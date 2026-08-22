@@ -68,12 +68,12 @@ const postAuthAction = async (url: string, body: Record<string, unknown>) => {
 };
 
 const getSafeRedirectPath = () => {
-  if (typeof window === 'undefined') return '/workspace';
+  if (typeof window === 'undefined') return '/home';
   const params = new URLSearchParams(window.location.search);
   const rawTarget = params.get('next') || params.get('redirect');
-  if (!rawTarget) return '/workspace';
+  if (!rawTarget || rawTarget === '/workspace') return '/home';
   const target = rawTarget.startsWith('/') ? rawTarget : `/${rawTarget}`;
-  if (target.startsWith('//') || target.includes('://')) return '/workspace';
+  if (target.startsWith('//') || target.includes('://') || target === '/workspace') return '/home';
   return target;
 };
 
@@ -312,33 +312,33 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent
         dir="rtl"
-        className="w-[94vw] sm:max-w-[580px] p-0 overflow-hidden border-0 shadow-2xl rounded-3xl bg-card text-foreground"
+        className="w-[94vw] sm:max-w-[580px] max-h-[85vh] sm:max-h-[90vh] p-0 overflow-hidden border-0 shadow-2xl rounded-2xl sm:rounded-3xl bg-card text-foreground flex flex-col"
       >
         <DialogTitle className="sr-only">
           {mode === 'login' ? 'تسجيل الدخول' : mode === 'register' ? 'إنشاء حساب جديد' : 'استعادة كلمة المرور'}
         </DialogTitle>
 
-        <div className="p-6 sm:p-8 space-y-6 text-right">
+        <div className="p-4 sm:p-7 space-y-4 sm:space-y-6 text-right overflow-y-auto max-h-[85vh] sm:max-h-[90vh]">
           
           {/* Top Brand Header */}
-          <div className="flex items-center justify-between border-b border-border/30 pb-4">
-            <div className="flex items-center gap-2.5">
-              <div className="flex items-center justify-center size-9 rounded-xl bg-primary text-primary-foreground font-black text-lg shadow-2xs">
+          <div className="flex items-center justify-between border-b border-border/30 pb-3 gap-2">
+            <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center size-8 sm:size-9 rounded-xl bg-primary text-primary-foreground font-black text-base sm:text-lg shadow-2xs shrink-0">
                 L
               </div>
-              <div>
-                <h3 className="text-base font-black text-foreground">منصة خطة</h3>
-                <p className="text-[10px] text-muted-foreground font-semibold">استوديو نمذجة وبناء المشاريع</p>
+              <div className="min-w-0">
+                <h3 className="text-xs sm:text-base font-black text-foreground truncate">منصة خطة</h3>
+                <p className="text-[9px] sm:text-[10px] text-muted-foreground font-semibold truncate hidden xs:block sm:block">استوديو نمذجة وبناء المشاريع</p>
               </div>
             </div>
 
             {/* Mode Selector Tabs */}
-            <div className="flex items-center gap-1 bg-muted/60 p-1 rounded-xl border-0">
+            <div className="flex items-center gap-1 bg-muted/60 p-1 rounded-xl border-0 shrink-0">
               <button
                 type="button"
                 onClick={() => switchMode('login')}
                 className={cn(
-                  "px-3.5 py-1.5 rounded-lg text-xs font-black transition-all cursor-pointer border-0",
+                  "px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-black transition-all cursor-pointer border-0",
                   mode === 'login' ? "bg-background text-foreground shadow-2xs" : "text-muted-foreground hover:text-foreground"
                 )}
               >
@@ -348,7 +348,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 type="button"
                 onClick={() => switchMode('register')}
                 className={cn(
-                  "px-3.5 py-1.5 rounded-lg text-xs font-black transition-all cursor-pointer border-0",
+                  "px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-black transition-all cursor-pointer border-0",
                   mode === 'register' ? "bg-background text-foreground shadow-2xs" : "text-muted-foreground hover:text-foreground"
                 )}
               >
@@ -359,7 +359,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
           {/* Titles & Descriptions */}
           <div className="space-y-1">
-            <h2 className="text-xl sm:text-2xl font-black text-foreground">
+            <h2 className="text-lg sm:text-2xl font-black text-foreground">
               {mode === 'login' && 'مرحباً بعودتك'}
               {mode === 'register' && (
                 registerStep === 1 ? 'إنشاء حساب جديد' : registerStep === 2 ? 'اختر خطة اشتراكك' : 'خيارات الدفع والتفعيل'
@@ -381,25 +381,25 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
           {/* Registration 3-Step Progress Indicator */}
           {mode === 'register' && (
-            <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-muted/60 border-0">
+            <div className="flex items-center gap-1 sm:gap-1.5 p-1 rounded-2xl bg-muted/60 border-0">
               <button
                 type="button"
                 onClick={() => setRegisterStep(1)}
                 className={cn(
-                  "flex-1 flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer border-0",
+                  "flex-1 flex items-center justify-center gap-1 sm:gap-1.5 py-1.5 sm:py-2 px-1.5 sm:px-2.5 rounded-xl text-[11px] sm:text-xs font-bold transition-all cursor-pointer border-0 min-w-0",
                   registerStep === 1 ? "bg-background text-foreground shadow-2xs font-black" : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 <span className={cn(
-                  "size-5 rounded-full text-[10px] font-black flex items-center justify-center shrink-0",
+                  "size-4.5 sm:size-5 rounded-full text-[9px] sm:text-[10px] font-black flex items-center justify-center shrink-0",
                   registerStep === 1 ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
                 )}>
                   1
                 </span>
-                <span className="truncate">البيانات الشخصية</span>
+                <span className="truncate">البيانات</span>
               </button>
 
-              <span className="text-muted-foreground/40 font-bold text-xs select-none">←</span>
+              <span className="text-muted-foreground/40 font-bold text-[10px] sm:text-xs select-none shrink-0">←</span>
 
               <button
                 type="button"
@@ -407,20 +407,20 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   if (validateStep1()) setRegisterStep(2);
                 }}
                 className={cn(
-                  "flex-1 flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer border-0",
+                  "flex-1 flex items-center justify-center gap-1 sm:gap-1.5 py-1.5 sm:py-2 px-1.5 sm:px-2.5 rounded-xl text-[11px] sm:text-xs font-bold transition-all cursor-pointer border-0 min-w-0",
                   registerStep === 2 ? "bg-background text-foreground shadow-2xs font-black" : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 <span className={cn(
-                  "size-5 rounded-full text-[10px] font-black flex items-center justify-center shrink-0",
+                  "size-4.5 sm:size-5 rounded-full text-[9px] sm:text-[10px] font-black flex items-center justify-center shrink-0",
                   registerStep === 2 ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
                 )}>
                   2
                 </span>
-                <span className="truncate">اختيار الباقة</span>
+                <span className="truncate">الباقة</span>
               </button>
 
-              <span className="text-muted-foreground/40 font-bold text-xs select-none">←</span>
+              <span className="text-muted-foreground/40 font-bold text-[10px] sm:text-xs select-none shrink-0">←</span>
 
               <button
                 type="button"
@@ -428,17 +428,17 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   if (validateStep1()) setRegisterStep(3);
                 }}
                 className={cn(
-                  "flex-1 flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer border-0",
+                  "flex-1 flex items-center justify-center gap-1 sm:gap-1.5 py-1.5 sm:py-2 px-1.5 sm:px-2.5 rounded-xl text-[11px] sm:text-xs font-bold transition-all cursor-pointer border-0 min-w-0",
                   registerStep === 3 ? "bg-background text-foreground shadow-2xs font-black" : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 <span className={cn(
-                  "size-5 rounded-full text-[10px] font-black flex items-center justify-center shrink-0",
+                  "size-4.5 sm:size-5 rounded-full text-[9px] sm:text-[10px] font-black flex items-center justify-center shrink-0",
                   registerStep === 3 ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
                 )}>
                   3
                 </span>
-                <span className="truncate">خيارات الدفع</span>
+                <span className="truncate">الدفع</span>
               </button>
             </div>
           )}

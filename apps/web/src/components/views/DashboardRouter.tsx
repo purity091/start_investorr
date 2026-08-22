@@ -22,6 +22,9 @@ import { MobileSiteMap } from './MobileSiteMap';
 import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
 import { FeatureErrorBoundary } from '@/components/common/FeatureErrorBoundary';
 import { getProjectIdFromEditPath } from '@/utils/routes';
+import { Globe, ArrowLeft } from 'lucide-react';
+import { Badge } from '../ui/Badge';
+import { Button } from '../ui/Button';
 
 import { User, PlanSection } from '../../types';
 
@@ -507,7 +510,26 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
           />
         );
       case 'unicorn-benchmark':
-        return <UnicornBenchmarking />;
+        return (
+          <div dir="rtl" className="min-h-[60vh] flex flex-col items-center justify-center p-8 text-center max-w-md mx-auto space-y-4">
+            <div className="size-16 rounded-3xl bg-amber-500/10 text-amber-600 flex items-center justify-center shadow-2xs">
+              <Globe className="size-8" />
+            </div>
+            <div className="space-y-2">
+              <Badge variant="secondary" className="bg-amber-500/15 text-amber-700 border-amber-500/30 px-3 py-1 text-xs font-bold border-0">
+                تحت التطوير 🛠️
+              </Badge>
+              <h2 className="text-xl font-black text-foreground">رادار اليونيكورن غير متاح حالياً</h2>
+              <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
+                يعمل فريق التطوير حالياً على تجهيز رادار التقييم والمقارنة للمشاريع الواعدة. سينطلق هذا الملحق قريباً!
+              </p>
+            </div>
+            <Button onClick={() => setActiveTab('home')} variant="outline" size="sm" className="font-bold text-xs gap-2 mt-2 bg-background">
+              <ArrowLeft className="size-4" />
+              <span>العودة للرئيسية</span>
+            </Button>
+          </div>
+        );
       case 'discovery-center':
       case 'market-discovery':
         return (

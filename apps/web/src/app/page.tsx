@@ -196,8 +196,16 @@ export default function LandingPage() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
+  const handleCtaClick = (mode: 'register' | 'login' = 'login', targetRoute: string = '/home') => {
+    if (user) {
+      window.location.href = targetRoute;
+    } else {
+      openAuthModal(mode);
+    }
+  };
+
   const handleRowClick = () => {
-    openAuthModal('register');
+    handleCtaClick('register');
   };
 
   return (
@@ -222,8 +230,8 @@ export default function LandingPage() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Button onClick={() => openAuthModal('register')} size="lg" className="w-full sm:w-auto text-sm font-bold px-8 h-12 gap-2 shadow-2xs cursor-pointer">
-                ابدأ بناء مشروعك مجاناً
+              <Button onClick={() => handleCtaClick('register')} size="lg" className="w-full sm:w-auto text-sm font-bold px-8 h-12 gap-2 shadow-2xs cursor-pointer">
+                {user ? 'الذهاب لصفحة البناء' : 'ابدأ بناء مشروعك مجاناً'}
                 <Rocket className="size-4" />
               </Button>
               <a href="#table-preview">
@@ -503,8 +511,8 @@ export default function LandingPage() {
               </div>
 
               <div className="pt-6 w-full">
-                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
-                  ابدأ نموذج BMC
+                <Button onClick={() => handleCtaClick('login', '/new-plan-bmc')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
+                  {user ? 'الانتقال لبناء نموذج BMC' : 'ابدأ نموذج BMC'}
                   <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
                 </Button>
               </div>
@@ -535,8 +543,8 @@ export default function LandingPage() {
               </div>
 
               <div className="pt-6 w-full">
-                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
-                  ابدأ منهجية MIT
+                <Button onClick={() => handleCtaClick('login', '/new-plan-mit24')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
+                  {user ? 'الانتقال لبناء خطة MIT' : 'ابدأ منهجية MIT'}
                   <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
                 </Button>
               </div>
@@ -567,8 +575,8 @@ export default function LandingPage() {
               </div>
 
               <div className="pt-6 w-full">
-                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
-                  ابدأ النموذج المالي
+                <Button onClick={() => handleCtaClick('login', '/financial-calculator')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
+                  {user ? 'الانتقال لبناء النموذج المالي' : 'ابدأ النموذج المالي'}
                   <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
                 </Button>
               </div>
@@ -599,8 +607,8 @@ export default function LandingPage() {
               </div>
 
               <div className="pt-6 w-full">
-                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
-                  ابدأ مصفوفة العميل
+                <Button onClick={() => handleCtaClick('login', '/new-plan-family')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
+                  {user ? 'الانتقال لبناء مصفوفة العميل' : 'ابدأ مصفوفة العميل'}
                   <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
                 </Button>
               </div>
@@ -631,8 +639,8 @@ export default function LandingPage() {
               </div>
 
               <div className="pt-6 w-full">
-                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
-                  ابدأ خريطة التنفيذ 90 يوماً
+                <Button onClick={() => handleCtaClick('login', '/first-90-days')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
+                  {user ? 'الانتقال لخريطة تنفيذ 90 يوماً' : 'ابدأ خريطة التنفيذ 90 يوماً'}
                   <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
                 </Button>
               </div>
@@ -717,8 +725,8 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div className="pt-2">
-                  <Button onClick={() => openAuthModal('register')} size="lg" className="w-full sm:w-auto font-bold text-xs sm:text-sm h-11 px-8 gap-2 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer">
-                    تسجيل الدخول / إنشاء حساب مجاني لفتح كافة الصفوف
+                  <Button onClick={() => handleCtaClick('register')} size="lg" className="w-full sm:w-auto font-bold text-xs sm:text-sm h-11 px-8 gap-2 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer">
+                    {user ? 'الانتقال لقواعد بيانات المشاريع' : 'تسجيل الدخول / إنشاء حساب مجاني لفتح كافة الصفوف'}
                     <ArrowLeft className="size-4" />
                   </Button>
                 </div>
@@ -839,8 +847,8 @@ export default function LandingPage() {
                   مشروعك بهذا العدد من المشتركين يولد إيراداً سنوياً قدره <strong>${calculatedMetrics.arr.toLocaleString('en-US')}</strong> وهو مؤشر ممتاز للانتقال لبناء نموذج العمل في المنصة.
                 </div>
 
-                <Button onClick={() => openAuthModal('register')} className="w-full font-bold text-xs h-10 gap-2 cursor-pointer">
-                  احفظ الحسابات وابدأ بناء نموذج عملك الآن
+                <Button onClick={() => handleCtaClick('login', '/financial-calculator')} className="w-full font-bold text-xs h-10 gap-2 cursor-pointer">
+                  {user ? 'الانتقال لبناء النموذج المالي' : 'احفظ الحسابات وابدأ بناء نموذج عملك الآن'}
                   <ArrowLeft className="size-4" />
                 </Button>
               </div>
@@ -1051,17 +1059,24 @@ export default function LandingPage() {
                     className="w-full p-4 sm:p-5 flex items-center justify-between text-right gap-4 hover:bg-muted/40 transition-colors cursor-pointer"
                   >
                     <span className="text-sm font-bold text-foreground">{faq.q}</span>
-                    {isOpen ? (
-                      <ChevronUp className="size-4 text-primary shrink-0" />
-                    ) : (
-                      <ChevronDown className="size-4 text-muted-foreground shrink-0" />
-                    )}
+                    <ChevronDown
+                      className={`size-4 shrink-0 transition-transform duration-300 ease-in-out ${
+                        isOpen ? 'rotate-180 text-primary' : 'text-muted-foreground'
+                      }`}
+                    />
                   </button>
-                  {isOpen && (
-                    <div className="p-4 sm:p-5 pt-0 text-xs sm:text-sm text-muted-foreground leading-relaxed border-t border-border/40 font-medium">
-                      {faq.a}
+                  <div
+                    style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
+                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
+                      isOpen ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div className="p-4 sm:p-5 pt-0 text-xs sm:text-sm text-muted-foreground leading-relaxed border-t border-border/40 font-medium">
+                        {faq.a}
+                      </div>
                     </div>
-                  )}
+                  </div>
                 </div>
               );
             })}
@@ -1078,8 +1093,8 @@ export default function LandingPage() {
               انضم إلى آلاف المبتكرين ورواد الأعمال الذين يستكشفون الفرص ويبنون نماذج أعمالهم بثقة عبر منصة خطة.
             </p>
             <div className="pt-2">
-              <Button onClick={() => openAuthModal('register')} size="lg" variant="secondary" className="font-extrabold text-sm px-8 h-12 gap-2 shadow-sm cursor-pointer">
-                انشئ حسابك المجاني الآن
+              <Button onClick={() => handleCtaClick('register')} size="lg" variant="secondary" className="font-extrabold text-sm px-8 h-12 gap-2 shadow-sm cursor-pointer">
+                {user ? 'الذهاب لصفحة البناء في لوحة التحكم' : 'انشئ حسابك المجاني الآن'}
                 <ArrowLeft className="size-4" />
               </Button>
             </div>

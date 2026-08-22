@@ -8,6 +8,7 @@ import { DEFAULT_SUBSCRIPTION_PLAN_ID, SUBSCRIPTION_PLAN_IDS, SUBSCRIPTION_PLANS
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
 
+
 const getErrorMessage = (error: unknown) => {
   if (error instanceof Error) return error.message;
   if (typeof error === 'string') return error;
@@ -35,15 +36,15 @@ const postAuthAction = async (url: string, body: Record<string, unknown>) => {
 };
 
 const getSafeRedirectPath = () => {
-  if (typeof window === 'undefined') return '/workspace';
+  if (typeof window === 'undefined') return '/home';
 
   const params = new URLSearchParams(window.location.search);
   const rawTarget = params.get('next') || params.get('redirect');
 
-  if (!rawTarget) return '/workspace';
+  if (!rawTarget || rawTarget === '/workspace') return '/home';
 
   const target = rawTarget.startsWith('/') ? rawTarget : `/${rawTarget}`;
-  if (target.startsWith('//') || target.includes('://')) return '/workspace';
+  if (target.startsWith('//') || target.includes('://') || target === '/workspace') return '/home';
 
   return target;
 };

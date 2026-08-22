@@ -124,11 +124,15 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
         dir="rtl"
       >
         <div className="flex items-center justify-between border-b border-border px-4 py-4">
-          <Link
-            href="/"
-            onClick={onClose}
+          <a
+            href={getTabPath(isAdminMode ? 'admin-dashboard' : 'home')}
+            onClick={(e) => {
+              e.preventDefault();
+              setActiveTab(isAdminMode ? 'admin-dashboard' : 'home');
+              onClose();
+            }}
             className="flex min-w-0 items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"
-            title="الانتقال إلى صفحة الهبوط"
+            title="الانتقال إلى الرئيسية"
           >
             <span className="flex size-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               {isAdminMode ? <Shield className="size-5" /> : <Zap className="size-5" />}
@@ -141,7 +145,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
                 {isAdminMode ? 'إدارة النظام' : 'منصة بناء المشاريع'}
               </p>
             </div>
-          </Link>
+          </a>
           <Button variant="ghost" size="icon-sm" onClick={onClose} aria-label="إغلاق">
             <X className="size-4" />
           </Button>

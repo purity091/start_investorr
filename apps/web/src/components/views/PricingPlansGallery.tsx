@@ -289,7 +289,7 @@ export const PricingPlansGallery: React.FC = () => {
             </span>
             {!user && (
               <Button
-                onClick={() => openAuthModal('register')}
+                onClick={() => openAuthModal('login')}
                 size="sm"
                 className="font-bold text-xs h-7 px-3 gap-1 cursor-pointer border-0 shadow-2xs"
               >
@@ -480,7 +480,7 @@ export const PricingPlansGallery: React.FC = () => {
                 <div className="pt-6 mt-auto">
                   {!user ? (
                     <Button
-                      onClick={() => openAuthModal('register')}
+                      onClick={() => openAuthModal('login')}
                       variant={plan.popular ? 'default' : 'outline'}
                       className="w-full text-xs font-black h-11 gap-1.5 cursor-pointer rounded-xl border-0 shadow-2xs"
                     >

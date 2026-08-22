@@ -48,7 +48,6 @@ const groups = [
     items: [
       { label: 'استكشاف قطاعات السوق', id: 'market-discovery', icon: Compass },
       { label: 'المشكلات والفرص', id: 'problem-engine', icon: Lightbulb },
-      { label: 'رادار اليونيكورن', id: 'unicorn-benchmark', icon: Radar },
     ],
   },
   {

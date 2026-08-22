@@ -1,9 +1,9 @@
+import React from 'react';
 import {
   ArrowLeft,
   BarChart3,
   Bookmark,
   BrainCircuit,
-  CheckCircle2,
   Compass,
   FileText,
   Layers3,
@@ -12,6 +12,8 @@ import {
   Search,
   Sparkles,
   Target,
+  Zap,
+  CheckCircle2,
 } from 'lucide-react';
 
 import { Badge } from '../ui/Badge';
@@ -24,191 +26,263 @@ type HomeProps = {
 
 const START_PATHS = [
   {
-    title: 'لا أعرف من أين أبدأ',
-    description: 'ابدأ بأسئلة بسيطة تحوّل الفكرة الضبابية إلى اتجاه مشروع أولي قابل للنقاش.',
+    title: 'لا أعرف من أين أبدأ؟',
+    subtitle: 'النموذج السهل والمبسط',
+    description: 'تحويل الفكرة المبدئية إلى خطة عمل أولية واضحة عبر أسئلة تفاعلية ذكية.',
     action: 'ابدأ بالنموذج السهل',
     tab: 'new-plan-family',
     icon: Sparkles,
+    badgeColor: 'bg-blue-500/10 text-blue-600',
   },
   {
     title: 'لدي فكرة وأريد اختبارها',
-    description: 'افهم السوق، المشاكل، والفرص قبل أن تكتب خطة طويلة أو تبني منتجاً غير واضح.',
-    action: 'استكشف السوق',
+    subtitle: 'استكشاف السوق والفرص',
+    description: 'فهم حجم السوق والآلام والمنافسين قبل البدء في كتابة الخطط التفصيلية.',
+    action: 'استكشف الفرص بالسوق',
     tab: 'market-discovery',
     icon: Compass,
+    badgeColor: 'bg-purple-500/10 text-purple-600',
   },
   {
-    title: 'أريد بناء دراسة جدوى منظمة',
-    description: 'انتقل إلى أدوات بناء المشروع: النموذج الاحترافي، BMC، وMIT 24 Steps.',
+    title: 'أريد بناء دراسة جدوى متكاملة',
+    subtitle: 'النماذج الاحترافية (BMC & MIT)',
+    description: 'صياغة أركان المشروع التسعة وفق أفضل المناهج العالمية الجاهزة للعرض والتمويل.',
     action: 'بناء دراسة جدوى',
     tab: 'new-plan-pro',
     icon: FileText,
+    badgeColor: 'bg-emerald-500/10 text-emerald-600',
   },
 ];
 
 const PLATFORM_TOOLS = [
-  { title: 'مشاريعي', description: 'راجع المشاريع المحفوظة وعد إلى آخر نقطة عمل.', tab: 'my-plans', icon: Bookmark },
-  { title: 'المشاكل والفرص', description: 'اكتشف مشاكل سوقية قابلة للتحويل إلى مشاريع.', tab: 'problem-engine', icon: Search },
-  { title: 'نموذج العمل BMC', description: 'رتّب العملاء، القيمة، الإيرادات، والموارد في لوحة واحدة.', tab: 'new-plan-bmc', icon: Layers3 },
-  { title: 'الهوية البصرية', description: 'حوّل اتجاه المشروع إلى brief واضح للمصمم.', tab: 'brand-identity', icon: Palette },
-  { title: 'رادار اليونيكورن', description: 'قارن مؤشرات المشروع مع نماذج نمو عالية.', tab: 'unicorn-benchmark', icon: BarChart3 },
-  { title: 'MIT 24 Steps', description: 'اتبع منهجية منظمة لبناء مشروع قابل للنمو.', tab: 'new-plan-mit24', icon: Rocket },
-  { title: 'Lean Startup', description: 'دورة تفاعلية لاختبار الفرضيات قبل التنفيذ.', tab: 'new-plan-lean', icon: Sparkles },
+  {
+    title: 'نموذج العمل (BMC)',
+    description: 'ترتيب أركان المشروع التسعة وحساب القيمة والإيرادات في لوحة واحدة.',
+    tab: 'new-plan-bmc',
+    icon: Layers3,
+    color: 'text-blue-600',
+    bg: 'bg-blue-500/10',
+  },
+  {
+    title: 'الجدوى والتحليل المالي',
+    description: 'حساب الإيرادات المتكررة (MRR)، نقطة التعادل، وتوقعات النمو.',
+    tab: 'financial-calculator',
+    icon: BarChart3,
+    color: 'text-emerald-600',
+    bg: 'bg-emerald-500/10',
+  },
+  {
+    title: 'استكشاف الفرص والمشاكل',
+    description: 'تحليل الآلام الحقيقية بالأسواق وتحويل المشكلات إلى مشاريع مربحة.',
+    tab: 'problem-engine',
+    icon: Search,
+    color: 'text-amber-600',
+    bg: 'bg-amber-500/10',
+  },
+  {
+    title: 'منهجية MIT (24 خطوة)',
+    description: 'مسار ريادي متكامل لبناء وتنمية المشاريع عالية النمو.',
+    tab: 'new-plan-mit24',
+    icon: Rocket,
+    color: 'text-purple-600',
+    bg: 'bg-purple-500/10',
+  },
+  {
+    title: 'مشاريعي المحفوظة',
+    description: 'الوصول لكافة مشاريعك ودراساتك السابقة ومتابعة التعديلات.',
+    tab: 'my-plans',
+    icon: Bookmark,
+    color: 'text-indigo-600',
+    bg: 'bg-indigo-500/10',
+  },
+  {
+    title: 'استوديو الهوية البصرية',
+    description: 'تحديد نبرة صوت المشروع وإعداد دليل الهوية الأولية.',
+    tab: 'brand-identity',
+    icon: Palette,
+    color: 'text-pink-600',
+    bg: 'bg-pink-500/10',
+  },
+  {
+    title: 'خريطة التنفيذ (90 يوماً)',
+    description: 'تحويل دراسة الجدوى إلى مهام تنفيذية مرحلية لأول 3 أشهر.',
+    tab: 'first-90-days',
+    icon: Target,
+    color: 'text-rose-600',
+    bg: 'bg-rose-500/10',
+  },
+  {
+    title: 'رادار الشركات والنمو',
+    description: 'مقارنة أداء مشروعك ومؤشراته مع أفضل نماذج النمو.',
+    tab: 'unicorn-benchmark',
+    icon: BrainCircuit,
+    color: 'text-teal-600',
+    bg: 'bg-teal-500/10',
+  },
 ];
 
-const MINDSET_STEPS = [
-  'توضيح الفكرة بدل الدوران حولها',
-  'فهم السوق قبل كتابة الخطة',
-  'اختيار نموذج عمل قابل للتنفيذ',
-  'تحويل القرارات إلى مشروع محفوظ',
+const EXECUTION_STEPS = [
+  { step: '1', title: 'توضيح الفكرة', desc: 'صياغة الرؤية والقيمة الفريدة للمشروع' },
+  { step: '2', title: 'تحليل السوق', desc: 'استكشاف الفرص والمنافسين وتحديد العميل' },
+  { step: '3', title: 'نموذج العمل', desc: 'هيكلة BMC وحساب الجدوى المالية' },
+  { step: '4', title: 'خريطة التنفيذ', desc: 'جدولة خطة إطلاق 90 يوماً واثقة' },
 ];
 
-export const Home = ({ setActiveTab }: HomeProps) => {
+export const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
   return (
-    <main dir="rtl" className="min-h-screen bg-background pb-16 sm:pb-24 text-right">
-      <div className="app-page-shell-wide space-y-3.5 sm:space-y-8 py-3 sm:py-8">
-        <section className="rounded-lg bg-background px-1 py-2">
-          <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px] xl:items-end">
-            <div className="max-w-5xl">
-              <Badge variant="secondary" className="h-7 px-3 text-[11px]">
-                منصة تحويل التردد إلى مشروع واضح
+    <main dir="rtl" className="min-h-screen bg-background pb-16 text-right">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-10 space-y-8 sm:space-y-12">
+        
+        {/* HERO HEADER - Simplified Concept & Direct Action */}
+        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-card via-card to-muted/40 p-6 sm:p-10 shadow-2xs border-0">
+          <div className="relative z-10 grid gap-8 lg:grid-cols-12 items-center">
+            
+            <div className="lg:col-span-7 space-y-5">
+              <Badge variant="secondary" className="px-3.5 py-1 text-xs font-bold gap-1.5 border-0 bg-primary/10 text-primary">
+                <Zap className="size-3.5" />
+                <span>المنصة الأولى لبناء وتخطيط المشاريع</span>
               </Badge>
-              <h1 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                حوّل فكرتك إلى مشروع قابل للتنفيذ
+
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground tracking-tight leading-[1.2]">
+                مسارك الذكي لبناء <span className="text-primary">دراسة الجدوى</span> ونموذج العمل
               </h1>
-              <p className="mt-4 max-w-3xl text-sm font-medium leading-8 text-muted-foreground sm:text-base">
-                ابدأ من أي نقطة: فكرة جديدة، أو فرصة في السوق، أو مشروع قائم. تساعدك منصة خطة على تحليل السوق، وبناء نموذج العمل، وإعداد دراسة جدوى احترافية خطوة بخطوة، باستخدام أدوات ذكية تقودك إلى قرار استثماري واثق.
+
+              <p className="text-sm sm:text-base text-muted-foreground font-medium leading-relaxed max-w-2xl">
+                تساعدك منصة "خطة" على تحويل الأفكار الاستثمارية إلى دراسات منظمة وقرارات واثقة، عبر أدوات تفاعلية تبدأ من استكشاف السوق وحتى صياغة نموذج العمل والتخطيط المالي.
               </p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                <Button size="lg" onClick={() => setActiveTab('new-plan-family')}>
-                  <Sparkles size={16} />
-                  ابدأ أول مشروع
+
+              <div className="pt-2 flex flex-wrap items-center gap-3">
+                <Button size="lg" onClick={() => setActiveTab('new-plan-family')} className="font-extrabold text-sm h-12 px-7 gap-2 shadow-2xs cursor-pointer">
+                  <Sparkles className="size-4" />
+                  <span>ابدأ مشروعك الآن</span>
                 </Button>
-                <Button size="lg" variant="outline" onClick={() => setActiveTab('market-discovery')}>
-                  <Compass size={16} />
-                  استكشف المنصة
+                <Button size="lg" variant="outline" onClick={() => setActiveTab('market-discovery')} className="font-bold text-sm h-12 px-7 gap-2 cursor-pointer bg-background">
+                  <Compass className="size-4 text-primary" />
+                  <span>استكشف الفرص والسوق</span>
                 </Button>
               </div>
             </div>
 
-            <div className="rounded-lg bg-muted/55 p-4 sm:p-5">
-              <div className="flex items-center gap-3">
-                <span className="rounded-md bg-background p-2 text-foreground shadow-sm">
-                  <BrainCircuit size={18} />
-                </span>
-                <div>
-                  <p className="text-sm font-black text-foreground">تغيير طريقة التفكير</p>
-                  <p className="text-xs font-medium text-muted-foreground">من فكرة مبعثرة إلى قرار مشروع</p>
-                </div>
+            {/* 4-Step Simplified Execution Roadmap Strip */}
+            <div className="lg:col-span-5 bg-background/80 backdrop-blur-md rounded-2xl p-5 sm:p-6 shadow-2xs border-0 space-y-4">
+              <div className="flex items-center justify-between border-b border-border/50 pb-3">
+                <h3 className="text-sm font-black text-foreground flex items-center gap-2">
+                  <CheckCircle2 className="size-4 text-primary" />
+                  <span>رحلة بناء المشروع في خطة</span>
+                </h3>
+                <span className="text-[11px] font-bold text-muted-foreground">4 خطوات مبسطة</span>
               </div>
-              <div className="mt-5 space-y-3">
-                {MINDSET_STEPS.map((step, index) => (
-                  <div key={step} className="flex items-center gap-3 rounded-lg bg-background px-3 py-3 shadow-sm">
-                    <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-primary text-[11px] font-black text-primary-foreground">
-                      {index + 1}
-                    </span>
-                    <span className="text-sm font-semibold text-foreground">{step}</span>
+
+              <div className="grid grid-cols-2 gap-3">
+                {EXECUTION_STEPS.map((item) => (
+                  <div key={item.step} className="p-3 rounded-xl bg-muted/40 hover:bg-muted/70 transition-colors space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="size-5 rounded-md bg-primary text-primary-foreground font-black text-[10px] flex items-center justify-center">
+                        {item.step}
+                      </span>
+                      <span className="text-xs font-black text-foreground">{item.title}</span>
+                    </div>
+                    <p className="text-[11px] text-muted-foreground font-medium leading-tight">{item.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
+
           </div>
         </section>
 
-        <section className="grid gap-3 lg:grid-cols-3">
-          {START_PATHS.map((path) => {
-            const Icon = path.icon;
-            return (
-              <button
-                key={path.title}
-                type="button"
-                onClick={() => setActiveTab(path.tab)}
-                className="group rounded-lg bg-muted/55 p-4 sm:p-5 text-right transition hover:bg-muted"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <span className="rounded-md bg-background p-3 text-foreground shadow-sm">
-                    <Icon size={20} />
-                  </span>
-                  <ArrowLeft className="mt-2 text-muted-foreground transition group-hover:-translate-x-1" size={17} />
-                </div>
-                <h2 className="mt-5 text-lg font-black text-foreground">{path.title}</h2>
-                <p className="mt-2 min-h-[72px] text-sm font-medium leading-7 text-muted-foreground">{path.description}</p>
-                <span className="mt-5 inline-flex items-center rounded-md bg-background px-3 py-2 text-xs font-bold text-foreground shadow-sm">
-                  {path.action}
-                </span>
-              </button>
-            );
-          })}
-        </section>
-
-        <section className="rounded-lg bg-background p-4 sm:p-5 shadow-sm">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h2 className="text-xl font-black text-foreground">ماذا تستطيع أن تفعل داخل المنصة؟</h2>
-              <p className="mt-2 text-sm font-medium leading-7 text-muted-foreground">
-                أدوات قليلة وواضحة تقود المستخدم حسب المرحلة، بدون ازدحام في الصفحة الرئيسية.
-              </p>
-            </div>
-            <Button variant="outline" size="sm" onClick={() => setActiveTab('my-plans')}>
-              <Target size={16} />
-              متابعة مشاريعي
-            </Button>
+        {/* 3 MAIN START PATHWAYS */}
+        <section className="space-y-4">
+          <div className="space-y-1">
+            <h2 className="text-xl sm:text-2xl font-black text-foreground">اختر مسار البدء المناسب لك</h2>
+            <p className="text-xs sm:text-sm text-muted-foreground font-medium">حدد من أين تريد الانطلاق وستوجهك المنصة للأداة الأنسب</p>
           </div>
 
-          <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-            {PLATFORM_TOOLS.map((tool) => {
-              const Icon = tool.icon;
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+            {START_PATHS.map((path) => {
+              const Icon = path.icon;
               return (
-                <button
-                  key={tool.title}
-                  type="button"
-                  onClick={() => setActiveTab(tool.tab)}
-                  className="rounded-lg bg-muted/55 p-3 sm:p-4 text-right transition hover:bg-muted"
+                <div
+                  key={path.title}
+                  onClick={() => setActiveTab(path.tab)}
+                  className="group rounded-3xl bg-card hover:bg-muted/50 p-6 sm:p-7 shadow-2xs transition-all duration-200 border-0 flex flex-col justify-between space-y-6 cursor-pointer text-right"
                 >
-                  <div className="flex items-start gap-3">
-                    <span className="rounded-md bg-background p-2 text-foreground shadow-sm">
-                      <Icon size={17} />
-                    </span>
-                    <div>
-                      <h3 className="text-sm font-black text-foreground">{tool.title}</h3>
-                      <p className="mt-1 text-[13px] font-medium leading-6 text-muted-foreground">{tool.description}</p>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className={`px-3 py-1 rounded-full text-[11px] font-black ${path.badgeColor}`}>
+                        {path.subtitle}
+                      </span>
+                      <div className="p-3 rounded-2xl bg-muted/60 text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors shadow-2xs">
+                        <Icon className="size-5" />
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                        {path.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
+                        {path.description}
+                      </p>
                     </div>
                   </div>
-                </button>
+
+                  <div className="pt-2">
+                    <Button variant="ghost" size="sm" className="w-full text-xs font-bold justify-between p-0 hover:bg-transparent text-primary group-hover:translate-x-[-2px] transition-transform">
+                      <span>{path.action}</span>
+                      <ArrowLeft className="size-4" />
+                    </Button>
+                  </div>
+                </div>
               );
             })}
           </div>
         </section>
 
-        <section className="grid gap-3 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-          <div className="rounded-lg bg-primary p-4 sm:p-5 text-primary-foreground">
-            <h2 className="text-xl font-black">الهدف من الصفحة الرئيسية</h2>
-            <p className="mt-3 text-sm font-medium leading-7 text-primary-foreground/75">
-              ليست صفحة إعلانات. هي نقطة دخول للقرار: ماذا أفعل الآن؟ أين أبدأ؟ وما الأداة المناسبة لوضعي الحالي؟
-            </p>
-            <Button className="mt-5" variant="secondary" onClick={() => setActiveTab('new-plan-family')}>
-              <CheckCircle2 size={16} />
-              ابدأ بخطوة بسيطة
+        {/* DIRECT TOOLKIT GRID */}
+        <section className="space-y-5">
+          <div className="flex items-center justify-between">
+            <div className="space-y-1">
+              <h2 className="text-xl sm:text-2xl font-black text-foreground">أدوات منصة خطة المباشرة</h2>
+              <p className="text-xs sm:text-sm text-muted-foreground font-medium">وصول سريع لكافة أدوات ونماذج البناء داخل اللوحة</p>
+            </div>
+
+            <Button variant="outline" size="sm" onClick={() => setActiveTab('my-plans')} className="font-bold text-xs gap-1.5 bg-background">
+              <Bookmark className="size-3.5 text-primary" />
+              <span>مشاريعي المحفوظة</span>
             </Button>
           </div>
 
-          <div className="rounded-lg bg-muted/55 p-4 sm:p-5">
-            <h2 className="text-xl font-black text-foreground">رحلة المستخدم المقترحة</h2>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {[
-                ['أفهم وضعي', 'النموذج السهل يحدد الفكرة والسوق والعميل.'],
-                ['أبحث عن فرصة', 'استكشاف السوق والمشاكل يفتحان اتجاهات قابلة للبناء.'],
-                ['أبني النموذج', 'BMC وMIT 24 Steps يحولان الفكرة إلى هيكل عمل.'],
-                ['أجهز للتسليم', 'الهوية والرادار يرفعان وضوح المشروع قبل العرض.'],
-              ].map(([title, description]) => (
-                <div key={title} className="rounded-lg bg-background p-3 sm:p-4 shadow-sm">
-                  <p className="text-sm font-black text-foreground">{title}</p>
-                  <p className="mt-2 text-[13px] font-medium leading-6 text-muted-foreground">{description}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            {PLATFORM_TOOLS.map((tool) => {
+              const Icon = tool.icon;
+              return (
+                <div
+                  key={tool.title}
+                  onClick={() => setActiveTab(tool.tab)}
+                  className="p-5 rounded-2xl bg-card hover:bg-muted/60 transition-all shadow-2xs border-0 cursor-pointer space-y-3 group text-right flex flex-col justify-between"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className={`p-2.5 rounded-xl ${tool.bg} ${tool.color} shadow-2xs`}>
+                        <Icon className="size-4.5" />
+                      </div>
+                      <ArrowLeft className="size-4 text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:-translate-x-1 transition-all" />
+                    </div>
+
+                    <h4 className="text-sm font-extrabold text-foreground group-hover:text-primary transition-colors">
+                      {tool.title}
+                    </h4>
+                    <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                      {tool.description}
+                    </p>
+                  </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </section>
+
       </div>
     </main>
   );

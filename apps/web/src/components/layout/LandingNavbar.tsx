@@ -235,12 +235,16 @@ export const LandingNavbar: React.FC = () => {
                         <Button
                           onClick={() => {
                             setActiveDropdown(null);
-                            openAuthModal('register');
+                            if (user) {
+                              window.location.href = '/customer-dashboard';
+                            } else {
+                              openAuthModal('login');
+                            }
                           }}
                           size="sm"
                           className="w-full text-xs font-extrabold gap-1.5 h-9 shadow-2xs cursor-pointer"
                         >
-                          ابنِ نموذج مشروعك الآن
+                          {user ? 'الذهاب لصفحة البناء' : 'ابنِ نموذج مشروعك الآن'}
                           <ArrowLeft className="size-3.5" />
                         </Button>
                       </div>
@@ -454,30 +458,30 @@ export const LandingNavbar: React.FC = () => {
             استكشاف القطاعات
           </Link>
 
-          {/* Direct Standard Link 2: Academy */}
+          {/* Direct Standard Link 2: Problem Engine */}
           <Link
-            href="/platform-academy"
+            href="/problem-engine"
             className={cn(
               "px-3 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 text-xs font-extrabold",
-              isAcademyActive
+              currentPath === '/problem-engine'
                 ? "bg-primary text-primary-foreground font-black shadow-2xs"
                 : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
             )}
           >
-            الأكاديمية
+            المشكلات والفرص
           </Link>
 
-          {/* Direct Standard Link 3: Changelog */}
+          {/* Direct Standard Link 3: Case Studies */}
           <Link
-            href="/changelog"
+            href="/proven-projects"
             className={cn(
               "px-3 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 text-xs font-extrabold",
-              isChangelogActive
+              currentPath === '/proven-projects'
                 ? "bg-primary text-primary-foreground font-black shadow-2xs"
                 : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
             )}
           >
-            سجل التغييرات
+            دراسات الشركات
           </Link>
 
           {/* Direct Standard Link 4: Pricing */}
@@ -513,22 +517,29 @@ export const LandingNavbar: React.FC = () => {
           {authLoading ? (
             <div className="hidden sm:block size-9 rounded-full bg-muted animate-pulse shrink-0" aria-hidden="true" />
           ) : user ? (
-            <div className="hidden sm:flex items-center gap-2.5 shrink-0">
-              {/* 1. Circular User Profile Avatar Button (Matching the image provided by user) */}
+            <div className="hidden sm:flex items-center gap-2 shrink-0">
+              {/* User Profile Pill Dropdown Trigger */}
               <DropdownMenu dir="rtl">
                 <DropdownMenuTrigger asChild>
                   <button
                     id="landing-profile-avatar-trigger"
-                    className="relative flex items-center justify-center rounded-full p-0.5 border border-border/80 hover:border-primary/60 bg-card shadow-2xs hover:shadow-sm transition-all cursor-pointer outline-none shrink-0 group"
+                    className="flex items-center gap-2 rounded-full py-1 px-2.5 border border-primary/20 bg-primary/5 hover:bg-primary/10 shadow-2xs transition-all cursor-pointer outline-none shrink-0"
                     title={userName}
                     aria-label="حسابي - إعدادات الحساب"
                   >
-                    <Avatar className="size-8.5 rounded-full">
-                      <AvatarImage src={userAvatar} alt={userName} className="rounded-full object-cover" />
-                      <AvatarFallback className="bg-primary/10 text-primary font-black text-xs rounded-full">
-                        {userName.slice(0, 1).toUpperCase()}
-                      </AvatarFallback>
-                    </Avatar>
+                    <div className="relative shrink-0 flex items-center justify-center">
+                      <Avatar className="size-7.5 rounded-full">
+                        <AvatarImage src={userAvatar} alt={userName} className="rounded-full object-cover" />
+                        <AvatarFallback className="bg-primary text-primary-foreground font-black text-[11px] rounded-full">
+                          {userName.slice(0, 1).toUpperCase()}
+                        </AvatarFallback>
+                      </Avatar>
+                      <span className="absolute bottom-0 right-0 size-2.5 rounded-full bg-emerald-500 ring-2 ring-background" />
+                    </div>
+                    <span className="text-xs font-extrabold text-foreground max-w-[110px] truncate hidden md:inline-block">
+                      {userName}
+                    </span>
+                    <ChevronDown className="size-3 text-muted-foreground" />
                   </button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="min-w-64">
@@ -571,14 +582,16 @@ export const LandingNavbar: React.FC = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              {/* 2. Dashboard Icon Button on the Far Left */}
+              {/* Prominent Dashboard Button */}
               <Link href="/customer-dashboard" title="لوحة التحكم">
                 <Button
-                  size="icon"
-                  className="size-9 bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xs rounded-xl shrink-0 cursor-pointer"
+                  size="sm"
+                  className="gap-2 font-bold text-xs h-9 px-4 bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xs rounded-xl shrink-0 cursor-pointer"
                   aria-label="لوحة التحكم"
                 >
                   <LayoutGrid className="size-4" />
+                  <span>لوحة التحكم</span>
+                  <ArrowLeft className="size-3.5" />
                 </Button>
               </Link>
             </div>
@@ -690,31 +703,31 @@ export const LandingNavbar: React.FC = () => {
                   </Link>
 
                   <Link
-                    href="/platform-academy"
+                    href="/problem-engine"
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
                       "flex items-center gap-2.5 py-2.5 px-3 rounded-xl transition-all border-b border-border/30",
-                      isAcademyActive
+                      currentPath === '/problem-engine'
                         ? "bg-primary text-primary-foreground font-black shadow-2xs"
                         : "text-foreground hover:text-primary hover:bg-muted/50"
                     )}
                   >
-                    <BookOpen className={cn("size-4", isAcademyActive ? "text-primary-foreground" : "text-primary")} />
-                    <span>الأكاديمية</span>
+                    <Target className={cn("size-4", currentPath === '/problem-engine' ? "text-primary-foreground" : "text-amber-500")} />
+                    <span>المشكلات والفرص</span>
                   </Link>
 
                   <Link
-                    href="/changelog"
+                    href="/#calculator"
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
                       "flex items-center gap-2.5 py-2.5 px-3 rounded-xl transition-all border-b border-border/30",
-                      isChangelogActive
+                      currentPath === '/#calculator'
                         ? "bg-primary text-primary-foreground font-black shadow-2xs"
                         : "text-foreground hover:text-primary hover:bg-muted/50"
                     )}
                   >
-                    <Target className={cn("size-4", isChangelogActive ? "text-primary-foreground" : "text-rose-500")} />
-                    <span>سجل التغييرات</span>
+                    <Calculator className={cn("size-4", currentPath === '/#calculator' ? "text-primary-foreground" : "text-blue-500")} />
+                    <span>حاسبة الجدوى والنمو</span>
                   </Link>
 
                   <Link
@@ -734,26 +747,42 @@ export const LandingNavbar: React.FC = () => {
               </div>
 
               {/* Mobile Sheet Footer CTA Button */}
-              <div className="p-5 border-t border-border bg-muted/30 space-y-2">
+              <div className="p-4 border-t border-border bg-muted/30 space-y-3">
                 {authLoading ? (
                   <div className="h-10 w-full rounded-md bg-muted animate-pulse" aria-hidden="true" />
                 ) : user ? (
-                  <>
+                  <div className="space-y-2.5">
+                    <div className="p-3 rounded-2xl bg-card border border-border flex items-center gap-3 shadow-2xs">
+                      <div className="relative shrink-0">
+                        <Avatar className="size-9 rounded-full">
+                          <AvatarImage src={userAvatar} alt={userName} className="rounded-full object-cover" />
+                          <AvatarFallback className="bg-primary text-primary-foreground font-black text-xs">
+                            {userName.slice(0, 1).toUpperCase()}
+                          </AvatarFallback>
+                        </Avatar>
+                        <span className="absolute bottom-0 right-0 size-2.5 rounded-full bg-emerald-500 ring-2 ring-background" />
+                      </div>
+                      <div className="min-w-0 flex-1 text-right">
+                        <p className="text-xs font-black text-foreground truncate">{userName}</p>
+                        <p className="text-[11px] font-medium text-muted-foreground truncate">{userEmail}</p>
+                      </div>
+                    </div>
+
                     <Link href="/customer-dashboard" onClick={() => setMobileMenuOpen(false)} className="w-full block">
-                      <Button className="w-full font-bold text-xs h-10 gap-1.5 shadow-2xs cursor-pointer bg-primary">
+                      <Button className="w-full font-bold text-xs h-10 gap-2 shadow-2xs cursor-pointer bg-primary text-primary-foreground">
                         <LayoutGrid className="size-4" />
-                        <span>لوحة التحكم</span>
+                        <span>الانتقال إلى لوحة التحكم</span>
                         <ArrowLeft className="size-4" />
                       </Button>
                     </Link>
 
                     <Link href="/settings" onClick={() => setMobileMenuOpen(false)} className="w-full block">
-                      <Button variant="outline" className="w-full font-bold text-xs h-10 gap-1.5 cursor-pointer bg-background">
+                      <Button variant="outline" className="w-full font-bold text-xs h-9 gap-1.5 cursor-pointer bg-background">
                         <UserIcon className="size-4 text-primary" />
-                        <span>حسابي</span>
+                        <span>إعدادات الحساب</span>
                       </Button>
                     </Link>
-                  </>
+                  </div>
                 ) : (
                   <Button
                     onClick={() => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { getTabPath } from '../../utils/routes';
 
 interface DashboardFooterProps {
   setActiveTab?: (tab: string) => void;
@@ -19,13 +20,19 @@ export const DashboardFooter: React.FC<DashboardFooterProps> = ({ setActiveTab }
     <footer className="relative block w-full mt-10 border-t border-border/60 bg-card py-4 px-4 sm:px-6 lg:px-8 text-xs text-muted-foreground">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3 font-medium">
         <div className="flex items-center gap-2 shrink-0">
-          <Link
-            href="/"
+          <a
+            href={getTabPath('home')}
+            onClick={(e) => {
+              if (setActiveTab) {
+                e.preventDefault();
+                setActiveTab('home');
+              }
+            }}
             className="font-extrabold text-foreground tracking-tight hover:text-primary transition-colors cursor-pointer"
-            title="الانتقال إلى صفحة الهبوط"
+            title="الانتقال إلى الرئيسية"
           >
             خطة<span className="text-primary">.</span>
-          </Link>
+          </a>
           <span className="text-border">|</span>
           <p>© {new Date().getFullYear()} جميع الحقوق محفوظة.</p>
         </div>

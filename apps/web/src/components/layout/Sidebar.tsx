@@ -684,12 +684,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
               size="lg"
               className="h-12 justify-start gap-2 px-2 text-right cursor-pointer"
             >
-              <Link
-                href="/"
-                onClick={() => {
+              <a
+                href={getTabPath(isAdminMode ? 'admin-dashboard' : 'home')}
+                onClick={(event) => {
+                  goToTab(event, isAdminMode ? 'admin-dashboard' : 'home', setActiveTab);
                   if (isMobile) setOpenMobile(false);
                 }}
-                title="الرئيسية - صفحة الهبوط"
+                title="الرئيسية"
               >
                 <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground font-black">
                   {isAdminMode ? <Shield className="size-4" /> : <Zap className="size-4" />}
@@ -702,7 +703,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
                     {isAdminMode ? 'إدارة المنصة' : 'الجيل الجديد من دراسات الجدوى'}
                   </span>
                 </span>
-              </Link>
+              </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
