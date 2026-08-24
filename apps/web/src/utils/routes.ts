@@ -153,7 +153,7 @@ export const getTabPath = (tab: string, pathname = window.location.pathname) => 
   const basePath = getBasePath(pathname);
 
   if (!tab || tab === 'home') {
-    return basePath ? `${basePath}/` : '/';
+    return basePath ? `${basePath}/home` : '/home';
   }
 
   return `${basePath}/${encodeURIComponent(tab)}`;
