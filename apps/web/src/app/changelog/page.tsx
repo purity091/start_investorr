@@ -29,11 +29,18 @@ import {
   Rss,
   Mail,
   Activity,
-  CheckCircle
+  CheckCircle,
+  Linkedin,
+  Heart
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 type CategoryFilter = 'all' | 'feature' | 'fix' | 'improvement';
+
+interface Contributor {
+  name: string;
+  linkedin: string;
+}
 
 interface ReleaseHighlight {
   title: string;
@@ -54,19 +61,94 @@ interface ReleaseUpdate {
   category: CategoryFilter;
   badgeText: string;
   highlights: ReleaseHighlight[];
+  contributors?: Contributor[];
   tags: string[];
 }
 
 const releases: ReleaseUpdate[] = [
   {
+    id: 'v2.6.0',
+    version: 'v2.6.0',
+    date: '24 أغسطس 2026',
+    isLatest: true,
+    title: 'تحديث تجربة التصفح للجوال، الفلاتر الذكية، وتوحيد الفوتر الموحد',
+    summary: 'إصدار جديد يركز على جعل تجربة التصفح صديقة للجوال أولاً، إتاحة كبسولات وتصفية سريعة للمشاكل والفرص، استقرار استجابة الخادم والمتصفح، وتوحيد الفوتر العام للمنصة.',
+    category: 'feature',
+    badgeText: 'الإصدار الحالي v2.6.0',
+    highlights: [
+      {
+        title: 'المميزات الرئيسية والجديدة',
+        icon: Sparkles,
+        color: 'text-amber-500',
+        bgColor: 'bg-amber-500/10',
+        borderColor: 'border-amber-500/20',
+        items: [
+          'تطوير النوافذ المنبثقة (Modals): إصلاح نافذة مشاركة المشاريع ونوافذ التفاصيل لتفتح بسلاسة على الجوال دون تعليق.',
+          'واجهة تصفية للجوال (Mobile-First): إضافة درج سفلي (Drawer) وكبسولات تفاعلية بنقرة واحدة لتصفية الفرص والمشاكل.',
+          'أنيميشن خفيف للأسئلة (FAQ Accordion): حركة فتح وإغلاق سلسة لأسئلة منصة خطة بدون مكتبات خارجية ثقيلة.',
+          'تحديث الفوتر العام وشريط التنقل: تنظيم روابط المنتج والمصادر مع إبراز حالة تسجيل الدخول للمستخدم.'
+        ]
+      },
+      {
+        title: 'الإصلاحات وحل المشكلات',
+        icon: Wrench,
+        color: 'text-blue-500',
+        bgColor: 'bg-blue-500/10',
+        borderColor: 'border-blue-500/20',
+        items: [
+          'إصلاح التوافق بين الخادم والمتصفح (SSR Hydration Mismatch) في جداول المشاريع ورادار القطاعات.',
+          'تثبيت استجابة النوافذ التفاعلية وشريط التصفح العلوي على أجهزة iOS والجوال.'
+        ]
+      },
+      {
+        title: 'تحسينات الأداء والتصفح',
+        icon: Zap,
+        color: 'text-emerald-500',
+        bgColor: 'bg-emerald-500/10',
+        borderColor: 'border-emerald-500/20',
+        items: [
+          'تسريع استجابة الجداول والتمرير الميداني على كافة الأجهزة.',
+          'دعم محاذاة واستجابة الواجهات العربية (RTL).'
+        ]
+      }
+    ],
+    contributors: [
+      {
+        name: 'Aya Akour',
+        linkedin: 'https://www.linkedin.com/in/aya-akour-uiux-gamedev-and-trainer',
+      },
+      {
+        name: 'Sameer Dodin',
+        linkedin: 'https://www.linkedin.com/in/sameer-dodin-b81b76348',
+      },
+      {
+        name: 'Afrah Ali Alhamayiduh',
+        linkedin: 'https://www.linkedin.com/in/afrah-ali-alhamayiduh',
+      },
+      {
+        name: 'Osama Mashal',
+        linkedin: 'https://www.linkedin.com/in/osama-mashal-257100150',
+      },
+      {
+        name: 'Raghad Abdullah',
+        linkedin: 'https://www.linkedin.com/in/raghad-abdullah-b05221319',
+      },
+      {
+        name: 'Hamzah Almasri',
+        linkedin: 'https://www.linkedin.com/in/hamzah-almasri-aa916934a',
+      },
+    ],
+    tags: ['Mobile-First Filters', 'Hydration Fix', 'Footer Modernization', 'Navbar Auth', 'RTL Layout']
+  },
+  {
     id: 'v2.5.0',
     version: 'v2.5.0',
     date: '05 أغسطس 2026',
-    isLatest: true,
+    isLatest: false,
     title: 'تحديث المحرك الأساسي: مشاركة الخطط، بناء 10 دراسات مجانية، وتسهيل تسجيل الدخول',
     summary: 'إصدار رئيسي يركز على إتاحة مشاركة الخطط ونماذج الأعمال عبر روابط آمنة، تمكين بناء 10 دراسات جدوى عبر الباني الخاص، وإزالة تعقيدات صفحة الدخول.',
     category: 'feature',
-    badgeText: 'الإصدار الحالي v2.5.0',
+    badgeText: 'إصدار سابق v2.5.0',
     highlights: [
       {
         title: 'المميزات الرئيسية والجديدة',
@@ -310,6 +392,38 @@ export default function ChangelogPage() {
                           })}
                         </div>
 
+                        {/* Contributors Acknowledgement Section */}
+                        {rel.contributors && rel.contributors.length > 0 && (
+                          <div className="p-4 rounded-xl border border-primary/20 bg-primary/5 space-y-3">
+                            <div className="flex items-center gap-2">
+                              <div className="p-1.5 rounded-lg shrink-0 bg-primary/10 text-primary">
+                                <Heart className="size-4 fill-primary/20" />
+                              </div>
+                              <h3 className="text-xs sm:text-sm font-bold text-foreground">
+                                شكر خاص لشركاء التحديث والمساهمين
+                              </h3>
+                            </div>
+                            <p className="text-xs text-muted-foreground leading-relaxed">
+                              تتقدم منصة خطة بخالص الشكر والتقدير للخبراء والمستخدمين المتميزين الذين شاركونا ملاحظاتهم وتجاربهم الميدانية وكانوا جزءاً أساسياً من نجاح وتطوير هذا التحديث:
+                            </p>
+                            <div className="flex flex-wrap gap-2 pt-1">
+                              {rel.contributors.map((c, cIdx) => (
+                                <a
+                                  key={cIdx}
+                                  href={c.linkedin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-primary/20 bg-background hover:bg-primary hover:text-primary-foreground text-foreground font-bold text-xs shadow-2xs transition-all active:scale-95 group"
+                                >
+                                  <Linkedin className="size-3.5 text-[#0A66C2] group-hover:text-white transition-colors" />
+                                  <span>{c.name}</span>
+                                  <ArrowUpRight className="size-3 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
+                                </a>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
                         {/* Tags Footer */}
                         <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-border/40 text-xs">
                           <div className="flex flex-wrap gap-1.5">
@@ -428,7 +542,7 @@ export default function ChangelogPage() {
                 <div className="space-y-2 text-xs">
                   <div className="flex justify-between items-center py-1 border-b border-border/40">
                     <span className="text-muted-foreground">الإصدار النشط:</span>
-                    <strong className="font-mono text-foreground">v2.5.0</strong>
+                    <strong className="font-mono text-foreground">v2.6.0</strong>
                   </div>
                   <div className="flex justify-between items-center py-1 border-b border-border/40">
                     <span className="text-muted-foreground">حالة الخوادم:</span>
