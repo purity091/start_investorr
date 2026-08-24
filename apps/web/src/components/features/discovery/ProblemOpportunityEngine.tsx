@@ -922,6 +922,22 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [bookmarks, setBookmarks] = useState<Record<string, boolean>>({});
   const [detailsOpen, setDetailsOpen] = useState(false);
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+
+  const activeFilterCount = useMemo(() => {
+    let count = 0;
+    if (typeFilter !== 'all') count++;
+    if (sectorFilter !== 'all') count++;
+    if (marketFilter !== 'all') count++;
+    if (easeFilter !== 'all') count++;
+    if (profitFilter !== 'all') count++;
+    if (countryFilter !== 'all') count++;
+    if (competitionFilter !== 'all') count++;
+    if (sourceFilter !== 'all') count++;
+    if (priorityFilter !== 'all') count++;
+    if (query.trim()) count++;
+    return count;
+  }, [typeFilter, sectorFilter, marketFilter, easeFilter, profitFilter, countryFilter, competitionFilter, sourceFilter, priorityFilter, query]);
 
   useEffect(() => {
     let mounted = true;
@@ -1137,8 +1153,9 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
 
           {/* Main Controls Header & Filters Bar */}
           <Card className="shadow-xs border-border bg-card rounded-2xl">
-            <CardContent className="space-y-3 p-4">
+            <CardContent className="space-y-4 p-4">
               <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+                {/* Search Bar */}
                 <div className="relative flex-1">
                   <Search className="absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                   <Input
@@ -1150,80 +1167,131 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                 </div>
 
                 <div className="flex flex-wrap items-center gap-2">
-                  <Button type="button" variant="default" size="sm" onClick={() => setQuery('ذكاء اصطناعي')} className="h-9 text-xs rounded-xl">
+                  <Button type="button" variant="default" size="sm" onClick={() => setQuery('ذكاء اصطناعي')} className="h-9 text-xs rounded-xl cursor-pointer">
                     <Sparkles className="size-4 me-1.5" />
-                    اسأل
-                  </Button>
-                  <Button type="button" variant="outline" size="sm" onClick={resetFilters} className="h-9 text-xs rounded-xl">
-                    تصفير
+                    اسأل الذكاء الاصطناعي
                   </Button>
 
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button type="button" variant="outline" size="sm" className="h-9 text-xs rounded-xl">
-                        <SlidersHorizontal className="size-3.5 me-1.5" />
-                        فلاتر
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="w-64">
-                      <DropdownMenuLabel>الحالات الظاهرة</DropdownMenuLabel>
-                      <DropdownMenuSeparator />
-                      <DropdownMenuCheckboxItem
-                        checked={advancedStatuses.priority}
-                        onCheckedChange={() =>
-                          setAdvancedStatuses(current => ({ ...current, priority: !current.priority }))
-                        }
-                      >
-                        أولوية
-                      </DropdownMenuCheckboxItem>
-                      <DropdownMenuCheckboxItem
-                        checked={advancedStatuses.validated}
-                        onCheckedChange={() =>
-                          setAdvancedStatuses(current => ({ ...current, validated: !current.validated }))
-                        }
-                      >
-                        قيد التحقق
-                      </DropdownMenuCheckboxItem>
-                      <DropdownMenuCheckboxItem
-                        checked={advancedStatuses.draft}
-                        onCheckedChange={() =>
-                          setAdvancedStatuses(current => ({ ...current, draft: !current.draft }))
-                        }
-                      >
-                        تحتاج مراجعة
-                      </DropdownMenuCheckboxItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
+                  {/* Mobile-Only Filter Button */}
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    onClick={() => setIsMobileFilterOpen(true)}
+                    className="sm:hidden h-9 text-xs rounded-xl border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 gap-1.5 cursor-pointer"
+                  >
+                    <SlidersHorizontal className="size-3.5" />
+                    <span>تصفية الفلاتر</span>
+                    {activeFilterCount > 0 && (
+                      <Badge variant="default" className="size-5 p-0 justify-center text-[10px] rounded-full">
+                        {activeFilterCount}
+                      </Badge>
+                    )}
+                  </Button>
+
+                  {/* Reset Button */}
+                  {activeFilterCount > 0 && (
+                    <Button type="button" variant="ghost" size="sm" onClick={resetFilters} className="h-9 text-xs rounded-xl text-muted-foreground hover:text-destructive">
+                      <X className="size-3.5 me-1" />
+                      تصفير ({activeFilterCount})
+                    </Button>
+                  )}
                 </div>
               </div>
 
-              {isLoading ? (
-                <FiltersSkeleton />
-              ) : (
-                <div className="overflow-x-auto">
-                  <div className="flex min-w-max items-center gap-2 pt-0.5">
+              {/* Quick Filter Pills (Mobile & Desktop) */}
+              <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none border-t border-border/40 pt-3">
+                <span className="text-xs font-bold text-muted-foreground shrink-0 flex items-center gap-1">
+                  <Filter className="size-3" /> التصفية السريعة:
+                </span>
+
+                <button
+                  type="button"
+                  onClick={() => { setTypeFilter('all'); setPriorityFilter('all'); setEaseFilter('all'); setProfitFilter('all'); }}
+                  className={cn(
+                    "px-3 py-1 rounded-full text-xs font-bold transition-all shrink-0 cursor-pointer border",
+                    typeFilter === 'all' && priorityFilter === 'all' && easeFilter === 'all' && profitFilter === 'all'
+                      ? "bg-primary text-primary-foreground border-primary shadow-2xs"
+                      : "bg-muted/50 text-foreground hover:bg-muted border-border/60"
+                  )}
+                >
+                  الكل ({records.length})
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setTypeFilter('problem')}
+                  className={cn(
+                    "px-3 py-1 rounded-full text-xs font-bold transition-all shrink-0 cursor-pointer border",
+                    typeFilter === 'problem'
+                      ? "bg-rose-600 text-white border-rose-600 shadow-2xs"
+                      : "bg-rose-50 text-rose-700 hover:bg-rose-100 border-rose-200/80"
+                  )}
+                >
+                  المشاكل الميدانية ({totalProblems})
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setTypeFilter('opportunity')}
+                  className={cn(
+                    "px-3 py-1 rounded-full text-xs font-bold transition-all shrink-0 cursor-pointer border",
+                    typeFilter === 'opportunity'
+                      ? "bg-indigo-600 text-white border-indigo-600 shadow-2xs"
+                      : "bg-indigo-50 text-indigo-700 hover:bg-indigo-100 border-indigo-200/80"
+                  )}
+                >
+                  الفرص الواعدة ({totalOpportunities})
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setPriorityFilter(priorityFilter === 'high' ? 'all' : 'high')}
+                  className={cn(
+                    "px-3 py-1 rounded-full text-xs font-bold transition-all shrink-0 cursor-pointer border",
+                    priorityFilter === 'high'
+                      ? "bg-emerald-600 text-white border-emerald-600 shadow-2xs"
+                      : "bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border-emerald-200/80"
+                  )}
+                >
+                  🔥 عالية الأولوية (8+)
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setEaseFilter(easeFilter === 'easy' ? 'all' : 'easy')}
+                  className={cn(
+                    "px-3 py-1 rounded-full text-xs font-bold transition-all shrink-0 cursor-pointer border",
+                    easeFilter === 'easy'
+                      ? "bg-sky-600 text-white border-sky-600 shadow-2xs"
+                      : "bg-sky-50 text-sky-700 hover:bg-sky-100 border-sky-200/80"
+                  )}
+                >
+                  ⚡ سهلة التنفيذ
+                </button>
+              </div>
+
+              {/* Desktop Labeled Dropdowns Bar */}
+              {!isLoading && (
+                <div className="hidden sm:flex flex-wrap items-center gap-2 pt-2 border-t border-border/40">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[11px] font-bold text-muted-foreground">الترتيب:</span>
                     <Select value={sortBy} onValueChange={setSortBy}>
-                      <SelectTrigger className="h-8 text-xs w-[140px] rounded-lg"><SelectValue placeholder="ترتيب حسب" /></SelectTrigger>
+                      <SelectTrigger className="h-8 text-xs w-[135px] rounded-lg bg-background border-border"><SelectValue placeholder="ترتيب حسب" /></SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="priority">ترتيب حسب الأولوية</SelectItem>
-                        <SelectItem value="latest">ترتيب حسب آخر تحديث</SelectItem>
-                        <SelectItem value="market">ترتيب حسب حجم السوق</SelectItem>
-                        <SelectItem value="ease">ترتيب حسب سهولة التنفيذ</SelectItem>
-                        <SelectItem value="profit">ترتيب حسب إمكانية الربح</SelectItem>
+                        <SelectItem value="priority">الأولوية القصوى</SelectItem>
+                        <SelectItem value="latest">آخر تحديث</SelectItem>
+                        <SelectItem value="market">حجم السوق</SelectItem>
+                        <SelectItem value="ease">سهولة التنفيذ</SelectItem>
+                        <SelectItem value="profit">إمكانية الربح</SelectItem>
                       </SelectContent>
                     </Select>
+                  </div>
 
-                    <Select value={typeFilter} onValueChange={value => setTypeFilter(value as 'all' | RecordKind)}>
-                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="النوع" /></SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="all">كل الأنواع</SelectItem>
-                        <SelectItem value="problem">مشاكل</SelectItem>
-                        <SelectItem value="opportunity">فرص</SelectItem>
-                      </SelectContent>
-                    </Select>
-
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[11px] font-bold text-muted-foreground">القطاع:</span>
                     <Select value={sectorFilter} onValueChange={setSectorFilter}>
-                      <SelectTrigger className="h-8 text-xs w-[130px] rounded-lg"><SelectValue placeholder="القطاع" /></SelectTrigger>
+                      <SelectTrigger className="h-8 text-xs w-[130px] rounded-lg bg-background border-border"><SelectValue placeholder="القطاع" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">كل القطاعات</SelectItem>
                         {sectors.map(sector => (
@@ -1231,9 +1299,12 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                         ))}
                       </SelectContent>
                     </Select>
+                  </div>
 
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[11px] font-bold text-muted-foreground">السوق:</span>
                     <Select value={marketFilter} onValueChange={value => setMarketFilter(value as 'all' | MarketBand)}>
-                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="حجم السوق" /></SelectTrigger>
+                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg bg-background border-border"><SelectValue placeholder="حجم السوق" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">كل الأحجام</SelectItem>
                         <SelectItem value="massive">سوق ضخم</SelectItem>
@@ -1242,9 +1313,12 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                         <SelectItem value="niche">سوق متخصص</SelectItem>
                       </SelectContent>
                     </Select>
+                  </div>
 
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[11px] font-bold text-muted-foreground">السهولة:</span>
                     <Select value={easeFilter} onValueChange={value => setEaseFilter(value as 'all' | EaseBand)}>
-                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="سهولة الحل" /></SelectTrigger>
+                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg bg-background border-border"><SelectValue placeholder="سهولة الحل" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">كل المستويات</SelectItem>
                         <SelectItem value="easy">سهل التنفيذ</SelectItem>
@@ -1252,9 +1326,12 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                         <SelectItem value="complex">معقد وحساس</SelectItem>
                       </SelectContent>
                     </Select>
+                  </div>
 
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[11px] font-bold text-muted-foreground">الربحية:</span>
                     <Select value={profitFilter} onValueChange={value => setProfitFilter(value as 'all' | ProfitBand)}>
-                      <SelectTrigger className="h-8 text-xs w-[120px] rounded-lg"><SelectValue placeholder="إمكانية الربح" /></SelectTrigger>
+                      <SelectTrigger className="h-8 text-xs w-[115px] rounded-lg bg-background border-border"><SelectValue placeholder="إمكانية الربح" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">كل المستويات</SelectItem>
                         <SelectItem value="high">ربحية عالية</SelectItem>
@@ -1262,9 +1339,12 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                         <SelectItem value="steady">مستقرة تدريجياً</SelectItem>
                       </SelectContent>
                     </Select>
+                  </div>
 
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[11px] font-bold text-muted-foreground">الدولة:</span>
                     <Select value={countryFilter} onValueChange={setCountryFilter}>
-                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="الدولة" /></SelectTrigger>
+                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg bg-background border-border"><SelectValue placeholder="الدولة" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">كل الدول</SelectItem>
                         {countries.map(country => (
@@ -1272,9 +1352,12 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                         ))}
                       </SelectContent>
                     </Select>
+                  </div>
 
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-[11px] font-bold text-muted-foreground">المنافسة:</span>
                     <Select value={competitionFilter} onValueChange={value => setCompetitionFilter(value as 'all' | CompetitionBand)}>
-                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="المنافسة" /></SelectTrigger>
+                      <SelectTrigger className="h-8 text-xs w-[105px] rounded-lg bg-background border-border"><SelectValue placeholder="المنافسة" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">كل المستويات</SelectItem>
                         <SelectItem value="low">منخفضة</SelectItem>
@@ -1282,20 +1365,143 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                         <SelectItem value="high">مرتفعة</SelectItem>
                       </SelectContent>
                     </Select>
-
-                    <Select value={sourceFilter} onValueChange={value => setSourceFilter(value as DataSource)}>
-                      <SelectTrigger className="h-8 text-xs w-[120px] rounded-lg"><SelectValue placeholder="مصدر البيانات" /></SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="all">كل المصادر</SelectItem>
-                        <SelectItem value="base">المصدر الأساسي</SelectItem>
-                        <SelectItem value="dynamic">المصدر الديناميكي</SelectItem>
-                      </SelectContent>
-                    </Select>
                   </div>
                 </div>
               )}
             </CardContent>
           </Card>
+
+          {/* Mobile Filter Sheet Drawer */}
+          <Sheet open={isMobileFilterOpen} onOpenChange={setIsMobileFilterOpen}>
+            <SheetContent side="bottom" dir="rtl" className="h-[85dvh] rounded-t-3xl p-5 flex flex-col justify-between">
+              <SheetHeader className="text-right border-b border-border pb-3">
+                <SheetTitle className="text-lg font-black text-foreground flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <SlidersHorizontal className="size-5 text-primary" />
+                    <span>تصفية فلاتر السوق</span>
+                  </div>
+                  {activeFilterCount > 0 && (
+                    <Badge variant="secondary" className="text-xs font-bold">
+                      {activeFilterCount} فلاتر مطبقة
+                    </Badge>
+                  )}
+                </SheetTitle>
+                <SheetDescription className="text-xs text-muted-foreground">
+                  اختر محددات البحث الدقيقة لاستعراض المشكلات والفرص المناسبة لمشروعك.
+                </SheetDescription>
+              </SheetHeader>
+
+              <div className="flex-1 overflow-y-auto py-4 space-y-4">
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-foreground">الترتيب حسب:</label>
+                  <Select value={sortBy} onValueChange={setSortBy}>
+                    <SelectTrigger className="w-full h-10 text-xs rounded-xl bg-muted/30"><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="priority">الأولوية القصوى</SelectItem>
+                      <SelectItem value="latest">آخر تحديث</SelectItem>
+                      <SelectItem value="market">حجم السوق</SelectItem>
+                      <SelectItem value="ease">سهولة التنفيذ</SelectItem>
+                      <SelectItem value="profit">إمكانية الربح</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-foreground">القطاع الاستثماري:</label>
+                  <Select value={sectorFilter} onValueChange={setSectorFilter}>
+                    <SelectTrigger className="w-full h-10 text-xs rounded-xl bg-muted/30"><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">كل القطاعات</SelectItem>
+                      {sectors.map(sector => (
+                        <SelectItem key={sector} value={sector}>{sector}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-foreground">حجم السوق:</label>
+                    <Select value={marketFilter} onValueChange={value => setMarketFilter(value as 'all' | MarketBand)}>
+                      <SelectTrigger className="w-full h-10 text-xs rounded-xl bg-muted/30"><SelectValue /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل الأحجام</SelectItem>
+                        <SelectItem value="massive">سوق ضخم</SelectItem>
+                        <SelectItem value="large">سوق واسع</SelectItem>
+                        <SelectItem value="medium">سوق متوسط</SelectItem>
+                        <SelectItem value="niche">سوق متخصص</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-foreground">سهولة الحل:</label>
+                    <Select value={easeFilter} onValueChange={value => setEaseFilter(value as 'all' | EaseBand)}>
+                      <SelectTrigger className="w-full h-10 text-xs rounded-xl bg-muted/30"><SelectValue /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل المستويات</SelectItem>
+                        <SelectItem value="easy">سهل التنفيذ</SelectItem>
+                        <SelectItem value="medium">متوسط الصعوبة</SelectItem>
+                        <SelectItem value="complex">معقد وحساس</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-foreground">إمكانية الربح:</label>
+                    <Select value={profitFilter} onValueChange={value => setProfitFilter(value as 'all' | ProfitBand)}>
+                      <SelectTrigger className="w-full h-10 text-xs rounded-xl bg-muted/30"><SelectValue /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل المستويات</SelectItem>
+                        <SelectItem value="high">ربحية عالية</SelectItem>
+                        <SelectItem value="medium">ربحية متوسطة</SelectItem>
+                        <SelectItem value="steady">مستقرة تدريجياً</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-bold text-foreground">الدولة:</label>
+                    <Select value={countryFilter} onValueChange={setCountryFilter}>
+                      <SelectTrigger className="w-full h-10 text-xs rounded-xl bg-muted/30"><SelectValue /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل الدول</SelectItem>
+                        {countries.map(country => (
+                          <SelectItem key={country} value={country}>{country}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-xs font-bold text-foreground">مستوى المنافسة:</label>
+                  <Select value={competitionFilter} onValueChange={value => setCompetitionFilter(value as 'all' | CompetitionBand)}>
+                    <SelectTrigger className="w-full h-10 text-xs rounded-xl bg-muted/30"><SelectValue /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">كل المستويات</SelectItem>
+                      <SelectItem value="low">منخفضة</SelectItem>
+                      <SelectItem value="medium">متوسطة</SelectItem>
+                      <SelectItem value="high">مرتفعة</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+
+              <div className="border-t border-border pt-3 flex items-center gap-2">
+                <Button onClick={() => setIsMobileFilterOpen(false)} className="flex-1 h-11 font-bold text-xs bg-primary text-primary-foreground rounded-xl">
+                  تطبيق الفلاتر ({filteredRecords.length} نتيجة)
+                </Button>
+                {activeFilterCount > 0 && (
+                  <Button variant="outline" onClick={() => { resetFilters(); setIsMobileFilterOpen(false); }} className="h-11 text-xs rounded-xl">
+                    تصفير الكل
+                  </Button>
+                )}
+              </div>
+            </SheetContent>
+          </Sheet>
 
           {/* Active Cell Filters Bar */}
           {(typeFilter !== 'all' || sectorFilter !== 'all' || marketFilter !== 'all' || easeFilter !== 'all' || profitFilter !== 'all' || priorityFilter !== 'all' || countryFilter !== 'all' || competitionFilter !== 'all' || sourceFilter !== 'all' || query) && (

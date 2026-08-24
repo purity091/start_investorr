@@ -504,13 +504,13 @@ function DiscoveryTanStackTable({
     pageSize: 10,
   });
 
-  const [savedSectors, setSavedSectors] = useState<Record<string, boolean>>(() => {
+  const [savedSectors, setSavedSectors] = useState<Record<string, boolean>>({});
+
+  React.useEffect(() => {
     try {
-      return JSON.parse(localStorage.getItem('saved_discovery_sectors') || '{}');
-    } catch {
-      return {};
-    }
-  });
+      setSavedSectors(JSON.parse(localStorage.getItem('saved_discovery_sectors') || '{}'));
+    } catch {}
+  }, []);
 
   const pagination = useMemo(
     () => ({ pageIndex, pageSize }),

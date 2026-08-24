@@ -6,6 +6,7 @@ import {
   useReactTable,
   getPaginationRowModel,
   getSortedRowModel,
+  PaginationState,
   SortingState,
   getFilteredRowModel,
   ColumnFiltersState,
@@ -209,13 +210,19 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [globalFilter, setGlobalFilter] = useState('');
   const [rowSelection, setRowSelection] = useState({});
-  const [savedProjects, setSavedProjects] = useState<Record<string, boolean>>(() => {
-    try {
-      return JSON.parse(localStorage.getItem('saved_proven_projects') || '{}');
-    } catch {
-      return {};
-    }
+  const [pagination, setPagination] = useState<PaginationState>({
+    pageIndex: 0,
+    pageSize: 50,
   });
+  const [isHydrated, setIsHydrated] = useState(false);
+  const [savedProjects, setSavedProjects] = useState<Record<string, boolean>>({});
+
+  React.useEffect(() => {
+    setIsHydrated(true);
+    try {
+      setSavedProjects(JSON.parse(localStorage.getItem('saved_proven_projects') || '{}'));
+    } catch {}
+  }, []);
 
   // Ensure table only contains successful companies (filter out failed ones) and shows newest added first
   const provenData = useMemo(() => {
@@ -455,6 +462,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
     getFilteredRowModel: getFilteredRowModel(),
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
+    onPaginationChange: setPagination,
     globalFilterFn: (row, columnId, filterValue) => {
       if (!filterValue) return true;
       const searchTerm = filterValue.toLowerCase();
@@ -470,16 +478,12 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         location.includes(searchTerm)
       );
     },
-    initialState: {
-      pagination: {
-        pageSize: 50,
-      },
-    },
     state: {
       sorting,
       columnFilters,
       globalFilter,
       rowSelection,
+      pagination,
     },
     onGlobalFilterChange: setGlobalFilter,
   });
@@ -723,7 +727,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
               variant="outline"
               size="sm"
               onClick={() => table.previousPage()}
-              disabled={!table.getCanPreviousPage()}
+              disabled={isHydrated && !table.getCanPreviousPage()}
               className="h-8 w-8 sm:h-9 sm:w-9 p-0 border-slate-200 rounded-lg shadow-2xs"
             >
               <ChevronRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
@@ -735,7 +739,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
               variant="outline"
               size="sm"
               onClick={() => table.nextPage()}
-              disabled={!table.getCanNextPage()}
+              disabled={isHydrated && !table.getCanNextPage()}
               className="h-8 w-8 sm:h-9 sm:w-9 p-0 border-slate-200 rounded-lg shadow-2xs"
             >
               <ChevronLeft className="h-3.5 w-3.5 sm:h-4 sm:w-4" />

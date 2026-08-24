@@ -21,61 +21,102 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
       {/* Footer */}
       <footer className="border-t border-border/60 bg-muted/30 text-muted-foreground py-10 md:py-12 relative overflow-hidden mt-auto">
         <div className="container mx-auto px-4 relative z-10">
-          
-          {/* Upper Footer Grid: Product, Sectors, Resources */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-8 mb-10">
-            
+          {/* Upper Footer Grid for Public Pages */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-8 mb-10 pb-8 border-b border-border/60">
             {/* Brand Intro Column */}
             <div className="lg:col-span-2 space-y-3">
               <div className="flex items-center gap-2 mb-1">
                 <div className="flex items-center justify-center size-9 rounded-xl bg-primary text-primary-foreground font-black text-base shadow-xs">
                   خ
                 </div>
-                <span className="text-xl font-black tracking-tight text-foreground">خطة<span className="text-primary">.</span></span>
+                <span className="text-xl font-black tracking-tight text-foreground">
+                  خطة<span className="text-primary">.</span>
+                </span>
               </div>
               <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed max-w-xs">
-                منظومة التخطيط والتحليل الاستثماري الذكي. نقدم أدوات تعتمد على الذكاء الاصطناعي لتوليد نماذج العمل ودراسة القطاعات بالكامل.
+                المنصة العربية الأولى لبناء وتوثيق نماذج العمل التجاري ودراسة قطاعات السوق وفق المنهجيات الريادية العالمية.
               </p>
             </div>
 
-            {/* Column 1: Product & Tools */}
+            {/* Column 1: المنتج والخيارات */}
             <div>
-              <h4 className="text-foreground font-bold text-xs sm:text-sm mb-3">المنتج والأدوات</h4>
+              <h4 className="text-foreground font-bold text-xs sm:text-sm mb-3">المنتج والخيارات</h4>
               <ul className="space-y-2 text-xs sm:text-sm font-medium">
-                <li><Link href="/features" className="text-muted-foreground hover:text-primary transition-colors">المميزات الرئيسية</Link></li>
-                <li><Link href="/#features" className="text-muted-foreground hover:text-primary transition-colors">مولد نموذج العمل (BMC)</Link></li>
-                <li><Link href="/#calculator" className="text-muted-foreground hover:text-primary transition-colors">حاسبة الإيرادات SaaS</Link></li>
-                <li><Link href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">الأسعار والاشتراكات</Link></li>
+                <li>
+                  <Link href="/market-discovery" className="text-muted-foreground hover:text-primary transition-colors">
+                    استكشاف قطاعات السوق
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/saas-ideas" className="text-muted-foreground hover:text-primary transition-colors">
+                    أفكار مشاريع SaaS
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/micro-saas-ideas" className="text-muted-foreground hover:text-primary transition-colors">
+                    أفكار Micro-SaaS
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/proven-projects" className="text-muted-foreground hover:text-primary transition-colors">
+                    أفكار شركات ناجحة
+                  </Link>
+                </li>
               </ul>
             </div>
 
-            {/* Column 2: Sectors & Databases */}
+            {/* Column 2: المصادر والأكاديمية */}
             <div>
-              <h4 className="text-foreground font-bold text-xs sm:text-sm mb-3">القطاعات والدراسات</h4>
+              <h4 className="text-foreground font-bold text-xs sm:text-sm mb-3">المصادر والأكاديمية</h4>
               <ul className="space-y-2 text-xs sm:text-sm font-medium">
-                <li><Link href="/market-discovery" className="text-muted-foreground hover:text-primary transition-colors">رادار استكشاف القطاعات</Link></li>
-                <li><Link href="/saas-ideas" className="text-muted-foreground hover:text-primary transition-colors">أفكار مشاريع SaaS</Link></li>
-                <li><Link href="/micro-saas-ideas" className="text-muted-foreground hover:text-primary transition-colors">أفكار Micro-SaaS</Link></li>
-                <li><Link href="/proven-projects" className="text-muted-foreground hover:text-primary transition-colors">دراسات حالة الشركات</Link></li>
+                <li>
+                  <Link href="/platform-academy" className="text-muted-foreground hover:text-primary transition-colors">
+                    أكاديمية خطة والمفاهيم
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/failed-projects" className="text-muted-foreground hover:text-primary transition-colors">
+                    تحليل الشركات التي فشلت
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#faq" className="text-muted-foreground hover:text-primary transition-colors">
+                    الأسئلة الشائعة
+                  </Link>
+                </li>
               </ul>
             </div>
 
-            {/* Column 3: Platform Resources */}
+            {/* Column 3: الشركة والخصوصية */}
             <div>
-              <h4 className="text-foreground font-bold text-xs sm:text-sm mb-3">المصادر والمنصة</h4>
+              <h4 className="text-foreground font-bold text-xs sm:text-sm mb-3">الشركة والخصوصية</h4>
               <ul className="space-y-2 text-xs sm:text-sm font-medium">
-                <li><Link href="/platform-academy" className="text-muted-foreground hover:text-primary transition-colors">أكاديمية خطة</Link></li>
-                <li><Link href="/changelog" className="text-muted-foreground hover:text-primary transition-colors">سجل التحديثات</Link></li>
-                <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">عن منصة خطة</Link></li>
-                <li><Link href="/contact-us" className="text-muted-foreground hover:text-primary transition-colors">الدعم والتواصل</Link></li>
+                <li>
+                  <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                    من نحن
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact-us" className="text-muted-foreground hover:text-primary transition-colors">
+                    اتصل بنا
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                    سياسة الخصوصية
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                    شروط الاستخدام
+                  </Link>
+                </li>
               </ul>
             </div>
-            
           </div>
 
           {/* Bottom Bar Footer Section: Single Line Right & Left */}
-          <div className="pt-6 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4 w-full text-xs font-medium text-muted-foreground" dir="rtl">
-            
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full text-xs font-medium text-muted-foreground" dir="rtl">
             {/* Right: Copyright */}
             <p dir="rtl" className="flex items-center gap-1.5 shrink-0 text-center sm:text-right">
               <span>© {new Date().getFullYear()}</span>
@@ -93,9 +134,7 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
               <span className="text-border/80">•</span>
               <Link href="/fulfillment-policy" className="hover:text-primary transition-colors">سياسة التسليم وتوفير الخدمة</Link>
             </div>
-
           </div>
-
         </div>
       </footer>
 

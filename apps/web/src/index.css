@@ -95,6 +95,7 @@
 * {
   font-family: var(--font-sans) !important;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
