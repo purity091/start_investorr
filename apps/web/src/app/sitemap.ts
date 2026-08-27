@@ -4,11 +4,15 @@ import { siteConfig } from '@/lib/seo';
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     { path: '/', priority: 1, changeFrequency: 'weekly' as const },
-    { path: '/features', priority: 0.92, changeFrequency: 'monthly' as const },
-    { path: '/market-discovery', priority: 0.9, changeFrequency: 'weekly' as const },
-    { path: '/proven-projects', priority: 0.9, changeFrequency: 'daily' as const },
+    { path: '/arab-maps', priority: 0.95, changeFrequency: 'weekly' as const },
+    { path: '/startup-financing', priority: 0.95, changeFrequency: 'weekly' as const },
+    { path: '/llms.txt', priority: 0.95, changeFrequency: 'daily' as const },
+    { path: '/llms-full.txt', priority: 0.90, changeFrequency: 'daily' as const },
+    { path: '/market-discovery', priority: 0.90, changeFrequency: 'weekly' as const },
+    { path: '/proven-projects', priority: 0.90, changeFrequency: 'daily' as const },
     { path: '/saas-ideas', priority: 0.88, changeFrequency: 'weekly' as const },
     { path: '/micro-saas-ideas', priority: 0.86, changeFrequency: 'weekly' as const },
+    { path: '/features', priority: 0.92, changeFrequency: 'monthly' as const },
     { path: '/failed-projects', priority: 0.82, changeFrequency: 'weekly' as const },
     { path: '/platform-academy', priority: 0.84, changeFrequency: 'weekly' as const },
     { path: '/pricing', priority: 0.78, changeFrequency: 'monthly' as const },

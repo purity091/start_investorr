@@ -2,7 +2,7 @@ import "../index.css";
 import { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Providers } from "./providers";
-import { createMetadata, organizationJsonLd, siteConfig, websiteJsonLd } from "@/lib/seo";
+import { createMetadata, organizationJsonLd, siteConfig, websiteJsonLd, softwareApplicationJsonLd } from "@/lib/seo";
 
 export const viewport: Viewport = {
   themeColor: "#4f46e5",
@@ -58,7 +58,7 @@ export default function RootLayout({
           type="application/ld+json"
           suppressHydrationWarning
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([organizationJsonLd, websiteJsonLd]).replace(/</g, "\\u003c"),
+            __html: JSON.stringify([organizationJsonLd, websiteJsonLd, softwareApplicationJsonLd]).replace(/</g, "\\u003c"),
           }}
         />
         <Providers>{children}</Providers>

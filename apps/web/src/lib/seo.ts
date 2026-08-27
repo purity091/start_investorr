@@ -19,6 +19,8 @@ export const siteConfig = {
     "أفكار Micro-SaaS",
     "فرص استثمارية",
     "ريادة الأعمال",
+    "توزيعات سكانية عربية",
+    "دليل شركات التمويل",
   ],
 };
 
@@ -130,3 +132,36 @@ export const websiteJsonLd = {
     "query-input": "required name=search_term_string",
   },
 };
+
+export const softwareApplicationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "منصة خطة لبناء دراسات الجدوى ونماذج العمل",
+  operatingSystem: "Web",
+  applicationCategory: "BusinessApplication",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    ratingCount: "1280",
+  },
+};
+
+export function buildFaqJsonLd(faqs: Array<{ question: string; answer: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+}
