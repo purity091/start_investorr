@@ -13,6 +13,7 @@ import {
   CreditCard,
   Crown,
   Globe,
+  Globe2,
   Heart,
   Home,
   Layers,
@@ -29,6 +30,7 @@ import {
   TrendingDown,
   CloudCog,
   Settings2,
+  Building2,
 } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import {
@@ -209,6 +211,8 @@ const PROJECT_ATTACHMENTS: NavItemConfig[] = [
     tooltipText: 'مقيم ومستشار جاهزية اليونيكورن للمشاريع الواعدة — قريباً في المنصة لتوفير المقارنات المتقدمة والتنبؤات الاستثمارية.',
   },
   { tab: 'brand-identity', label: 'الهوية البصرية', icon: Palette, id: 'tour-brand', iconColor: 'text-pink-500', tooltipText: 'استوديو تصميم الهوية التجارية وتنسيق شعار وألوان تقارير الدراسة' },
+  { tab: 'arab-maps', label: 'التوزيعات السكانية والاقتصادية', icon: Globe2, badge: 'جديد', iconColor: 'text-teal-600', tooltipText: 'مرصد تحليلي تفاعلي للدول العربية الـ 22 يغطي التوزيع السكاني والناتج المحلي ودخل الفرد' },
+  { tab: 'startup-financing', label: 'شركات تمويل الناشئة', icon: Building2, badge: 'جديد', iconColor: 'text-emerald-500', tooltipText: 'دليل ورادار شركات رأس المال الجريء (VC)، المسرعات والمستثمرين الملائكيين في الشرق الأوسط' },
 ];
 
 const ACCOUNT_ITEMS: NavItemConfig[] = [
@@ -412,10 +416,10 @@ function SidebarLink({
         isActive={isActive}
         tooltip={item.tooltipText || item.label}
         className={cn(
-          "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl cursor-pointer group-data-[collapsible=icon]:!h-9 group-data-[collapsible=icon]:!w-9 group-data-[collapsible=icon]:!min-h-0 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:!justify-center",
+          "h-8 py-1 min-h-8 justify-start gap-2 px-2.5 text-right text-xs leading-normal transition-all rounded-lg cursor-pointer group-data-[collapsible=icon]:!h-8 group-data-[collapsible=icon]:!w-8 group-data-[collapsible=icon]:!min-h-0 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:!justify-center",
           isActive
-            ? "!bg-slate-900 !text-white font-bold shadow-sm hover:!bg-slate-900 hover:!text-white"
-            : "text-slate-700 font-semibold hover:bg-slate-100 hover:text-slate-900"
+            ? "!bg-slate-900 !text-white font-bold shadow-2xs hover:!bg-slate-900 hover:!text-white"
+            : "text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900"
         )}
       >
         <a
@@ -425,19 +429,19 @@ function SidebarLink({
             goToTab(event, item.tab, setActiveTab);
             if (isMobile) setOpenMobile(false);
           }}
-          className="flex w-full items-center gap-2.5 rounded-xl transition-colors group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:w-auto"
+          className="flex w-full items-center gap-2 rounded-lg transition-colors group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:w-auto"
         >
-          <Icon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white" : item.iconColor || "text-slate-600")} />
-          <span className={cn("min-w-0 flex-1 group-data-[collapsible=icon]:hidden", isActive ? "!text-white font-bold" : "font-semibold")}>
+          <Icon className={cn("size-4 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white" : item.iconColor || "text-slate-500")} />
+          <span className={cn("min-w-0 flex-1 truncate group-data-[collapsible=icon]:hidden", isActive ? "!text-white font-bold" : "font-semibold")}>
             {item.label}
           </span>
           {item.badge !== undefined && item.badge !== null && item.badge !== '' ? (
             <span
               className={cn(
-                "ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md px-1.5 text-[11px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
+                "ms-auto flex h-4.5 min-w-4.5 shrink-0 items-center justify-center rounded-md px-1.5 text-[10px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
                 isActive
                   ? "!bg-white/20 !text-white font-bold"
-                  : item.badgeClassName || "bg-sidebar-accent text-sidebar-foreground"
+                  : item.badgeClassName || "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"
               )}
             >
               {item.badge}
@@ -467,18 +471,18 @@ function SidebarSection({
 
   return (
     <Collapsible defaultOpen={true} className="group/collapsible">
-      <SidebarGroup>
-        <SidebarGroupLabel asChild className="bg-transparent font-bold text-[11px] uppercase tracking-wider text-slate-400 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground cursor-pointer transition-colors w-full flex items-center justify-between py-1">
+      <SidebarGroup className="py-0.5 px-2">
+        <SidebarGroupLabel asChild className="bg-transparent font-bold text-[10px] uppercase tracking-wider text-slate-400 hover:text-slate-600 cursor-pointer transition-colors w-full flex items-center justify-between h-6 py-0 px-2 my-0.5">
           <CollapsibleTrigger>
             <span className={cn("flex items-center gap-1.5 transition-colors", isAnyActive && "text-slate-900 font-bold")}>
               {title}
             </span>
-            <ChevronDown className="ms-auto size-3.5 transition-transform group-data-[state=open]/collapsible:rotate-180" />
+            <ChevronDown className="ms-auto size-3 transition-transform group-data-[state=open]/collapsible:rotate-180" />
           </CollapsibleTrigger>
         </SidebarGroupLabel>
         <CollapsibleContent>
           <SidebarGroupContent>
-            <SidebarMenu>
+            <SidebarMenu className="gap-0.5">
               {items.map((item) => {
                 const SubIcon = item.icon;
                 const isActive = isItemActive(item, activeTab);
@@ -492,10 +496,10 @@ function SidebarSection({
                       disabled={isDisabled}
                       tooltip={item.tooltipText || item.label}
                       className={cn(
-                        "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl cursor-pointer group-data-[collapsible=icon]:!h-9 group-data-[collapsible=icon]:!w-9 group-data-[collapsible=icon]:!min-h-0 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:!justify-center",
+                        "h-8 py-1 min-h-8 justify-start gap-2 px-2.5 text-right text-xs leading-normal transition-all rounded-lg cursor-pointer group-data-[collapsible=icon]:!h-8 group-data-[collapsible=icon]:!w-8 group-data-[collapsible=icon]:!min-h-0 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:!justify-center",
                         isActive
-                          ? "!bg-slate-900 !text-white font-bold shadow-sm hover:!bg-slate-900 hover:!text-white"
-                          : "text-slate-700 font-semibold hover:bg-slate-100 hover:text-slate-900",
+                          ? "!bg-slate-900 !text-white font-bold shadow-2xs hover:!bg-slate-900 hover:!text-white"
+                          : "text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900",
                         isDisabled && "hover:bg-amber-500/10 cursor-not-allowed"
                       )}
                     >
@@ -511,23 +515,23 @@ function SidebarSection({
                           if (isMobile) setOpenMobile(false);
                         }}
                         className={cn(
-                          "flex w-full items-center gap-2.5 rounded-xl transition-colors group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:w-auto",
+                          "flex w-full items-center gap-2 rounded-lg transition-colors group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:w-auto",
                           isDisabled && "opacity-75 cursor-not-allowed"
                         )}
                       >
-                        <SubIcon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white" : item.iconColor || "text-slate-600")} />
+                        <SubIcon className={cn("size-4 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white" : item.iconColor || "text-slate-500")} />
 
-                        <span className={cn("min-w-0 flex-1 group-data-[collapsible=icon]:hidden", isActive ? "font-bold !text-white text-sm" : "font-semibold text-sm text-slate-700")}>
+                        <span className={cn("min-w-0 flex-1 truncate group-data-[collapsible=icon]:hidden", isActive ? "font-bold !text-white text-xs" : "font-semibold text-xs text-slate-700")}>
                           {item.label}
                         </span>
 
                         {item.badge !== undefined && item.badge !== null && item.badge !== '' ? (
                           <span
                             className={cn(
-                              "ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md px-1.5 text-[11px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
+                              "ms-auto flex h-4.5 min-w-4.5 shrink-0 items-center justify-center rounded-md px-1.5 text-[10px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
                               isActive
                                 ? "!bg-white/20 !text-white font-bold"
-                                : item.badgeClassName || "bg-sidebar-accent text-sidebar-foreground"
+                                : item.badgeClassName || "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300"
                             )}
                           >
                             {item.badge}
@@ -556,10 +560,10 @@ function AccountSection({
   const { isMobile, setOpenMobile } = useSidebar();
 
   return (
-    <SidebarGroup>
-      <SidebarGroupLabel className="bg-transparent font-semibold text-sidebar-foreground/70">إدارة المستخدم</SidebarGroupLabel>
+    <SidebarGroup className="py-0.5 px-2">
+      <SidebarGroupLabel className="bg-transparent font-bold text-[10px] uppercase tracking-wider text-slate-400 h-6 py-0 px-2 my-0.5">إدارة المستخدم</SidebarGroupLabel>
       <SidebarGroupContent>
-        <SidebarMenu>
+        <SidebarMenu className="gap-0.5">
           {ACCOUNT_ITEMS.map((item) => {
             const Icon = item.icon;
             const isActive = isItemActive(item, activeTab);
@@ -570,7 +574,12 @@ function AccountSection({
                   asChild 
                   isActive={isActive} 
                   tooltip={item.label}
-                  className="h-auto py-1.5 min-h-8 justify-start gap-2 px-2 text-right text-[13px] leading-relaxed"
+                  className={cn(
+                    "h-8 py-1 min-h-8 justify-start gap-2 px-2.5 text-right text-xs leading-normal transition-all rounded-lg cursor-pointer group-data-[collapsible=icon]:!h-8 group-data-[collapsible=icon]:!w-8 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:!justify-center",
+                    isActive
+                      ? "!bg-slate-900 !text-white font-bold shadow-2xs hover:!bg-slate-900 hover:!text-white"
+                      : "text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900"
+                  )}
                 >
                   <a
                     id={item.id}
@@ -579,9 +588,10 @@ function AccountSection({
                       goToTab(event, item.tab, setActiveTab);
                       if (isMobile) setOpenMobile(false);
                     }}
+                    className="flex w-full items-center gap-2 rounded-lg transition-colors"
                   >
-                    <Icon />
-                    <span className="min-w-0 flex-1">{item.label}</span>
+                    <Icon className={cn("size-4 shrink-0", isActive ? "!text-white" : item.iconColor || "text-slate-500")} />
+                    <span className="min-w-0 flex-1 truncate font-semibold text-xs">{item.label}</span>
                   </a>
                 </SidebarMenuButton>
               </SidebarMenuItem>
@@ -676,13 +686,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
 
   return (
     <UiSidebar side="right" dir="rtl" variant="sidebar" collapsible="icon">
-      <SidebarHeader>
+      <SidebarHeader className="p-2 pb-1">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
               size="lg"
-              className="h-12 justify-start gap-2 px-2 text-right cursor-pointer"
+              className="h-10 justify-start gap-2 px-2 text-right cursor-pointer"
             >
               <a
                 href={getTabPath(isAdminMode ? 'admin-dashboard' : 'home')}
@@ -692,15 +702,15 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
                 }}
                 title="الرئيسية"
               >
-                <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground font-black">
-                  {isAdminMode ? <Shield className="size-4" /> : <Zap className="size-4" />}
+                <span className="flex size-7 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground font-black">
+                  {isAdminMode ? <Shield className="size-3.5" /> : <Zap className="size-3.5" />}
                 </span>
                 <span className="grid min-w-0 flex-1 text-right leading-tight">
-                  <span className="truncate text-sm font-extrabold text-sidebar-foreground">
+                  <span className="truncate text-xs font-extrabold text-sidebar-foreground">
                     {isAdminMode ? 'لوحة الإدارة' : 'خطة.'}
                   </span>
-                  <span className="truncate text-xs text-muted-foreground">
-                    {isAdminMode ? 'إدارة المنصة' : 'الجيل الجديد من دراسات الجدوى'}
+                  <span className="truncate text-[10px] text-muted-foreground">
+                    {isAdminMode ? 'إدارة المنصة' : 'دراسات الجدوى'}
                   </span>
                 </span>
               </a>
@@ -730,27 +740,27 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
 
       <SidebarSeparator />
 
-      <SidebarFooter>
+      <SidebarFooter className="p-2 pt-1">
         <SidebarMenu>
           <SidebarMenuItem className="hidden">
             <SidebarMenuButton
-              className="h-9 justify-start gap-2 px-2 text-right"
+              className="h-8 justify-start gap-2 px-2 text-right"
               onClick={() => setActiveTab?.(isAdminMode ? 'home' : 'admin-dashboard')}
             >
               {isAdminMode ? <LogOut /> : <Shield />}
               <span>{isAdminMode ? 'حساب المستخدم' : 'لوحة الأدمن'}</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
-          <SidebarMenuItem className="mt-2">
+          <SidebarMenuItem>
             <SidebarMenuButton 
-              className="h-10 justify-start gap-3 px-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 border border-transparent hover:border-border/50 rounded-lg cursor-pointer transition-all"
+              className="h-8.5 justify-start gap-2.5 px-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 border-0 rounded-lg cursor-pointer transition-all"
               onClick={toggleSidebar}
               title={state === "collapsed" ? "توسيع القائمة" : "طي القائمة"}
             >
-              <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-muted shadow-sm border border-border/50 text-foreground">
-                {state === "collapsed" ? <ChevronLeft className="size-3.5" /> : <ChevronRight className="size-3.5" />}
+              <div className="flex size-5 shrink-0 items-center justify-center rounded-md bg-muted shadow-2xs text-foreground">
+                {state === "collapsed" ? <ChevronLeft className="size-3" /> : <ChevronRight className="size-3" />}
               </div>
-              <span className="font-medium text-sm group-data-[collapsible=icon]:hidden">
+              <span className="font-semibold text-xs group-data-[collapsible=icon]:hidden">
                 طي القائمة الجانبية
               </span>
             </SidebarMenuButton>

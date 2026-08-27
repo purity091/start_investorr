@@ -107,6 +107,8 @@ const SavedMarketItems = lazyNamedPage(() => import('../features/discovery/Saved
 const First90DaysView = lazyNamedPage(() => import('./First90DaysView'), 'First90DaysView');
 const PlatformAcademyView = lazyNamedPage(() => import('./PlatformAcademyView'), 'PlatformAcademyView');
 const RevenueCalculatorView = lazyNamedPage(() => import('./RevenueCalculatorView'), 'RevenueCalculatorView');
+const ArabWorldMapsView = lazyNamedPage(() => import('./ArabWorldMapsView'), 'ArabWorldMapsView');
+const StartupFinancingView = lazyNamedPage(() => import('./StartupFinancingView'), 'StartupFinancingView');
 
 const AdvertisingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/AdvertisingDashboard'));
 const MarketingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/MarketingDashboard'));
@@ -337,7 +339,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
     }
   }, [activeTab]);
 
-  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'first-90-days', 'platform-academy', 'financial-calculator', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support', 'proven-projects', 'failed-projects', 'saas-ideas', 'micro-saas-ideas', 'project-ideas', 'project-edit'].includes(activeTab) || activeTab.endsWith('-dashboard') || activeTab.startsWith('new-plan')
+  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'first-90-days', 'platform-academy', 'financial-calculator', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support', 'proven-projects', 'failed-projects', 'saas-ideas', 'micro-saas-ideas', 'project-ideas', 'project-edit', 'arab-maps'].includes(activeTab) || activeTab.endsWith('-dashboard') || activeTab.startsWith('new-plan')
     ? 'w-full flex-1 flex flex-col' 
     : 'app-page-shell-wide flex-1 flex flex-col py-4 sm:py-6 pb-8';
 
@@ -870,6 +872,8 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
       case 'digital-health': return <DigitalHealthDashboard />;
       case 'mental-health-services': return <MentalHealthServicesDashboard />;
       case 'ai-platforms': return <AiPlatformsDashboard />;
+      case 'arab-maps': return <ArabWorldMapsView />;
+      case 'startup-financing': return <StartupFinancingView />;
       case 'problem-engine': return <ProblemOpportunityEngine setActiveTab={setActiveTab} />;
       case 'cloud-services-internet': return <CloudServicesDashboard />;
       case 'streaming-platforms': return <StreamingPlatformsDashboard />;

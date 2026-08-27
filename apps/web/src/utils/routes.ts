@@ -85,6 +85,12 @@ const STATIC_TABS = new Set([
   'geopolitical-risk-global-trade-analysis-dashboard',
   'modular-prefab-construction-dashboard',
   'seeds-crop-protection-dashboard',
+  'arab-maps',
+  'startup-financing',
+  'financial-calculator',
+  'first-90-days',
+  'new-plan-lean',
+  'project-ideas',
 ]);
 
 const hasTabShape = (segment: string) =>
