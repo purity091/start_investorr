@@ -23,6 +23,30 @@ interface ReleaseItem {
 
 const RELEASES: ReleaseItem[] = [
   {
+    id: 'v2.7.0',
+    version: 'v2.7.0',
+    date: '27 أغسطس 2026',
+    title: 'مرصد التوزيعات السكانية والاقتصادية وتحديث دليل التمويل الاستثماري',
+    summary: 'إطلاق المرصد الديموغرافي والاقتصادي التفاعلي الشامل لدول الوطن العربي، وتحديث بيانات وروابط دليل جهات التمويل والاستثمار الجريء.',
+    category: 'feature',
+    features: [
+      'المرصد الديموغرافي التفاعلي: إطلاق لوحة "التوزيعات السكانية والاقتصادية بالوطن العربي" بخريطة تفاعلية ذكية تركز تلقائياً على 22 دولة عربية.',
+      'التلميح التفاعلي العائم (Dynamic Floating Tooltip): إمكانية تتبع مؤشر الفأرة لحظياً لعرض إحصائيات السكان، الناتج المحلي الإجمالي (GDP)، ومتوسط دخل الفرد بأسلوب بصري فاخر.',
+      'واجهة الجوال المخصصة (Touch-Optimized Layout): شريط بيانات سفلي تفاعلي يظهر عند النقر على أي دولة عبر الهواتف الذكية مع تصنيفات مرنة للأقاليم.',
+      'تحديث دليل التمويل الاستثماري: مراجعة ومزامنة وتطوير المواقع الإلكترونية الرسمية لأكثر من 198 جهة تمويلية وصندوق استثمار جريء في المنطقة.',
+      'محرك البحث والتصنيف الإقليمي: إمكانية تصفية وبحث ترتيب الدول العربية حسب السكان، الناتج المحلي، دخل الفرد، والمساحة الجغرافية.'
+    ],
+    fixes: [
+      'تعديل تموضع التلمح التفاعلي ليكون أعلى مؤشر الفأرة مباشرة مع دعم الانقلاب التلقائي عند الحواف العلوية لعدم حجب الرؤية.',
+      'إعادة تصميم جداول دليل التمويل وحذف الوسوم غير الضرورية لضمان مظهر SaaS خالي من الحواف الزائدة (Border-0 Aesthetic).'
+    ],
+    improvements: [
+      'ترشيق مقاسات أزرار التحكم والتبويبات على الأجهزة الذكية والمتوسطة لتقليل الازدحام وتوفير مساحة تصفح أوسع.',
+      'اعتماد التنسيق الرقمي القياسي العالمي للأرقام والمبالغ المالية مع الحفاظ الكامل على الهوية العربية والاتجاه RTL.'
+    ],
+    tags: ['التوزيعات السكانية', 'خرائط تفاعلية', 'دليل التمويل', 'الوطن العربي', 'تجربة الجوال', 'بيانات اقتصادية']
+  },
+  {
     id: 'v2.6.0',
     version: 'v2.6.0',
     date: '13 أغسطس 2026',
@@ -128,7 +152,7 @@ export const Changelog: React.FC = () => {
                 <Radio className="size-3 text-emerald-400 animate-pulse" />
                 <span>سجل التحديثات والإصدارات</span>
               </Badge>
-              <span className="text-xs text-muted-foreground font-mono">v2.5.0</span>
+              <span className="text-xs text-muted-foreground font-mono">v2.7.0</span>
             </div>
             <h1 className="text-lg font-bold text-foreground">تطور المنصة والميزات الجديدة</h1>
             <p className="text-xs text-muted-foreground font-normal">
@@ -252,9 +276,9 @@ export const Changelog: React.FC = () => {
             <div className="space-y-1">
               {[
                 { id: 'all', label: 'الكل', count: RELEASES.length, icon: Layers },
-                { id: 'feature', label: 'مميزات جديدة', count: 2, icon: Sparkles },
-                { id: 'fix', label: 'إصلاحات', count: 1, icon: Wrench },
-                { id: 'improvement', label: 'تحسينات', count: 1, icon: Zap },
+                { id: 'feature', label: 'مميزات جديدة', count: RELEASES.filter(r => r.category === 'feature').length, icon: Sparkles },
+                { id: 'fix', label: 'إصلاحات', count: RELEASES.filter(r => r.category === 'fix').length, icon: Wrench },
+                { id: 'improvement', label: 'تحسينات', count: RELEASES.filter(r => r.category === 'improvement').length, icon: Zap },
               ].map((cat) => {
                 const Icon = cat.icon;
                 const active = selectedCategory === cat.id;

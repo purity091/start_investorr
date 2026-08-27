@@ -67,14 +67,63 @@ interface ReleaseUpdate {
 
 const releases: ReleaseUpdate[] = [
   {
+    id: 'v2.7.0',
+    version: 'v2.7.0',
+    date: '27 أغسطس 2026',
+    isLatest: true,
+    title: 'مرصد التوزيعات السكانية والاقتصادية وتحديث دليل التمويل الاستثماري',
+    summary: 'إطلاق المرصد الديموغرافي والاقتصادي التفاعلي الشامل لدول الوطن العربي، وتحديث بيانات وروابط دليل جهات التمويل والاستثمار الجريء.',
+    category: 'feature',
+    badgeText: 'الإصدار الحالي v2.7.0',
+    highlights: [
+      {
+        title: 'المميزات الرئيسية والجديدة',
+        icon: Sparkles,
+        color: 'text-amber-500',
+        bgColor: 'bg-amber-500/10',
+        borderColor: 'border-amber-500/20',
+        items: [
+          'المرصد الديموغرافي التفاعلي: إطلاق لوحة "التوزيعات السكانية والاقتصادية بالوطن العربي" بخريطة تفاعلية ذكية تركز تلقائياً على 22 دولة عربية.',
+          'التلميح التفاعلي العائم (Dynamic Floating Tooltip): إمكانية تتبع مؤشر الفأرة لحظياً لعرض إحصائيات السكان، الناتج المحلي الإجمالي (GDP)، ومتوسط دخل الفرد بأسلوب بصري فاخر.',
+          'واجهة الجوال المخصصة (Touch-Optimized Layout): شريط بيانات سفلي تفاعلي يظهر عند النقر على أي دولة عبر الهواتف الذكية مع تصنيفات مرنة للأقاليم.',
+          'تحديث دليل التمويل الاستثماري: مراجعة ومزامنة وتطوير المواقع الإلكترونية الرسمية لأكثر من 198 جهة تمويلية وصندوق استثمار جريء في المنطقة.',
+          'محرك البحث والتصنيف الإقليمي: إمكانية تصفية وبحث ترتيب الدول العربية حسب السكان، الناتج المحلي، دخل الفرد، والمساحة الجغرافية.'
+        ]
+      },
+      {
+        title: 'الإصلاحات وحل المشكلات',
+        icon: Wrench,
+        color: 'text-blue-500',
+        bgColor: 'bg-blue-500/10',
+        borderColor: 'border-blue-500/20',
+        items: [
+          'تعديل تموضع التلمح التفاعلي ليكون أعلى مؤشر الفأرة مباشرة مع دعم الانقلاب التلقائي عند الحواف العلوية لعدم حجب الرؤية.',
+          'إعادة تصميم جداول دليل التمويل وحذف الوسوم غير الضرورية لضمان مظهر SaaS خالي من الحواف الزائدة (Border-0 Aesthetic).'
+        ]
+      },
+      {
+        title: 'تحسينات التجربة والأداء',
+        icon: Zap,
+        color: 'text-emerald-500',
+        bgColor: 'bg-emerald-500/10',
+        borderColor: 'border-emerald-500/20',
+        items: [
+          'ترشيق مقاسات أزرار التحكم والتبويبات على الأجهزة الذكية والمتوسطة لتقليل الازدحام وتوفير مساحة تصفح أوسع.',
+          'اعتماد التنسيق الرقمي القياسي العالمي للأرقام والمبالغ المالية مع الحفاظ الكامل على الهوية العربية والاتجاه RTL.'
+        ]
+      }
+    ],
+    tags: ['التوزيعات السكانية', 'خرائط تفاعلية', 'دليل التمويل', 'الوطن العربي', 'تجربة الجوال', 'بيانات اقتصادية']
+  },
+  {
     id: 'v2.6.0',
     version: 'v2.6.0',
     date: '24 أغسطس 2026',
-    isLatest: true,
+    isLatest: false,
     title: 'تحديث تجربة التصفح للجوال، الفلاتر الذكية، وتوحيد الفوتر الموحد',
     summary: 'إصدار جديد يركز على جعل تجربة التصفح صديقة للجوال أولاً، إتاحة كبسولات وتصفية سريعة للمشاكل والفرص، استقرار استجابة الخادم والمتصفح، وتوحيد الفوتر العام للمنصة.',
     category: 'feature',
-    badgeText: 'الإصدار الحالي v2.6.0',
+    badgeText: 'إصدار سابق v2.6.0',
     highlights: [
       {
         title: 'المميزات الرئيسية والجديدة',
@@ -480,9 +529,9 @@ export default function ChangelogPage() {
                 <div className="space-y-1.5">
                   {[
                     { id: 'all', label: 'كافة التحديثات', count: releases.length, icon: Layers },
-                    { id: 'feature', label: 'مميزات جديدة', count: 2, icon: Sparkles },
-                    { id: 'fix', label: 'إصلاحات وحلول', count: 1, icon: Wrench },
-                    { id: 'improvement', label: 'تحسينات الواجهة', count: 1, icon: Zap },
+                    { id: 'feature', label: 'مميزات جديدة', count: releases.filter(r => r.category === 'feature').length, icon: Sparkles },
+                    { id: 'fix', label: 'إصلاحات وحلول', count: releases.filter(r => r.category === 'fix').length, icon: Wrench },
+                    { id: 'improvement', label: 'تحسينات الواجهة', count: releases.filter(r => r.category === 'improvement').length, icon: Zap },
                   ].map((cat) => {
                     const Icon = cat.icon;
                     const active = selectedCategory === cat.id;
@@ -542,7 +591,7 @@ export default function ChangelogPage() {
                 <div className="space-y-2 text-xs">
                   <div className="flex justify-between items-center py-1 border-b border-border/40">
                     <span className="text-muted-foreground">الإصدار النشط:</span>
-                    <strong className="font-mono text-foreground">v2.6.0</strong>
+                    <strong className="font-mono text-foreground">v2.7.0</strong>
                   </div>
                   <div className="flex justify-between items-center py-1 border-b border-border/40">
                     <span className="text-muted-foreground">حالة الخوادم:</span>
