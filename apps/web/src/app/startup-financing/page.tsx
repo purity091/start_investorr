@@ -1,6 +1,6 @@
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { StartupFinancingView } from "@/components/views/StartupFinancingView";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, siteConfig } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "دليل شركات التمويل والاستثمار الجريء بالوطن العربي | حاضنات وصناديق الاستثمار",
@@ -24,7 +24,7 @@ export const financingDirectoryJsonLd = {
   "@type": "ItemList",
   name: "دليل جهات التمويل والاستثمار الجريء بالوطن العربي",
   description: "قائمة موثقة بأبرز صناديق الاستثمار الجريء وحاضنات الأعمال في منطقة الشرق الأوسط وشمال أفريقيا.",
-  url: "https://khotta.app/startup-financing",
+  url: `${siteConfig.url}/startup-financing`,
   numberOfItems: 198,
   itemListElement: [
     {

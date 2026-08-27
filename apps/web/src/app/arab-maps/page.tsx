@@ -1,6 +1,6 @@
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { ArabWorldMapsView } from "@/components/views/ArabWorldMapsView";
-import { createMetadata } from "@/lib/seo";
+import { createMetadata, siteConfig } from "@/lib/seo";
 
 export const metadata = createMetadata({
   title: "التوزيعات السكانية والاقتصادية بالوطن العربي | مؤشرات الناتج المحلي ودخل الفرد",
@@ -24,12 +24,12 @@ export const arabWorldDatasetJsonLd = {
   "@type": "Dataset",
   name: "مرصد التوزيعات السكانية والاقتصادية للوطن العربي",
   description: "بيانات تفاعلية شاملة لمؤشرات السكان، الناتج المحلي الإجمالي، ودخل الفرد عبر 22 دولة عربية.",
-  url: "https://khotta.app/arab-maps",
+  url: `${siteConfig.url}/arab-maps`,
   keywords: ["سكان الوطن العربي", "GDP الوطن العربي", "دخل الفرد العربي"],
   creator: {
     "@type": "Organization",
     name: "منصة خطة",
-    url: "https://khotta.app"
+    url: siteConfig.url
   },
   spatialCoverage: "Middle East and North Africa (MENA)",
   temporalCoverage: "2024/2026",

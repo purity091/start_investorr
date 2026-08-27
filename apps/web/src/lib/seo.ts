@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const siteConfig = {
   name: "خطة.",
   legalName: "منصة خطة",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://khotta.app",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://khotta.dtajer.com",
   locale: "ar_SA",
   twitterHandle: "@khotta_app",
   description:
