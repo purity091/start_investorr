@@ -19,10 +19,10 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border/60 bg-muted/30 text-muted-foreground py-10 md:py-12 relative overflow-hidden mt-auto">
+      <footer className="border-t border-border/60 bg-muted/30 text-muted-foreground py-3 sm:py-4 relative overflow-hidden mt-auto">
         <div className="container mx-auto px-4 relative z-10">
           {/* Upper Footer Grid for Public Pages */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-8 mb-10 pb-8 border-b border-border/60">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 mb-3 pb-3 border-b border-border/60">
             {/* Brand Intro Column */}
             <div className="lg:col-span-2 space-y-3">
               <div className="flex items-center gap-2 mb-1">
@@ -40,25 +40,30 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
 
             {/* Column 1: المنتج والخيارات */}
             <div>
-              <h4 className="text-foreground font-bold text-xs sm:text-sm mb-3">المنتج والخيارات</h4>
-              <ul className="space-y-2 text-xs sm:text-sm font-medium">
+              <h4 className="text-foreground font-black text-xs sm:text-sm mb-3 tracking-tight">المنتج والخيارات</h4>
+              <ul className="space-y-2 text-xs sm:text-sm">
                 <li>
-                  <Link href="/market-discovery" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/pricing" className="text-foreground/85 hover:text-primary transition-colors font-bold hover:underline underline-offset-4">
+                    الأسعار
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/market-discovery" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     استكشاف قطاعات السوق
                   </Link>
                 </li>
                 <li>
-                  <Link href="/saas-ideas" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/saas-ideas" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     أفكار مشاريع SaaS
                   </Link>
                 </li>
                 <li>
-                  <Link href="/micro-saas-ideas" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/micro-saas-ideas" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     أفكار Micro-SaaS
                   </Link>
                 </li>
                 <li>
-                  <Link href="/proven-projects" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/proven-projects" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     أفكار شركات ناجحة
                   </Link>
                 </li>
@@ -67,20 +72,25 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
 
             {/* Column 2: المصادر والأكاديمية */}
             <div>
-              <h4 className="text-foreground font-bold text-xs sm:text-sm mb-3">المصادر والأكاديمية</h4>
-              <ul className="space-y-2 text-xs sm:text-sm font-medium">
+              <h4 className="text-foreground font-black text-xs sm:text-sm mb-3 tracking-tight">المصادر والأكاديمية</h4>
+              <ul className="space-y-2 text-xs sm:text-sm">
                 <li>
-                  <Link href="/platform-academy" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/platform-academy" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     أكاديمية خطة والمفاهيم
                   </Link>
                 </li>
                 <li>
-                  <Link href="/failed-projects" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/changelog" className="text-foreground/85 hover:text-primary transition-colors font-bold hover:underline underline-offset-4">
+                    سجل التحديثات
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/failed-projects" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     تحليل الشركات التي فشلت
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#faq" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/#faq" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     الأسئلة الشائعة
                   </Link>
                 </li>
@@ -89,25 +99,25 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
 
             {/* Column 3: الشركة والخصوصية */}
             <div>
-              <h4 className="text-foreground font-bold text-xs sm:text-sm mb-3">الشركة والخصوصية</h4>
-              <ul className="space-y-2 text-xs sm:text-sm font-medium">
+              <h4 className="text-foreground font-black text-xs sm:text-sm mb-3 tracking-tight">الشركة والخصوصية</h4>
+              <ul className="space-y-2 text-xs sm:text-sm">
                 <li>
-                  <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/about" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     من نحن
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact-us" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/contact-us" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     اتصل بنا
                   </Link>
                 </li>
                 <li>
-                  <Link href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/privacy" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     سياسة الخصوصية
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+                  <Link href="/terms" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
                     شروط الاستخدام
                   </Link>
                 </li>
@@ -115,24 +125,24 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
             </div>
           </div>
 
-          {/* Bottom Bar Footer Section: Single Line Right & Left */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full text-xs font-medium text-muted-foreground" dir="rtl">
+          {/* Bottom Bar Footer Section: Single Line Right & Left (Compact & Lightweight) */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-2.5 w-full text-[11px] sm:text-xs text-muted-foreground font-normal" dir="rtl">
             {/* Right: Copyright */}
-            <p dir="rtl" className="flex items-center gap-1.5 shrink-0 text-center sm:text-right">
+            <p dir="rtl" className="flex items-center gap-1 shrink-0 text-center sm:text-right whitespace-nowrap">
               <span>© {new Date().getFullYear()}</span>
-              <span className="font-extrabold text-foreground">منصة خطة</span>.
+              <span className="font-bold text-foreground">منصة خطة</span>.
               <span>جميع الحقوق محفوظة.</span>
             </p>
 
             {/* Left: Legal Policy Links Inline */}
-            <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-4 text-[11px] sm:text-xs">
-              <Link href="/privacy" className="hover:text-primary transition-colors">سياسة الخصوصية وحماية البيانات</Link>
+            <div className="flex flex-wrap items-center justify-center sm:justify-end gap-2 sm:gap-3 text-[11px] whitespace-nowrap">
+              <Link href="/privacy" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">سياسة الخصوصية وحماية البيانات</Link>
               <span className="text-border/80">•</span>
-              <Link href="/terms" className="hover:text-primary transition-colors">شروط وأحكام الخدمة</Link>
+              <Link href="/terms" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">شروط وأحكام الخدمة</Link>
               <span className="text-border/80">•</span>
-              <Link href="/refund-policy" className="hover:text-primary transition-colors">سياسة الاسترجاع والإلغاء</Link>
+              <Link href="/refund-policy" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">سياسة الاسترجاع والإلغاء</Link>
               <span className="text-border/80">•</span>
-              <Link href="/fulfillment-policy" className="hover:text-primary transition-colors">سياسة التسليم وتوفير الخدمة</Link>
+              <Link href="/fulfillment-policy" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">سياسة التسليم وتوفير الخدمة</Link>
             </div>
           </div>
         </div>

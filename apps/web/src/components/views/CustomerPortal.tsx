@@ -170,36 +170,34 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
   }, [authUser]);
 
   return (
-    <div className="app-page-shell-wide space-y-4 sm:space-y-6 py-4 sm:py-8 pb-24 text-right" dir="rtl">
-      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm">
-        <div className="flex flex-col gap-4 sm:gap-5 xl:flex-row xl:items-center xl:justify-between">
-          <div className="min-w-0 space-y-1.5 sm:space-y-2">
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge variant="secondary">مساحة العميل</Badge>
-              <Badge variant="outline">واجهة اشتراك</Badge>
-            </div>
-            <div>
-              <h1 className="text-xl font-semibold tracking-tight text-foreground sm:text-3xl">
-                {meta.label}
-              </h1>
-              <p className="mt-2 max-w-3xl text-sm leading-7 text-muted-foreground">
-                {meta.desc}
-              </p>
-            </div>
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500 text-right pb-24">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-2">
+        <div className="flex flex-col gap-3">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="secondary" className="bg-muted text-foreground font-semibold text-xs border-0">مساحة العميل</Badge>
+            <Badge variant="outline" className="text-xs">واجهة اشتراك</Badge>
           </div>
-
-          <div className="flex flex-wrap gap-2">
-            <Button onClick={() => setActiveTab('workspace')} size="sm">
-              <Crown className="size-4" />
-              مساحة المشروع
-            </Button>
-            <Button onClick={() => setActiveTab('settings')} variant="outline" size="sm">
-              <Settings className="size-4" />
-              إعدادات الحساب
-            </Button>
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              {meta.label}
+            </h1>
+            <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium mt-1">
+              {meta.desc}
+            </p>
           </div>
         </div>
-      </section>
+
+        <div className="flex flex-wrap gap-2 shrink-0">
+          <Button onClick={() => setActiveTab('workspace')} size="sm" className="font-bold">
+            <Crown className="size-4" />
+            مساحة المشروع
+          </Button>
+          <Button onClick={() => setActiveTab('settings')} variant="outline" size="sm" className="font-bold">
+            <Settings className="size-4" />
+            إعدادات الحساب
+          </Button>
+        </div>
+      </div>
 
       <section className="overflow-x-auto no-scrollbar rounded-xl bg-card p-1.5 sm:p-2 shadow-sm">
         <div className="flex min-w-max gap-1">

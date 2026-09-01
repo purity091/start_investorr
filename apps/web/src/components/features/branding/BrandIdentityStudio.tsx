@@ -745,34 +745,29 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
   };
 
   return (
-    <div dir="rtl" className="min-h-screen bg-[#f8fafc] pb-24 font-['IBM_Plex_Sans_Arabic'] text-slate-900">
-      <div className="app-page-shell-wide pt-8 sm:pt-10">
-        <section className="rounded-lg bg-background px-1 py-2 text-right">
-          <div className="flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
-            <div className="max-w-4xl">
-              <Badge variant="secondary" className="h-7 px-3 text-[11px]">
-                مساحة قرار الهوية البصرية
-              </Badge>
-              <h1 className="mt-4 text-2xl font-black tracking-tight text-foreground sm:text-3xl lg:text-4xl">
-                استوديو الهوية البصرية
-              </h1>
-              <p className="mt-3 max-w-3xl text-sm font-medium leading-7 text-muted-foreground">
-                ابنِ اتجاه الهوية للمشروع عبر قرارات واضحة: نوع المشروع، الشخصية، الألوان، الخطوط، الشعار، الصور،
-                وأولوية التطبيق. النتيجة النهائية brief جاهز للمصمم بدون عمود جانبي أو واجهة مشتتة.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-2">
-              <Button type="button" onClick={() => setActiveTab?.('my-plans')} variant="outline" size="sm">
-                <Briefcase size={16} />
-                مشاريعي
-              </Button>
-              <Button type="button" onClick={() => setActiveTab?.('new-plan')} size="sm">
-                <Sparkles size={16} />
-                إنشاء مشروع
-              </Button>
-            </div>
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans pb-24 text-slate-900 animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <div className="w-full">
+        <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-4 mb-4">
+          <div className="flex flex-col gap-3">
+            <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              استوديو الهوية البصرية
+            </h1>
+            <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+              ابنِ اتجاه الهوية للمشروع عبر قرارات واضحة: نوع المشروع، الشخصية، الألوان، الخطوط، الشعار، الصور، وأولوية التطبيق. النتيجة النهائية brief جاهز للمصمم.
+            </p>
           </div>
+
+          <div className="flex flex-wrap items-center gap-2 shrink-0">
+            <Button type="button" onClick={() => setActiveTab?.('my-plans')} variant="outline" size="sm" className="gap-1.5 font-bold text-xs">
+              <Briefcase size={16} />
+              مشاريعي
+            </Button>
+            <Button type="button" onClick={() => setActiveTab?.('new-plan')} size="sm" className="gap-1.5 font-bold text-xs">
+              <Sparkles size={16} />
+              إنشاء مشروع
+            </Button>
+          </div>
+        </div>
 
           <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             <TopCard icon={<Target size={17} />} label="المشروع النشط" value={projectName} note={sectorLabel} />
@@ -797,7 +792,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               </div>
             ))}
           </div>
-        </section>
+        </div>
 
         <div className="mt-6 space-y-4 sm:space-y-6">
           <section className="rounded-lg bg-background p-4 sm:p-6 shadow-sm">
@@ -1026,13 +1021,12 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
                     loading={exportState === 'loading'}
                     loadingText="جارٍ إنشاء التقرير..."
                     size="lg"
-                    className={`w-full rounded-3xl px-6 py-4 ${
-                      exportState === 'success'
+                    className={`w-full rounded-3xl px-6 py-4 ${exportState === 'success'
                         ? 'ui-confirmation-flash bg-emerald-600 hover:bg-emerald-600'
                         : exportState === 'error'
                           ? 'bg-rose-600 hover:bg-rose-600'
                           : ''
-                    }`}
+                      }`}
                   >
                     <Share2 size={18} />
                     {exportState === 'success'
@@ -1167,17 +1161,17 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               </div>
 
               {detailsContext.option.swatches?.length ? (
-              <div className="mt-6">
-                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">المعاينة اللونية</p>
-                <div className="mt-4 flex gap-3">
-                  {(detailsContext.option.swatches ?? []).map((swatch) => (
-                    <div key={swatch} className="flex-1">
-                      <div className="h-20 rounded-2xl border border-slate-200" style={{ backgroundColor: swatch }} />
-                      <p className="mt-2 text-center text-[11px] font-black text-slate-500">{swatch}</p>
-                    </div>
-                  ))}
+                <div className="mt-6">
+                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">المعاينة اللونية</p>
+                  <div className="mt-4 flex gap-3">
+                    {(detailsContext.option.swatches ?? []).map((swatch) => (
+                      <div key={swatch} className="flex-1">
+                        <div className="h-20 rounded-2xl border border-slate-200" style={{ backgroundColor: swatch }} />
+                        <p className="mt-2 text-center text-[11px] font-black text-slate-500">{swatch}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
               ) : null}
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -1231,9 +1225,8 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
           </div>
         ) : null}
       </div>
-    </div>
-  );
-};
+    );
+  };
 
 const StepSection = ({
   sectionId,
@@ -1319,17 +1312,15 @@ const OptionGrid = ({
               onChange(option.id);
             }
           }}
-          className={`ui-card-interactive rounded-lg p-4 text-right transition sm:min-h-[180px] xl:min-h-[190px] ${
-            active
+          className={`ui-card-interactive rounded-lg p-4 text-right transition sm:min-h-[180px] xl:min-h-[190px] ${active
               ? 'bg-primary text-primary-foreground shadow-sm ring-2 ring-ring/20'
               : 'bg-muted/55 text-foreground hover:bg-muted'
-          }`}
+            }`}
         >
           <div className="flex items-center justify-between gap-3">
             <span
-              className={`rounded-full px-3 py-1 text-[10px] font-black ${
-                active ? 'bg-primary-foreground/15 text-primary-foreground' : 'bg-background text-muted-foreground'
-              }`}
+              className={`rounded-full px-3 py-1 text-[10px] font-black ${active ? 'bg-primary-foreground/15 text-primary-foreground' : 'bg-background text-muted-foreground'
+                }`}
             >
               {active ? 'تم الاختيار' : 'اختيار متاح'}
             </span>
@@ -1363,11 +1354,10 @@ const OptionGrid = ({
                   event.stopPropagation();
                   onOpenDetails?.(option.id);
                 }}
-                className={`rounded-2xl px-4 py-2 text-[12px] font-black transition ${
-                  active
+                className={`rounded-2xl px-4 py-2 text-[12px] font-black transition ${active
                     ? 'bg-white/15 text-white hover:bg-white/20'
                     : 'bg-background text-foreground shadow-sm hover:bg-background/80'
-                }`}
+                  }`}
               >
                 عرض الفكرة
               </button>

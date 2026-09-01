@@ -90,9 +90,9 @@ const AppShell: React.FC = () => {
 
   const requiresAuth = !isPublicTab(activeTab);
 
-  const setActiveTab = (tab: string, options?: { replace?: boolean }) => {
+  const setActiveTab = (tab: string, options?: { replace?: boolean; path?: string }) => {
     let nextTab = normalizeTab(tab || DEFAULT_TAB);
-    let nextPath = getTabPath(nextTab, window.location.pathname);
+    let nextPath = options?.path || getTabPath(nextTab, window.location.pathname);
 
     // Route Protection
     if (!session && !isPublicTab(nextTab)) {

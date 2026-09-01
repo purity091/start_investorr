@@ -484,7 +484,20 @@ export const LandingNavbar: React.FC = () => {
             دراسات الشركات
           </Link>
 
-          {/* Direct Standard Link 4: Pricing */}
+          {/* Direct Standard Link 4: Changelog */}
+          <Link
+            href="/changelog"
+            className={cn(
+              "px-3 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 text-xs font-extrabold",
+              isChangelogActive
+                ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+            )}
+          >
+            سجل التغييرات
+          </Link>
+
+          {/* Direct Standard Link 5: Pricing */}
           <Link
             href="/pricing"
             className={cn(
@@ -602,7 +615,7 @@ export const LandingNavbar: React.FC = () => {
                 onClick={() => openAuthModal('login')}
                 className="gap-1.5 font-bold text-xs h-9 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer whitespace-nowrap shrink-0"
               >
-                ابدأ مجاناً
+                ابدأ بـ 99 ر.س
                 <ArrowLeft className="size-3.5" />
               </Button>
             </div>
@@ -731,6 +744,20 @@ export const LandingNavbar: React.FC = () => {
                   </Link>
 
                   <Link
+                    href="/changelog"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      "flex items-center gap-2.5 py-2.5 px-3 rounded-xl transition-all border-b border-border/30",
+                      isChangelogActive
+                        ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                        : "text-foreground hover:text-primary hover:bg-muted/50"
+                    )}
+                  >
+                    <Sparkles className={cn("size-4", isChangelogActive ? "text-primary-foreground" : "text-emerald-500")} />
+                    <span>سجل التغييرات والتحديثات</span>
+                  </Link>
+
+                  <Link
                     href="/pricing"
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
@@ -791,7 +818,7 @@ export const LandingNavbar: React.FC = () => {
                     }}
                     className="w-full font-bold text-xs h-10 gap-1.5 shadow-2xs cursor-pointer"
                   >
-                    إنشاء حساب مجاني
+                    إنشاء حساب بـ 99 ر.س
                     <ArrowLeft className="size-4" />
                   </Button>
                 )}

@@ -27,7 +27,7 @@ import {
 import { Input } from '@/components/ui/Input';
 import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
-import { SubscriptionPlanId, getSubscriptionPlan, isHigherSubscriptionPlan } from '@/lib/subscriptionPlans';
+import { SUBSCRIPTION_PLANS, SubscriptionPlanId, getSubscriptionPlan, isHigherSubscriptionPlan } from '@/lib/subscriptionPlans';
 import { readProjectCountCache, writeProjectCountCache } from '@/lib/projectCache';
 import { cn } from '@/lib/utils';
 
@@ -42,6 +42,8 @@ interface PlanCardData {
   icon: React.ComponentType<{ className?: string }>;
   monthly: number;
   yearly: number;
+  monthlyUsd: number;
+  yearlyUsd: number;
   badge?: string | null;
   highlight?: boolean;
   cta: string;
@@ -52,11 +54,13 @@ const PLANS: PlanCardData[] = [
   {
     id: 'starter',
     name: 'باقة رائد',
-    subtext: 'لتجربة النمذجة واختبار أول 5 مشاريع.',
+    subtext: 'الباقة الأولى لبناء أول 5 مشاريع والبدء باحتراف.',
     icon: User,
-    monthly: 0,
-    yearly: 0,
-    cta: 'الخطة الحالية',
+    monthly: SUBSCRIPTION_PLANS.starter.monthlyPriceSar,
+    yearly: SUBSCRIPTION_PLANS.starter.annualMonthlyPriceSar,
+    monthlyUsd: SUBSCRIPTION_PLANS.starter.monthlyPriceUsd,
+    yearlyUsd: SUBSCRIPTION_PLANS.starter.annualMonthlyPriceUsd,
+    cta: 'ابدأ بالباقة الأولى',
     featuresSummary: [
       'سعة 5 مشاريع ودراسات جدوى',
       'تصفح عينات +500 شركة ناجحة',
@@ -68,8 +72,10 @@ const PLANS: PlanCardData[] = [
     name: 'باقة مؤسس',
     subtext: 'الخيار الأكثر شعبية لبناء 10 مشاريع ومشاركة الخطط.',
     icon: Rocket,
-    monthly: 35,
-    yearly: 29,
+    monthly: SUBSCRIPTION_PLANS.founder.monthlyPriceSar,
+    yearly: SUBSCRIPTION_PLANS.founder.annualMonthlyPriceSar,
+    monthlyUsd: SUBSCRIPTION_PLANS.founder.monthlyPriceUsd,
+    yearlyUsd: SUBSCRIPTION_PLANS.founder.annualMonthlyPriceUsd,
     badge: 'الأكثر شعبية',
     highlight: true,
     cta: 'ترقية الباقة',
@@ -84,8 +90,10 @@ const PLANS: PlanCardData[] = [
     id: 'leader',
     name: 'باقة قائد',
     icon: Zap,
-    monthly: 75,
-    yearly: 59,
+    monthly: SUBSCRIPTION_PLANS.leader.monthlyPriceSar,
+    yearly: SUBSCRIPTION_PLANS.leader.annualMonthlyPriceSar,
+    monthlyUsd: SUBSCRIPTION_PLANS.leader.monthlyPriceUsd,
+    yearlyUsd: SUBSCRIPTION_PLANS.leader.annualMonthlyPriceUsd,
     badge: 'متقدم للقياديين',
     cta: 'ترقية الباقة',
     subtext: 'للمستشارين والفرق التي تحتاج سعة غير محدودة.',
@@ -358,7 +366,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
             >
               <span>دفع سنوي</span>
               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-0">
-                توفير 20%
+                توفير حتى 20%
               </span>
             </button>
           </div>
@@ -457,14 +465,17 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                     <div>
                       <div className="flex items-baseline gap-1">
                         <span className="text-3xl font-black text-foreground tracking-tight">
-                          {price === 0 ? 'مجاناً' : `${price} ر.س`}
+                           {price} ر.س
                         </span>
                         {price > 0 && (
                           <span className="text-xs text-muted-foreground font-bold">
-                            / {billingCycle === 'monthly' ? 'شهرياً' : 'سنوياً'}
+                            / {billingCycle === 'monthly' ? 'شهرياً' : 'شهرياً عند الدفع السنوي'}
                           </span>
                         )}
                       </div>
+                      <p className="mt-1 text-[11px] font-bold text-primary">
+                        ما يعادل ${billingCycle === 'monthly' ? plan.monthlyUsd.toFixed(2) : plan.yearlyUsd.toFixed(2)} شهرياً
+                      </p>
                     </div>
 
                     {/* CTA Button */}

@@ -1124,32 +1124,38 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
 
   return (
     <TooltipProvider>
-      <div dir="rtl" className="min-h-screen bg-background text-right text-foreground">
-        <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-4 px-4 py-5 sm:px-6 lg:px-8 xl:px-10">
-          {/* Header & Quick Stats Bar */}
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-border/60 pb-3">
-            <div className="space-y-1">
-              <h1 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">مشاكل وفرص السوق</h1>
-              <p className="text-xs text-muted-foreground sm:text-sm">
-                مساحة قرار مضغوطة لقراءة المشاكل والفرص بسرعة واستكشاف الفجوات الاستثمارية.
-              </p>
+      <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
+        {/* Header & Quick Stats Bar */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-2">
+          <div className="flex flex-col gap-3">
+            <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">المشكلات والفرص</h1>
+            <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+              رادار اكتشاف الفرص والمشاكل الميدانية لبناء حلول مبتكرة واستكشاف الفجوات الاستثمارية بسرعة.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 shrink-0 pt-1 lg:pt-0">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+              <span className="text-[11px] sm:text-xs font-bold text-slate-600">إجمالي الفجوات:</span>
+              <span className="text-xs sm:text-sm font-black text-slate-900">{records.length}</span>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge variant="outline" className="rounded-lg bg-card px-3 py-1 text-xs font-semibold">
-                {records.length} إجمالي الفجوات
-              </Badge>
-              <Badge variant="outline" className="rounded-lg bg-rose-50 text-rose-700 border-rose-200 px-3 py-1 text-xs font-semibold">
-                {totalProblems} مشكلة
-              </Badge>
-              <Badge variant="outline" className="rounded-lg bg-indigo-50 text-indigo-700 border-indigo-200 px-3 py-1 text-xs font-semibold">
-                {totalOpportunities} فرصة
-              </Badge>
-              <Badge variant="outline" className="rounded-lg bg-emerald-50 text-emerald-700 border-emerald-200 px-3 py-1 text-xs font-semibold">
-                {priorityRecords} عالية الأولوية
-              </Badge>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-rose-50/90 border border-rose-200/70">
+              <span className="text-[11px] sm:text-xs font-bold text-rose-800">مشاكل:</span>
+              <span className="text-xs sm:text-sm font-black text-rose-700">{totalProblems}</span>
+            </div>
+
+            <div className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-indigo-50/90 border border-indigo-200/70">
+              <span className="text-[11px] sm:text-xs font-bold text-indigo-800">فرص:</span>
+              <span className="text-xs sm:text-sm font-black text-indigo-700">{totalOpportunities}</span>
+            </div>
+
+            <div className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-emerald-50/90 border border-emerald-200/70">
+              <span className="text-[11px] sm:text-xs font-bold text-emerald-800">عالية الأولوية:</span>
+              <span className="text-xs sm:text-sm font-black text-emerald-700">{priorityRecords}</span>
             </div>
           </div>
+        </div>
 
           {/* Main Controls Header & Filters Bar */}
           <Card className="shadow-xs border-border bg-card rounded-2xl">
@@ -1583,7 +1589,6 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
               />
             )}
           </div>
-        </div>
 
         <Sheet open={detailsOpen} onOpenChange={setDetailsOpen}>
           <SheetContent side="bottom" className="max-h-[88vh] overflow-y-auto rounded-t-3xl">

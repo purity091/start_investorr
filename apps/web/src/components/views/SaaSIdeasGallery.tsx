@@ -139,32 +139,32 @@ export const SaaSIdeasGallery: React.FC<SaaSIdeasGalleryProps> = ({ setSubTabLab
   }
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-3 sm:gap-6 px-2 sm:px-6 py-2 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
       
-      {/* Sleek Integrated Header with Compact Summary Pills */}
-      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-3 bg-slate-50/70 p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border border-slate-200/80 shadow-2xs">
-        <div className="flex flex-col gap-1.5 sm:gap-2">
-          <h1 className="text-xl sm:text-3xl font-black text-slate-900 tracking-tight">أفكار مشاريع SaaS (البرمجيات كخدمة)</h1>
-          <p className="max-w-2xl text-[11px] sm:text-sm leading-relaxed text-slate-600 font-medium">
+      {/* Header Section */}
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-2">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">أفكار مشاريع SaaS (البرمجيات كخدمة)</h1>
+          <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
             تصفح نماذج البرمجيات كخدمة الناجحة وتلك التي فشلت مباشرة في الجدول أدناه، مع إمكانية الفلترة حسب الإيرادات، الدولة، ونموذج العمل.
           </p>
         </div>
 
         {/* Compact Quick Stats Pills */}
-        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2.5 shrink-0 pt-1 lg:pt-0">
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 shrink-0 pt-1 lg:pt-0">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-white border border-slate-200/80 shadow-2xs">
             <Layers className="size-3.5 sm:size-4 text-blue-600" />
             <span className="text-[11px] sm:text-xs font-bold text-slate-600">إجمالي SaaS:</span>
             <span className="text-xs sm:text-sm font-black text-slate-900">{isLoading ? '...' : projectsList.length}</span>
           </div>
 
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-emerald-50/90 border border-emerald-200/70">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-emerald-50/90 border border-emerald-200/70">
             <CheckCircle2 className="size-3.5 sm:size-4 text-emerald-600" />
             <span className="text-[11px] sm:text-xs font-bold text-emerald-800">شركات ناجحة:</span>
             <span className="text-xs sm:text-sm font-black text-emerald-700">{isLoading ? '...' : provenCount}</span>
           </div>
 
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-red-50/90 border border-red-200/70">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-red-50/90 border border-red-200/70">
             <TrendingDown className="size-3.5 sm:size-4 text-red-600" />
             <span className="text-[11px] sm:text-xs font-bold text-red-800">شركات فشلت:</span>
             <span className="text-xs sm:text-sm font-black text-red-700">{isLoading ? '...' : failedCount}</span>

@@ -11,6 +11,10 @@ export type SubscriptionPlan = {
   projectLimit: ProjectLimit;
   projectLimitLabel: string;
   description: string;
+  monthlyPriceSar: number;
+  monthlyPriceUsd: number;
+  annualMonthlyPriceSar: number;
+  annualMonthlyPriceUsd: number;
 };
 
 export const SUBSCRIPTION_PLANS: Record<SubscriptionPlanId, SubscriptionPlan> = {
@@ -20,7 +24,11 @@ export const SUBSCRIPTION_PLANS: Record<SubscriptionPlanId, SubscriptionPlan> = 
     shortName: 'رائد',
     projectLimit: 5,
     projectLimitLabel: '5 مشاريع',
-    description: 'مناسبة للتجربة وبناء أول مجموعة مشاريع.',
+    description: 'الباقة الأولى لبناء أول مجموعة مشاريع وبدء العمل على المنصة.',
+    monthlyPriceSar: 99,
+    monthlyPriceUsd: 26.4,
+    annualMonthlyPriceSar: 99,
+    annualMonthlyPriceUsd: 26.4,
   },
   founder: {
     id: 'founder',
@@ -29,6 +37,10 @@ export const SUBSCRIPTION_PLANS: Record<SubscriptionPlanId, SubscriptionPlan> = 
     projectLimit: 10,
     projectLimitLabel: '10 مشاريع',
     description: 'للعمل الجاد على أكثر من فكرة ومقارنة البدائل.',
+    monthlyPriceSar: 299,
+    monthlyPriceUsd: 79.73,
+    annualMonthlyPriceSar: 239,
+    annualMonthlyPriceUsd: 63.73,
   },
   leader: {
     id: 'leader',
@@ -37,6 +49,10 @@ export const SUBSCRIPTION_PLANS: Record<SubscriptionPlanId, SubscriptionPlan> = 
     projectLimit: null,
     projectLimitLabel: 'مشاريع غير محدودة',
     description: 'لإدارة عدد مفتوح من المشاريع ودراسات الجدوى.',
+    monthlyPriceSar: 799,
+    monthlyPriceUsd: 213.07,
+    annualMonthlyPriceSar: 639,
+    annualMonthlyPriceUsd: 170.4,
   },
 };
 

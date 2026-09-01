@@ -34,6 +34,7 @@ export const ExampleViewer: React.FC<ExampleViewerProps> = ({ mode, onBack }) =>
         {mode === 'easy' && <ProModeExample />}
         {mode === 'mit24' && <Mit24Example />}
         {mode === 'bmc' && <BmcExample />}
+        {mode === 'lean' && <LeanModeExample />}
       </div>
     </div>
   );
@@ -504,5 +505,170 @@ function BmcBox({ title, items, className = '' }: { title: string; items: string
         {items.map((it, i) => <li key={i}>{it}</li>)}
       </ul>
     </Card>
+  );
+}
+
+function LeanModeExample() {
+  return (
+    <div className="flex flex-col gap-6 font-sans mt-4">
+      {/* Header */}
+      <div className="flex flex-col gap-2 mb-2">
+        <div className="flex items-center gap-3">
+          <Badge className="bg-primary/20 text-primary hover:bg-primary/20 rounded-md border-0">منهجية Lean Startup</Badge>
+          <span className="text-sm text-muted-foreground">حلقة (البناء - القياس - التعلم)</span>
+        </div>
+        <h1 className="text-3xl font-black text-foreground mt-2">TaskFlow - منصة إدارة وتتبع المهام الميدانية</h1>
+        <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
+          تطبيق خفيف يتيح لشركات المقاولات والصيانة الصغيرة توزيع وتأكيد المهام اليومية لفنيي الموقع عبر الواتساب بدلاً من التطبيقات المعقدة.
+        </p>
+      </div>
+
+      {/* Value & Growth Hypotheses */}
+      <Card className="border-0 shadow-2xs bg-primary/[0.03]">
+        <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-0">
+          <CardTitle className="text-lg flex items-center gap-2 text-primary font-bold">
+            <Target className="size-5" />
+            1. الفرضيات الجوهرية للاختبار (Core Hypotheses)
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 grid md:grid-cols-2 gap-4">
+          <div className="p-4 bg-background rounded-xl space-y-2 border-0 shadow-2xs">
+            <div className="flex items-center gap-2">
+              <Badge variant="secondary" className="bg-emerald-500/10 text-emerald-600 border-0 text-xs font-bold">فرضية القيمة Value</Badge>
+              <h4 className="font-bold text-sm text-foreground">جدوى الخدمة للمستخدم</h4>
+            </div>
+            <p className="text-xs leading-6 text-muted-foreground">
+              مدراء المشاريع في شركات المقاولات مستعدون لدفع 49$/شهرياً لاستبدال المتابعة اليدوية عبر واتساب بتطبيق موحد يوفر عليهم ساعتين يومياً من التنسيق والاتصالات.
+            </p>
+          </div>
+
+          <div className="p-4 bg-background rounded-xl space-y-2 border-0 shadow-2xs">
+            <div className="flex items-center gap-2">
+              <Badge variant="secondary" className="bg-blue-500/10 text-blue-600 border-0 text-xs font-bold">فرضية النمو Growth</Badge>
+              <h4 className="font-bold text-sm text-foreground">آلية الانتشار الآلي</h4>
+            </div>
+            <p className="text-xs leading-6 text-muted-foreground">
+              توصية مهندسي المواقع والمشرفين لزملائهم في الشركات المجاورة ستولد 40% من العملاء الجدد دون الحاجة لميزانيات تسويق ضخمة في البداية.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+
+      <div className="grid lg:grid-cols-2 gap-6">
+        {/* MVP Definition */}
+        <Card className="border-0 shadow-2xs">
+          <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-0 bg-muted/20">
+            <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+              <Rocket className="size-5 text-amber-500" />
+              2. تعريف المنتج الأدنى القياسي (MVP)
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 space-y-3">
+            <div className="p-3 bg-muted/30 rounded-lg">
+              <h4 className="font-bold text-xs text-foreground mb-1">الميزات الجوهرية المضمنة في MVP</h4>
+              <p className="text-xs text-muted-foreground leading-5">
+                بوت واتساب مبسط + لوحة ويب واحدة. المشرف يرفع قائمة المهام، والفني يستلم رسالة مع زر &quot;تم الإنجاز&quot; وإرفاق صورة الموقع فقط.
+              </p>
+            </div>
+            <div className="p-3 bg-red-500/5 rounded-lg">
+              <h4 className="font-bold text-xs text-red-600 mb-1">الميزات المستبعدة عمداً من المرحلة الأولى</h4>
+              <p className="text-xs text-muted-foreground leading-5">
+                تم استبعاد نظام الفوترة المتقدم، والتقارير المخصصة، وتتبع الحضور لتقليل مدة التطوير من 6 أشهر إلى 3 أسابيع فقط.
+              </p>
+            </div>
+            <div className="p-3 bg-emerald-500/10 rounded-lg">
+              <h4 className="font-bold text-xs text-emerald-700 mb-1">سرعة الإطلاق وخفض التكلفة</h4>
+              <p className="text-xs text-emerald-900/80 leading-5">
+                تكلفة بناء الـ MVP لم تتجاوز 1,500$ باستغلال أدوات No-Code مضافة مع خوادم سحابية بسيطة.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Validation Experiments & Pass Criteria */}
+        <Card className="border-0 shadow-2xs">
+          <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-0 bg-muted/20">
+            <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+              <CheckCircle2 className="size-5 text-emerald-500" />
+              3. حلقة الاختبار والتحقق (Validation Experiment)
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 space-y-3">
+            <div className="p-3 bg-muted/30 rounded-lg">
+              <h4 className="font-bold text-xs text-foreground mb-1">طبيعة تجربة التحقق الميدانية</h4>
+              <p className="text-xs text-muted-foreground leading-5">
+                إشراك 12 شركة مقاولات وصيانة صغيرة في تجربة مجانية لمدة 14 يوماً لمتابعة الاستخدام اليومي الحقيقي لفنيي الموقع.
+              </p>
+            </div>
+            <div className="p-3 bg-primary/10 rounded-lg">
+              <h4 className="font-bold text-xs text-primary mb-1">معيار النجاح الكمي (Pass / Fail Threshold)</h4>
+              <p className="text-xs text-muted-foreground leading-5 font-medium">
+                1. استخدام البوت يومياً من قبل 75% على الأقل من الفنيين.<br/>
+                2. تحويل 4 شركات على الأقل إلى باقة مدفوعة بعد انتهاء التجربة.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Actionable Metrics vs Vanity Metrics */}
+      <Card className="border-0 shadow-2xs">
+        <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-0 bg-muted/20">
+          <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+            <BarChart3 className="size-5 text-indigo-500" />
+            4. المقاييس الإجرائية الفعالة vs مقاييس الغرور (Actionable vs Vanity Metrics)
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 grid md:grid-cols-2 gap-4">
+          <div className="p-4 bg-emerald-500/5 rounded-xl space-y-2">
+            <h4 className="font-bold text-sm text-emerald-700 flex items-center gap-1.5">
+              <CheckCircle2 className="size-4 text-emerald-600" />
+              مقاييس العمل الفعالة (Actionable Metrics)
+            </h4>
+            <ul className="text-xs text-muted-foreground leading-6 space-y-1 list-disc list-inside">
+              <li>نسبة التزام الفنيين بتحديث حالة المهام يومياً (Daily Engagement Rate).</li>
+              <li>معدل الاحتفاظ بالشركات بعد أول شهر (Retention Rate &gt; 80%).</li>
+              <li>نسبة التحويل من النسخة التجريبية إلى الاشتراك المدفوع (Conversion Rate).</li>
+            </ul>
+          </div>
+
+          <div className="p-4 bg-muted/40 rounded-xl space-y-2">
+            <h4 className="font-bold text-sm text-muted-foreground flex items-center gap-1.5">
+              <ShieldAlert className="size-4 text-amber-500" />
+              مقاييس الغرور المتجاهلة (Vanity Metrics)
+            </h4>
+            <ul className="text-xs text-muted-foreground leading-6 space-y-1 list-disc list-inside opacity-80">
+              <li>عدد زيارات الصفحة التعريفية للمنتج.</li>
+              <li>عدد مرات تحميل ملف الشرح (PDF).</li>
+              <li>عدد المتابعين في منصات التواصل الاجتماعي.</li>
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Pivot or Persevere Signals */}
+      <Card className="border-0 shadow-2xs">
+        <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-0 bg-purple-500/5">
+          <CardTitle className="text-base font-bold flex items-center gap-2 text-purple-700">
+            <Zap className="size-5" />
+            5. إشارات الاستمرار أو التعديل الجوهري (Pivot vs Persevere Signals)
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 grid md:grid-cols-2 gap-4">
+          <div className="p-3 bg-background rounded-lg border-0 shadow-2xs space-y-1">
+            <h4 className="font-bold text-xs text-emerald-600">إشارات الاستمرار (Persevere Signals)</h4>
+            <p className="text-xs text-muted-foreground leading-5">
+              إذا كانت نسبة استخدام الخدمة تتجاوز 4 مرات يومياً لكل مشرف مع معدل إلغاء اشتراك أسبوعي أقل من 2%، استمر في التوسع وتحديث نفس المنتج.
+            </p>
+          </div>
+          <div className="p-3 bg-background rounded-lg border-0 shadow-2xs space-y-1">
+            <h4 className="font-bold text-xs text-amber-600">إشارات التعديل الجوهري (Pivot Signals)</h4>
+            <p className="text-xs text-muted-foreground leading-5">
+              إذا رفضت الشركات الاشتراك الشهري وفضلت الدفع لكل شحنة/مأموية، يتم التحول فوراً إلى نموذج التسعير حسب الاستخدام (Pay-per-task model).
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 }

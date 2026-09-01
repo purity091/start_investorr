@@ -282,23 +282,14 @@ export function StartupFinancingView() {
   });
 
   return (
-    <div dir="rtl" className="w-full flex-1 flex flex-col min-h-screen bg-background p-3 sm:p-6 gap-4 sm:gap-6">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
-        <div className="flex items-center gap-2.5 sm:gap-3">
-          <div className="size-9 sm:size-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 shadow-2xs">
-            <Building2 className="size-4 sm:size-5 text-primary" />
-          </div>
-          <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-2">
-              <h1 className="text-base sm:text-xl font-extrabold text-foreground tracking-tight">
-                دليل تمويل الشركات الناشئة في الشرق الأوسط
-              </h1>
-            </div>
-            <p className="text-[11px] sm:text-xs text-muted-foreground font-medium mt-0.5 leading-relaxed">
-              قاعدة بيانات شاملة لشركات رأس المال الجريء (VC)، المسرعات، المستثمرين الملائكيين وصناديق التمويل الحكومية
-            </p>
-          </div>
-        </div>
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <div className="flex flex-col gap-3 mb-2">
+        <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          دليل تمويل الشركات الناشئة في الشرق الأوسط
+        </h1>
+        <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+          قاعدة بيانات شاملة لشركات رأس المال الجريء (VC)، المسرعات، المستثمرين الملائكيين وصناديق التمويل الحكومية.
+        </p>
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">

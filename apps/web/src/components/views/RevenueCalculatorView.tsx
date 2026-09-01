@@ -5,19 +5,18 @@ import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
-import { PageHeader } from '@/components/ui/PageHeader';
 import { cn } from '@/lib/utils';
-import { 
-  Calculator, 
-  TrendingUp, 
-  DollarSign, 
-  ArrowLeft, 
-  Save, 
-  Sparkles, 
-  CheckCircle2, 
-  BarChart3, 
-  PieChart, 
-  RefreshCw, 
+import {
+  Calculator,
+  TrendingUp,
+  DollarSign,
+  ArrowLeft,
+  Save,
+  Sparkles,
+  CheckCircle2,
+  BarChart3,
+  PieChart,
+  RefreshCw,
   Target,
   FileSpreadsheet,
   ShieldCheck,
@@ -159,43 +158,26 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
   };
 
   return (
-    <div dir="rtl" className="w-full space-y-6 pb-12">
-      
-      {/* Page Header */}
-      <PageHeader
-        title="حاسبة الأرباح والمؤشرات المالية"
-        description="نموذج تحليلي تفاعلي مخصص لتقدير الإيرادات المتكررة، التكاليف التشغيلية، القيمة الممتدة للعميل (LTV)، وهامش الربح السنوي للمشروع."
-        badge="ملحقات المشروع"
-        actions={[
-          {
-            label: isSaved ? "تم الحفظ في كراسة المشروع" : "حفظ التقديرات في المشروع",
-            onClick: handleSaveToWorkspace,
-            variant: isSaved ? "secondary" : "default",
-            icon: isSaved ? <CheckCircle2 className="size-4 text-emerald-600" /> : <Save className="size-4" />
-          }
-        ]}
-      />
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans pb-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
 
-      {/* Model Selection Toolbar */}
-      <Card className="p-4 border-border shadow-xs">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">
-              <BarChart3 className="size-5" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-foreground">نوع نموذج العمل المالي</h3>
-              <p className="text-xs text-muted-foreground">اختر نوع نموذج الإيراد الخاص بمشروعك لضبط المدخلات</p>
-            </div>
-          </div>
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-2">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            حاسبة الأرباح والمؤشرات المالية
+          </h1>
+          <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+            نموذج تحليلي تفاعلي مخصص لتقدير الإيرادات المتكررة، التكاليف التشغيلية، القيمة الممتدة للعميل (LTV)، وهامش الربح السنوي للمشروع.
+          </p>
+        </div>
 
-          <div className="inline-flex p-1 rounded-lg bg-muted border border-border text-xs font-semibold gap-1 w-full sm:w-auto">
+        <div className="flex flex-wrap items-center gap-2 shrink-0">
+          <div className="inline-flex p-1 rounded-lg bg-muted border border-border text-xs font-semibold gap-1">
             <button
               onClick={() => setModelType('saas')}
               className={cn(
-                "px-3.5 py-1.5 rounded-md transition-all flex items-center justify-center gap-2 flex-1 sm:flex-none cursor-pointer",
-                modelType === 'saas' 
-                  ? "bg-background text-foreground font-bold shadow-xs border border-border" 
+                "px-3 py-1.5 rounded-md transition-all flex items-center justify-center gap-1.5 cursor-pointer",
+                modelType === 'saas'
+                  ? "bg-background text-foreground font-bold shadow-2xs border border-border"
                   : "text-muted-foreground hover:text-foreground"
               )}
             >
@@ -205,9 +187,9 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
             <button
               onClick={() => setModelType('sales')}
               className={cn(
-                "px-3.5 py-1.5 rounded-md transition-all flex items-center justify-center gap-2 flex-1 sm:flex-none cursor-pointer",
-                modelType === 'sales' 
-                  ? "bg-background text-foreground font-bold shadow-xs border border-border" 
+                "px-3 py-1.5 rounded-md transition-all flex items-center justify-center gap-1.5 cursor-pointer",
+                modelType === 'sales'
+                  ? "bg-background text-foreground font-bold shadow-2xs border border-border"
                   : "text-muted-foreground hover:text-foreground"
               )}
             >
@@ -215,12 +197,22 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
               مبيعات / خدمات مباشرة
             </button>
           </div>
+
+          <Button
+            onClick={handleSaveToWorkspace}
+            variant={isSaved ? "secondary" : "default"}
+            size="sm"
+            className="font-bold text-xs h-9 gap-1.5 shadow-2xs cursor-pointer"
+          >
+            {isSaved ? <CheckCircle2 className="size-4 text-emerald-600" /> : <Save className="size-4" />}
+            {isSaved ? "تم الحفظ" : "حفظ التقديرات"}
+          </Button>
         </div>
-      </Card>
+      </div>
 
       {/* Key Financial Cards Summary */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        
+
         {/* MRR Card */}
         <Card className="border-border shadow-xs">
           <CardContent className="p-5">
@@ -288,7 +280,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
 
       {/* Main Interactive Grid */}
       <div className="grid lg:grid-cols-12 gap-6">
-        
+
         {/* Left Inputs Column */}
         <div className="lg:col-span-6 space-y-6">
           <Card className="border-border shadow-xs">
@@ -301,7 +293,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
             </CardHeader>
 
             <CardContent className="p-5 space-y-5">
-              
+
               {modelType === 'saas' ? (
                 <>
                   {/* Subscriber Count Input */}
@@ -319,12 +311,12 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                         onChange={(e) => setSubscribers(Math.max(1, Number(e.target.value)))}
                         className="w-28 text-left text-xs font-bold"
                       />
-                      <input 
-                        type="range" 
-                        min="10" 
-                        max="5000" 
+                      <input
+                        type="range"
+                        min="10"
+                        max="5000"
                         step="10"
-                        value={subscribers} 
+                        value={subscribers}
                         onChange={(e) => setSubscribers(Number(e.target.value))}
                         className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
                       />
@@ -346,12 +338,12 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                         onChange={(e) => setPricePerMonth(Math.max(1, Number(e.target.value)))}
                         className="w-28 text-left text-xs font-bold"
                       />
-                      <input 
-                        type="range" 
-                        min="5" 
-                        max="1000" 
+                      <input
+                        type="range"
+                        min="5"
+                        max="1000"
                         step="5"
-                        value={pricePerMonth} 
+                        value={pricePerMonth}
                         onChange={(e) => setPricePerMonth(Number(e.target.value))}
                         className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
                       />
@@ -374,12 +366,12 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                         onChange={(e) => setChurnRate(Math.max(0, Number(e.target.value)))}
                         className="w-28 text-left text-xs font-bold"
                       />
-                      <input 
-                        type="range" 
-                        min="0.5" 
-                        max="15" 
+                      <input
+                        type="range"
+                        min="0.5"
+                        max="15"
                         step="0.5"
-                        value={churnRate} 
+                        value={churnRate}
                         onChange={(e) => setChurnRate(Number(e.target.value))}
                         className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
                       />
@@ -401,12 +393,12 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                         onChange={(e) => setCac(Math.max(0, Number(e.target.value)))}
                         className="w-28 text-left text-xs font-bold"
                       />
-                      <input 
-                        type="range" 
-                        min="10" 
-                        max="1000" 
+                      <input
+                        type="range"
+                        min="10"
+                        max="1000"
                         step="10"
-                        value={cac} 
+                        value={cac}
                         onChange={(e) => setCac(Number(e.target.value))}
                         className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
                       />
@@ -430,12 +422,12 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                         onChange={(e) => setMonthlyOrders(Math.max(1, Number(e.target.value)))}
                         className="w-28 text-left text-xs font-bold"
                       />
-                      <input 
-                        type="range" 
-                        min="20" 
-                        max="10000" 
+                      <input
+                        type="range"
+                        min="20"
+                        max="10000"
                         step="50"
-                        value={monthlyOrders} 
+                        value={monthlyOrders}
                         onChange={(e) => setMonthlyOrders(Number(e.target.value))}
                         className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
                       />
@@ -457,12 +449,12 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                         onChange={(e) => setAvgOrderValue(Math.max(1, Number(e.target.value)))}
                         className="w-28 text-left text-xs font-bold"
                       />
-                      <input 
-                        type="range" 
-                        min="10" 
-                        max="2000" 
+                      <input
+                        type="range"
+                        min="10"
+                        max="2000"
                         step="10"
-                        value={avgOrderValue} 
+                        value={avgOrderValue}
                         onChange={(e) => setAvgOrderValue(Number(e.target.value))}
                         className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
                       />
@@ -484,12 +476,12 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                         onChange={(e) => setCogsPercentage(Math.max(0, Number(e.target.value)))}
                         className="w-28 text-left text-xs font-bold"
                       />
-                      <input 
-                        type="range" 
-                        min="10" 
-                        max="80" 
+                      <input
+                        type="range"
+                        min="10"
+                        max="80"
                         step="5"
-                        value={cogsPercentage} 
+                        value={cogsPercentage}
                         onChange={(e) => setCogsPercentage(Number(e.target.value))}
                         className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
                       />
@@ -513,12 +505,12 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                     onChange={(e) => setMonthlyExpense(Math.max(0, Number(e.target.value)))}
                     className="w-28 text-left text-xs font-bold"
                   />
-                  <input 
-                    type="range" 
-                    min="500" 
-                    max="20000" 
+                  <input
+                    type="range"
+                    min="500"
+                    max="20000"
                     step="500"
-                    value={monthlyExpense} 
+                    value={monthlyExpense}
                     onChange={(e) => setMonthlyExpense(Number(e.target.value))}
                     className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
                   />
@@ -532,7 +524,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
 
         {/* Right Analysis & Projections Column */}
         <div className="lg:col-span-6 space-y-6">
-          
+
           {/* Detailed Financial Breakdown Card */}
           <Card className="border-border shadow-xs">
             <CardHeader className="p-5 border-b border-border">
@@ -545,7 +537,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
               </CardTitle>
             </CardHeader>
             <CardContent className="p-5 space-y-4">
-              
+
               <div className="space-y-2 text-xs font-medium">
                 <div className="flex justify-between p-3 rounded-lg bg-muted/40 border border-border">
                   <span className="text-muted-foreground">إجمالي الإيرادات السنوية (Gross Revenue):</span>
@@ -584,7 +576,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
 
               {/* Next Steps CTA */}
               <div className="pt-2">
-                <Button 
+                <Button
                   onClick={() => setActiveTab?.('workspace')}
                   className="w-full font-bold text-xs h-10 gap-2 shadow-xs cursor-pointer"
                 >

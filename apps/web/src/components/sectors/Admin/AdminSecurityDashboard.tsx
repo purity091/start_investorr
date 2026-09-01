@@ -114,21 +114,25 @@ export const AdminSecurityDashboard: React.FC<any> = (props) => {
   };
 
   return (
-    <div className="font-['IBM_Plex_Sans_Arabic'] space-y-8 animate-in fade-in duration-700 pb-24">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500 text-right pb-24">
       
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-800 text-white rounded-full text-[10px] font-bold uppercase tracking-widest border border-slate-700 mb-3 shadow-md">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-2">
+        <div className="flex flex-col gap-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-800 text-white rounded-full text-[10px] font-bold uppercase tracking-widest border border-slate-700 w-fit shadow-xs">
             <Lock size={12} />
             أمان النظام والصلاحيات
           </div>
-          <h1 className="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">الدرع الواقي والإدارة</h1>
-          <p className="text-slate-500 font-normal text-sm mt-2">راقب الأنشطة الحساسة، أدر صلاحيات الوصول للمنصة، وتعامل مع التهديدات.</p>
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">الدرع الواقي والإدارة</h1>
+            <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium mt-1">
+              راقب الأنشطة الحساسة، أدر صلاحيات الوصول للمنصة، وتعامل مع التهديدات.
+            </p>
+          </div>
         </div>
-        
+
         {/* Global Security Status Card */}
-        <div className="bg-white border border-emerald-100 p-4 rounded-2xl shadow-[0_8px_30px_rgba(16,185,129,0.1)] flex items-center gap-4">
+        <div className="bg-white border border-emerald-100 p-4 rounded-2xl shadow-[0_8px_30px_rgba(16,185,129,0.1)] flex items-center gap-4 shrink-0">
            <div className="w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600">
              <ShieldCheck size={24} />
            </div>
@@ -335,3 +339,5 @@ export const AdminSecurityDashboard: React.FC<any> = (props) => {
     </div>
   );
 };
+
+export default AdminSecurityDashboard;

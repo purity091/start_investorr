@@ -100,6 +100,7 @@ const hasTabShape = (segment: string) =>
 
 export const isKnownTabPath = (pathname: string) => {
   if (getProjectIdFromEditPath(pathname)) return true;
+  if (getFirst90DaysProjectId(pathname)) return true;
 
   const segments = getSegments(pathname);
   if (!segments.length) return true;
@@ -123,8 +124,19 @@ export const getProjectIdFromEditPath = (pathname: string) => {
   return segments[1] || null;
 };
 
+export const getFirst90DaysProjectId = (pathname: string) => {
+  const segments = getSegments(pathname);
+  if (segments.length !== 2 || segments[0] !== 'first-90-days') return null;
+
+  return segments[1] || null;
+};
+
+export const getFirst90DaysProjectPath = (projectId: string) =>
+  `/first-90-days/${encodeURIComponent(projectId)}`;
+
 export const getTabFromPathname = (pathname: string) => {
   if (getProjectIdFromEditPath(pathname)) return 'project-edit';
+  if (getFirst90DaysProjectId(pathname)) return 'first-90-days';
 
   const segments = getSegments(pathname);
   if (!segments.length) return 'home';
@@ -154,6 +166,12 @@ const getBasePath = (pathname: string) => {
 export const getTabPath = (tab: string, pathname = window.location.pathname) => {
   if (tab === 'project-edit' && getProjectIdFromEditPath(pathname)) {
     return pathname;
+  }
+
+  if (tab === 'first-90-days') {
+    const projectId = getFirst90DaysProjectId(pathname);
+    if (projectId) return getFirst90DaysProjectPath(projectId);
+    return '/first-90-days';
   }
 
   const basePath = getBasePath(pathname);

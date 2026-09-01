@@ -255,8 +255,8 @@ export const AuthScreen: React.FC = () => {
               <div className="space-y-2 text-right">
                 <div className="flex items-center justify-between">
                   <label className="text-xs font-extrabold text-slate-700">اختر الباقة المناسبة لك</label>
-                  <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                    مجاناً 0$ الآن
+                  <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-200">
+                    تبدأ من 99 ر.س / $26.40 شهرياً
                   </span>
                 </div>
 
@@ -295,6 +295,9 @@ export const AuthScreen: React.FC = () => {
                         <div className="space-y-1">
                           <div className="text-[11px] font-bold text-slate-800">
                             {plan.projectLimitLabel}
+                          </div>
+                          <div className="text-[11px] font-black text-blue-600">
+                            {plan.monthlyPriceSar} ر.س / ${plan.monthlyPriceUsd.toFixed(2)} شهرياً
                           </div>
                           <p className="text-[10px] text-slate-500 leading-relaxed">
                             {plan.description}
@@ -412,7 +415,7 @@ export const AuthScreen: React.FC = () => {
                 onClick={() => switchMode(mode === 'login' ? 'register' : 'login')}
                 className="font-bold text-blue-600 hover:text-blue-700 transition-colors"
               >
-                {mode === 'login' ? 'سجل مجاناً' : 'سجل دخولك'}
+                {mode === 'login' ? 'أنشئ حسابك بـ 99 ر.س' : 'سجل دخولك'}
               </button>
             </p>
           </div>

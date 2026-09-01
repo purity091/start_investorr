@@ -231,7 +231,7 @@ export default function LandingPage() {
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <Button onClick={() => handleCtaClick('register')} size="lg" className="w-full sm:w-auto text-sm font-bold px-8 h-12 gap-2 shadow-2xs cursor-pointer">
-                {user ? 'الذهاب لصفحة البناء' : 'ابدأ بناء مشروعك مجاناً'}
+                {user ? 'الذهاب لصفحة البناء' : 'ابدأ بناء مشروعك بـ 99 ر.س'}
                 <Rocket className="size-4" />
               </Button>
               <a href="#table-preview">
@@ -673,8 +673,8 @@ export default function LandingPage() {
               <button
                 onClick={() => setActiveTableTab('all')}
                 className={`px-4 py-2 rounded-lg transition-all ${activeTableTab === 'all'
-                    ? 'bg-card text-foreground shadow-2xs font-extrabold'
-                    : 'text-muted-foreground hover:text-foreground'
+                  ? 'bg-card text-foreground shadow-2xs font-extrabold'
+                  : 'text-muted-foreground hover:text-foreground'
                   }`}
               >
                 جميع المشاريع ({projectsList.length})
@@ -682,8 +682,8 @@ export default function LandingPage() {
               <button
                 onClick={() => setActiveTableTab('saas')}
                 className={`px-4 py-2 rounded-lg transition-all flex items-center gap-1.5 ${activeTableTab === 'saas'
-                    ? 'bg-primary text-primary-foreground shadow-2xs font-extrabold'
-                    : 'text-muted-foreground hover:text-foreground'
+                  ? 'bg-primary text-primary-foreground shadow-2xs font-extrabold'
+                  : 'text-muted-foreground hover:text-foreground'
                   }`}
               >
                 <Laptop className="size-3.5" />
@@ -692,8 +692,8 @@ export default function LandingPage() {
               <button
                 onClick={() => setActiveTableTab('micro-saas')}
                 className={`px-4 py-2 rounded-lg transition-all flex items-center gap-1.5 ${activeTableTab === 'micro-saas'
-                    ? 'bg-primary text-primary-foreground shadow-2xs font-extrabold'
-                    : 'text-muted-foreground hover:text-foreground'
+                  ? 'bg-primary text-primary-foreground shadow-2xs font-extrabold'
+                  : 'text-muted-foreground hover:text-foreground'
                   }`}
               >
                 <Cpu className="size-3.5" />
@@ -721,12 +721,12 @@ export default function LandingPage() {
                     هناك أكثر من +500 شركة وفكرة مشروع SaaS مكتملة البيانات في الجدول!
                   </h3>
                   <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
-                    سجل حسابك المجاني فوراً للوصول الكامل لكافة الصفوف، البيانات المالية، وتحليلات المنافسين دون أي قيود.
+                    ابدأ بالباقة الأولى مقابل 99 ر.س شهرياً (ما يعادل 26.40 دولاراً) للوصول الكامل لكافة الصفوف والبيانات المالية وتحليلات المنافسين.
                   </p>
                 </div>
                 <div className="pt-2">
                   <Button onClick={() => handleCtaClick('register')} size="lg" className="w-full sm:w-auto font-bold text-xs sm:text-sm h-11 px-8 gap-2 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer">
-                    {user ? 'الانتقال لقواعد بيانات المشاريع' : 'تسجيل الدخول / إنشاء حساب مجاني لفتح كافة الصفوف'}
+                    {user ? 'الانتقال لقواعد بيانات المشاريع' : 'إنشاء حساب بـ 99 ر.س لفتح كافة الصفوف'}
                     <ArrowLeft className="size-4" />
                   </Button>
                 </div>
@@ -1044,8 +1044,8 @@ export default function LandingPage() {
                 a: 'تُحفظ جميع مشاريعك ونماذج عملك سحابياً بتقنيات التشفير المتقدمة والحماية المشددة على مستوى الصفوف (Row Level Security - RLS). بياناتك خاصة 100% ولن يستطيع أي طرف ثالث الاطلاع عليها إلا إذا اخترت بنفسك إنشاء رابط مشاركة عمومي.'
               },
               {
-                q: 'هل تتطلب تجربة المنصة والتسجيل المجاني بطاقة ائتمان؟',
-                a: 'لا، يمكنك إنشاء حساب مجاني بالكامل واستكشاف قواعد البيانات الميدانية، واستخدام الحاسبة التفاعلية والأكاديمية، ومعاينة المشاريع الناجحة دون الحاجة لإدخال أي بطاقة ائتمان أو التزامات مالية.'
+                q: 'كم تبلغ تكلفة الباقة الأولى وهل تتطلب وسيلة دفع؟',
+                a: 'تبلغ تكلفة الباقة الأولى 99 ر.س شهرياً، بما يعادل 26.40 دولاراً، ويتم تفعيل الحساب بعد إكمال خطوات الدفع وإرفاق بيانات العملية عند الحاجة.'
               }
             ].map((faq, idx) => {
               const isOpen = openFaq === idx;
@@ -1060,16 +1060,14 @@ export default function LandingPage() {
                   >
                     <span className="text-sm font-bold text-foreground">{faq.q}</span>
                     <ChevronDown
-                      className={`size-4 shrink-0 transition-transform duration-300 ease-in-out ${
-                        isOpen ? 'rotate-180 text-primary' : 'text-muted-foreground'
-                      }`}
+                      className={`size-4 shrink-0 transition-transform duration-300 ease-in-out ${isOpen ? 'rotate-180 text-primary' : 'text-muted-foreground'
+                        }`}
                     />
                   </button>
                   <div
                     style={{ gridTemplateRows: isOpen ? '1fr' : '0fr' }}
-                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${
-                      isOpen ? 'opacity-100' : 'opacity-0'
-                    }`}
+                    className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0'
+                      }`}
                   >
                     <div className="overflow-hidden">
                       <div className="p-4 sm:p-5 pt-0 text-xs sm:text-sm text-muted-foreground leading-relaxed border-t border-border/40 font-medium">
@@ -1094,7 +1092,7 @@ export default function LandingPage() {
             </p>
             <div className="pt-2">
               <Button onClick={() => handleCtaClick('register')} size="lg" variant="secondary" className="font-extrabold text-sm px-8 h-12 gap-2 shadow-sm cursor-pointer">
-                {user ? 'الذهاب لصفحة البناء في لوحة التحكم' : 'انشئ حسابك المجاني الآن'}
+                {user ? 'الذهاب لصفحة البناء في لوحة التحكم' : 'أنشئ حسابك بـ 99 ر.س الآن'}
                 <ArrowLeft className="size-4" />
               </Button>
             </div>
@@ -1105,64 +1103,131 @@ export default function LandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border/60 bg-muted/30 text-muted-foreground py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-
-            <div className="space-y-3 md:col-span-1">
-              <div className="flex items-center gap-2">
-                <div className="flex items-center justify-center size-8 rounded-lg bg-primary text-primary-foreground font-black text-base">
+      <footer className="border-t border-border/60 bg-muted/30 text-muted-foreground py-3 sm:py-4 relative overflow-hidden mt-auto">
+        <div className="container mx-auto px-4 relative z-10">
+          {/* Upper Footer Grid for Public Pages */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 mb-3 pb-3 border-b border-border/60">
+            {/* Brand Intro Column */}
+            <div className="lg:col-span-2 space-y-3">
+              <div className="flex items-center gap-2 mb-1">
+                <div className="flex items-center justify-center size-9 rounded-xl bg-primary text-primary-foreground font-black text-base shadow-xs">
                   خ
                 </div>
-                <span className="text-xl font-black text-foreground">خطة<span className="text-primary">.</span></span>
+                <span className="text-xl font-black tracking-tight text-foreground">
+                  خطة<span className="text-primary">.</span>
+                </span>
               </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed max-w-xs">
                 المنصة العربية الأولى لبناء وتوثيق نماذج العمل التجاري ودراسة قطاعات السوق وفق المنهجيات الريادية العالمية.
               </p>
             </div>
 
+            {/* Column 1: المنتج والخيارات */}
             <div>
-              <h4 className="text-foreground font-bold text-xs mb-4">المنتج والخيارات</h4>
-              <ul className="space-y-2 text-xs text-muted-foreground font-medium">
-                <li><Link href="/market-discovery" className="hover:text-primary transition-colors">استكشاف قطاعات السوق</Link></li>
-                <li><Link href="/saas-ideas" className="hover:text-primary transition-colors">أفكار مشاريع SaaS</Link></li>
-                <li><Link href="/micro-saas-ideas" className="hover:text-primary transition-colors">أفكار Micro-SaaS</Link></li>
-                <li><Link href="/proven-projects" className="hover:text-primary transition-colors">أفكار شركات ناجحة</Link></li>
+              <h4 className="text-foreground font-black text-xs sm:text-sm mb-3 tracking-tight">المنتج والخيارات</h4>
+              <ul className="space-y-2 text-xs sm:text-sm">
+                <li>
+                  <Link href="/pricing" className="text-foreground/85 hover:text-primary transition-colors font-bold hover:underline underline-offset-4">
+                    الأسعار
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/market-discovery" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    استكشاف قطاعات السوق
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/saas-ideas" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    أفكار مشاريع SaaS
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/micro-saas-ideas" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    أفكار Micro-SaaS
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/proven-projects" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    أفكار شركات ناجحة
+                  </Link>
+                </li>
               </ul>
             </div>
 
+            {/* Column 2: المصادر والأكاديمية */}
             <div>
-              <h4 className="text-foreground font-bold text-xs mb-4">المصادر والأكاديمية</h4>
-              <ul className="space-y-2 text-xs text-muted-foreground font-medium">
-                <li><Link href="/platform-academy" className="hover:text-primary transition-colors">أكاديمية خطة والمفاهيم</Link></li>
-                <li><Link href="/failed-projects" className="hover:text-primary transition-colors">تحليل الشركات التي فشلت</Link></li>
-                <li><Link href="/faq" className="hover:text-primary transition-colors">الأسئلة الشائعة</Link></li>
+              <h4 className="text-foreground font-black text-xs sm:text-sm mb-3 tracking-tight">المصادر والأكاديمية</h4>
+              <ul className="space-y-2 text-xs sm:text-sm">
+                <li>
+                  <Link href="/platform-academy" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    أكاديمية خطة والمفاهيم
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/changelog" className="text-foreground/85 hover:text-primary transition-colors font-bold hover:underline underline-offset-4">
+                    سجل التحديثات
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/failed-projects" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    تحليل الشركات التي فشلت
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#faq" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    الأسئلة الشائعة
+                  </Link>
+                </li>
               </ul>
             </div>
 
+            {/* Column 3: الشركة والخصوصية */}
             <div>
-              <h4 className="text-foreground font-bold text-xs mb-4">الشركة والخصوصية</h4>
-              <ul className="space-y-2 text-xs text-muted-foreground font-medium">
-                <li><Link href="/about" className="hover:text-primary transition-colors">من نحن</Link></li>
-                <li><Link href="/contact-us" className="hover:text-primary transition-colors">اتصل بنا</Link></li>
-                <li><Link href="/privacy" className="hover:text-primary transition-colors">سياسة الخصوصية</Link></li>
-                <li><Link href="/terms" className="hover:text-primary transition-colors">شروط الاستخدام</Link></li>
+              <h4 className="text-foreground font-black text-xs sm:text-sm mb-3 tracking-tight">الشركة والخصوصية</h4>
+              <ul className="space-y-2 text-xs sm:text-sm">
+                <li>
+                  <Link href="/about" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    من نحن
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact-us" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    اتصل بنا
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    سياسة الخصوصية
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">
+                    شروط الاستخدام
+                  </Link>
+                </li>
               </ul>
             </div>
-
           </div>
 
-          <div className="pt-6 border-t border-border/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground font-medium">
-            <p>© {new Date().getFullYear()} منصة خطة. جميع الحقوق محفوظة.</p>
-            <nav className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5">
-              <Link href="/privacy" className="hover:text-primary transition-colors whitespace-nowrap">سياسة الخصوصية وحماية البيانات</Link>
-              <span className="text-border/60">•</span>
-              <Link href="/terms" className="hover:text-primary transition-colors whitespace-nowrap">شروط وأحكام الخدمة</Link>
-              <span className="text-border/60">•</span>
-              <Link href="/refund-policy" className="hover:text-primary transition-colors whitespace-nowrap">سياسة الاسترجاع والإلغاء</Link>
-              <span className="text-border/60">•</span>
-              <Link href="/fulfillment-policy" className="hover:text-primary transition-colors whitespace-nowrap">سياسة التسليم وتوفير الخدمة</Link>
-            </nav>
+          {/* Bottom Bar Footer Section: Single Line Right & Left (Compact & Lightweight) */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-2.5 w-full text-[11px] sm:text-xs text-muted-foreground font-normal" dir="rtl">
+            {/* Right: Copyright */}
+            <p dir="rtl" className="flex items-center gap-1 shrink-0 text-center sm:text-right whitespace-nowrap">
+              <span>© {new Date().getFullYear()}</span>
+              <span className="font-bold text-foreground">منصة خطة</span>.
+              <span>جميع الحقوق محفوظة.</span>
+            </p>
+
+            {/* Left: Legal Policy Links Inline */}
+            <div className="flex flex-wrap items-center justify-center sm:justify-end gap-2 sm:gap-3 text-[11px] whitespace-nowrap">
+              <Link href="/privacy" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">سياسة الخصوصية وحماية البيانات</Link>
+              <span className="text-border/80">•</span>
+              <Link href="/terms" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">شروط وأحكام الخدمة</Link>
+              <span className="text-border/80">•</span>
+              <Link href="/refund-policy" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">سياسة الاسترجاع والإلغاء</Link>
+              <span className="text-border/80">•</span>
+              <Link href="/fulfillment-policy" className="text-foreground/75 hover:text-primary transition-colors font-medium hover:underline underline-offset-4">سياسة التسليم وتوفير الخدمة</Link>
+            </div>
           </div>
         </div>
       </footer>

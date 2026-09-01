@@ -45,7 +45,7 @@ import {
 } from '@/components/ui/select';
 import { cn } from '@/lib/utils';
 
-const SafeIcon = ({ iconName, ...props }: { iconName: string; [key: string]: any }) => {
+const SafeIcon = ({ iconName, ...props }: { iconName: string;[key: string]: any }) => {
   const Icon = (LucideIcons as unknown as Record<string, React.ComponentType<any>>)[iconName] ?? LucideIcons.HelpCircle;
   return <Icon {...props} />;
 };
@@ -509,7 +509,7 @@ function DiscoveryTanStackTable({
   React.useEffect(() => {
     try {
       setSavedSectors(JSON.parse(localStorage.getItem('saved_discovery_sectors') || '{}'));
-    } catch {}
+    } catch { }
   }, []);
 
   const pagination = useMemo(
@@ -538,7 +538,7 @@ function DiscoveryTanStackTable({
               const updated = { ...prev, [item.id]: nextSaved };
               try {
                 localStorage.setItem('saved_discovery_sectors', JSON.stringify(updated));
-              } catch (err) {}
+              } catch (err) { }
               return updated;
             });
           };
@@ -1016,7 +1016,7 @@ export function DiscoveryCenter({
   const totalNewSectors = allSectors.filter(sector => sector.isNew).length;
 
   const tableRecords: SectorRecord[] = useMemo(() => {
-    return normalizedGroups.flatMap(group => 
+    return normalizedGroups.flatMap(group =>
       group.sectors.map(sector => ({
         ...sector,
         groupTitle: group.title,
@@ -1034,41 +1034,35 @@ export function DiscoveryCenter({
   };
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-6 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
-      
-      {/* Sleek Integrated Header with Compact Summary Pills matching ProvenProjectsGallery style */}
-      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 bg-slate-50/70 p-5 rounded-2xl border border-slate-200/80 shadow-2xs">
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2">
-            <Badge variant="secondary" className="w-fit bg-blue-500/10 text-blue-600 hover:bg-blue-500/20 border-0 font-bold px-3 py-1">
-              <LucideIcons.Compass className="size-3.5 me-1.5 inline-block" />
-              مساحة القرار الاستثماري
-            </Badge>
-          </div>
-          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">استكشاف قطاعات السوق</h1>
-          <p className="max-w-2xl text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
+
+      {/* Header Section */}
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-2">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">استكشاف قطاعات السوق</h1>
+          <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
             واجهة منظمة لاكتشاف القطاعات، مقارنة المسارات، والانتقال السريع إلى السوق المناسب لبناء دراسة جدوى أكثر دقة.
           </p>
         </div>
 
         {/* Compact Quick Stats Pills */}
-        <div className="flex flex-wrap items-center gap-2.5 shrink-0 pt-2 lg:pt-0">
-          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
-            <LucideIcons.Layers className="size-4 text-blue-600" />
-            <span className="text-xs font-bold text-slate-600">المجموعات:</span>
-            <span className="text-sm font-black text-slate-900">{normalizedGroups.length}</span>
+        <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 shrink-0 pt-1 lg:pt-0">
+          <div className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+            <LucideIcons.Layers className="size-3.5 sm:size-4 text-blue-600" />
+            <span className="text-[11px] sm:text-xs font-bold text-slate-600">المجموعات:</span>
+            <span className="text-xs sm:text-sm font-black text-slate-900">{normalizedGroups.length}</span>
           </div>
 
-          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100/90 border border-slate-200/70">
-            <LucideIcons.LayoutGrid className="size-4 text-slate-600" />
-            <span className="text-xs font-bold text-slate-600">إجمالي القطاعات:</span>
-            <span className="text-sm font-black text-slate-900">{totalSectors}</span>
+          <div className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-slate-100/90 border border-slate-200/70">
+            <LucideIcons.LayoutGrid className="size-3.5 sm:size-4 text-slate-600" />
+            <span className="text-[11px] sm:text-xs font-bold text-slate-600">إجمالي القطاعات:</span>
+            <span className="text-xs sm:text-sm font-black text-slate-900">{totalSectors}</span>
           </div>
 
-          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-50/90 border border-emerald-200/70">
-            <LucideIcons.Sparkles className="size-4 text-emerald-600" />
-            <span className="text-xs font-bold text-emerald-800">قطاعات جديدة:</span>
-            <span className="text-sm font-black text-emerald-700">{totalNewSectors}</span>
+          <div className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-emerald-50/90 border border-emerald-200/70">
+            <LucideIcons.Sparkles className="size-3.5 sm:size-4 text-emerald-600" />
+            <span className="text-[11px] sm:text-xs font-bold text-emerald-800">قطاعات جديدة:</span>
+            <span className="text-xs sm:text-sm font-black text-emerald-700">{totalNewSectors}</span>
           </div>
         </div>
       </div>

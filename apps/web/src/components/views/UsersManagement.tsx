@@ -216,25 +216,22 @@ export const UsersManagement: React.FC = () => {
   }
 
   return (
-    <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
-      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-3xl space-y-3">
-            <div className="space-y-2">
-              <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">إدارة المستخدمين</h1>
-              <p className="text-sm leading-7 text-muted-foreground">
-                واجهة منظمة لمراجعة المستخدمين، الصلاحيات، وحالات الحساب بطريقة جدولية واضحة.
-              </p>
-            </div>
-          </div>
+    <main dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500 text-right">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-2">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">إدارة المستخدمين</h1>
+          <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+            واجهة منظمة لمراجعة المستخدمين، الصلاحيات، وحالات الحساب بطريقة جدولية واضحة.
+          </p>
+        </div>
 
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button className="w-full sm:w-fit">
-                <Plus className="size-4" />
-                إضافة مستخدم
-              </Button>
-            </DialogTrigger>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button className="w-full sm:w-auto shrink-0 font-bold">
+              <Plus className="size-4" />
+              إضافة مستخدم
+            </Button>
+          </DialogTrigger>
             <DialogContent dir="rtl">
               <DialogHeader>
                 <DialogTitle>إضافة مستخدم جديد</DialogTitle>
@@ -285,7 +282,6 @@ export const UsersManagement: React.FC = () => {
             </DialogContent>
           </Dialog>
         </div>
-      </section>
 
       <section className="grid gap-3 md:grid-cols-4">
         {stats.map((stat) => {

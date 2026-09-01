@@ -515,28 +515,26 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   }
 
   return (
-    <main dir="rtl" className="app-page-shell-wide space-y-6 text-right">
+    <main dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500 text-right">
       {/* Header Section */}
-      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-2xs border-0">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="space-y-1 text-right">
-            <div className="flex items-center gap-2">
-              <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">مشاريعي</h1>
-              <Badge variant="secondary" className="bg-muted text-foreground font-semibold text-xs border-0">
-                {projectsList.filter((p) => !p.isMockExample && !p.id.startsWith('example')).length} مشروع
-              </Badge>
-            </div>
-            <p className="text-sm leading-6 text-muted-foreground">
-              جميع دراسات الجدوى ونماذج الأعمال المحفوظة في حسابك.
-            </p>
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-2">
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-2.5">
+            <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">مشاريعي</h1>
+            <Badge variant="secondary" className="bg-muted text-foreground font-semibold text-xs border-0">
+              {projectsList.filter((p) => !p.isMockExample && !p.id.startsWith('example')).length} مشروع
+            </Badge>
           </div>
-
-          <Button type="button" onClick={() => setActiveTab?.('new-plan')} className="w-full sm:w-auto shadow-2xs border-0">
-            <Plus className="size-4" />
-            <span>مشروع جديد</span>
-          </Button>
+          <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+            جميع دراسات الجدوى ونماذج الأعمال المحفوظة في حسابك.
+          </p>
         </div>
-      </section>
+
+        <Button type="button" onClick={() => setActiveTab?.('new-plan')} className="w-full sm:w-auto shadow-2xs border-0 shrink-0 font-bold">
+          <Plus className="size-4" />
+          <span>مشروع جديد</span>
+        </Button>
+      </div>
 
       {/* Main Table & Filters Card */}
       <Card className="shadow-2xs border-0">

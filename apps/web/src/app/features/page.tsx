@@ -96,7 +96,7 @@ export default function FeaturesPage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link href="/login">
               <Button size="lg" className="gap-2 shadow-md">
-                تجربة المنصة مجاناً
+                ابدأ تجربة المنصة بـ 99 ر.س
                 <ArrowLeft className="size-4" />
               </Button>
             </Link>
@@ -200,7 +200,7 @@ export default function FeaturesPage() {
           </p>
           <Link href="/login">
             <Button size="lg" className="gap-2 text-base px-8 mt-2">
-              ابدأ الآن مجاناً
+               ابدأ الآن بـ 99 ر.س
               <ArrowLeft className="size-5" />
             </Button>
           </Link>

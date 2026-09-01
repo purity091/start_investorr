@@ -558,6 +558,150 @@ body[style*="overflow: hidden"] {
   box-sizing: border-box !important;
 }
 
+/* First 90 days SVAR Gantt layout: standard left-to-right chart */
+.first-90-days-gantt > .wx-willow-theme {
+  width: 100%;
+  height: 100%;
+  direction: ltr !important;
+}
+
+.first-90-days-gantt .wx-gantt {
+  font-family: inherit;
+  direction: ltr !important;
+}
+
+.first-90-days-gantt * {
+  direction: ltr !important;
+}
+
+.first-90-days-gantt .wx-layout,
+.first-90-days-gantt .wx-grid-container,
+.first-90-days-gantt .wx-grid,
+.first-90-days-gantt .wx-grid .wx-cell,
+.first-90-days-gantt .wx-grid .wx-header {
+  direction: ltr !important;
+  text-align: left;
+}
+
+.first-90-days-gantt .wx-chart,
+.first-90-days-gantt .wx-timescale-viewport,
+.first-90-days-gantt .wx-scale,
+.first-90-days-gantt .wx-area {
+  direction: ltr !important;
+}
+
+.first-90-days-gantt .wx-chart {
+  min-width: 0;
+  overflow-x: auto !important;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.first-90-days-gantt .wx-chart::-webkit-scrollbar {
+  height: 0;
+}
+
+.first-90-days-gantt-scrollbar {
+  height: 16px;
+  min-height: 16px;
+  scrollbar-gutter: stable;
+  scrollbar-color: var(--primary) var(--muted);
+  scrollbar-width: auto;
+  overscroll-behavior-x: contain;
+}
+
+.first-90-days-gantt-scrollbar::-webkit-scrollbar {
+  height: 12px;
+}
+
+.first-90-days-gantt-scrollbar::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 9999px;
+}
+
+.first-90-days-gantt-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 9999px;
+}
+
+.first-90-days-gantt-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+.first-90-days-gantt .wx-content,
+.first-90-days-gantt .wx-text,
+.first-90-days-gantt .wx-scale {
+  text-align: left;
+}
+
+.first-90-days-gantt .wx-link {
+  opacity: 1 !important;
+  cursor: pointer;
+  z-index: 8;
+}
+
+/* Keep dependency lines above task bars so the connection remains continuous. */
+.first-90-days-gantt .wx-links {
+  z-index: 2;
+}
+
+/* A selected link renders its delete button inside the target task bar. */
+.first-90-days-gantt .wx-bar:has(.wx-delete-button) {
+  z-index: 9;
+}
+
+.first-90-days-gantt .wx-delete-button {
+  pointer-events: auto;
+}
+
+/* First 90 days SVAR Kanban board: Arabic task workflow */
+.first-90-days-kanban > .wx-willow-theme {
+  width: 100%;
+  height: 100%;
+  direction: rtl !important;
+}
+
+.first-90-days-kanban .wx-kanban,
+.first-90-days-kanban .wx-board,
+.first-90-days-kanban .wx-content,
+.first-90-days-kanban .wx-column,
+.first-90-days-kanban .wx-card {
+  direction: rtl !important;
+}
+
+.first-90-days-kanban .wx-kanban {
+  font-family: inherit;
+}
+
+.first-90-days-kanban .wx-scroll {
+  scrollbar-color: var(--primary) var(--muted);
+  scrollbar-width: auto;
+  overscroll-behavior-x: contain;
+}
+
+.first-90-days-kanban .wx-scroll::-webkit-scrollbar {
+  height: 12px;
+}
+
+.first-90-days-kanban .wx-scroll::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 9999px;
+}
+
+.first-90-days-kanban .wx-scroll::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 9999px;
+}
+
+.first-90-days-kanban .wx-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+}
+
+.first-90-days-kanban .wx-column-header,
+.first-90-days-kanban .wx-card {
+  text-align: right;
+}
+
 .content-wrapper,
 .tab-template,
 .tab-form,

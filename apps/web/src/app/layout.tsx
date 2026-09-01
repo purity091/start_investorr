@@ -1,6 +1,7 @@
 import "../index.css";
 import { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "./providers";
 import { createMetadata, organizationJsonLd, siteConfig, websiteJsonLd, softwareApplicationJsonLd } from "@/lib/seo";
 
@@ -62,6 +63,7 @@ export default function RootLayout({
           }}
         />
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );

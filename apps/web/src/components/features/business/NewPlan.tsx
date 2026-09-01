@@ -337,16 +337,12 @@ const ToolIntroPanel: React.FC<{
   isStarting?: boolean;
 }> = ({ mode, onStart, onBack, onViewExample, isStarting = false }) => {
   const intro = TOOL_INTROS[mode];
-  const IntroIcon = intro.icon;
 
   return (
     <div dir="rtl" className="flex w-full flex-col gap-4 px-2 py-2 sm:px-4 lg:px-6 text-right">
       {/* Header Info - Borderless and clean matching SmartBeginnerPro */}
       <div className="flex flex-col gap-2 bg-background px-0 py-1">
         <div className="flex items-start gap-3">
-          <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary ring-1 ring-primary/20 mt-0.5">
-            <IntroIcon className="size-4.5" />
-          </div>
           <div className="space-y-1 flex-1 min-w-0">
             <div className="flex items-center gap-2.5 flex-wrap">
               <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">{intro.title}</h1>

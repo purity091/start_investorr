@@ -22,8 +22,6 @@ import {
   Check,
   CreditCard,
   Building2,
-  Upload,
-  ShieldCheck,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/lib/supabase';
@@ -79,16 +77,14 @@ const getSafeRedirectPath = () => {
 
 const PLAN_DETAILS: Record<SubscriptionPlanId, {
   tag: string;
-  isFree: boolean;
   priceText: string;
   badge?: string;
   detailedFeatures: string[];
 }> = {
   starter: {
-    tag: 'مجانية 100%',
-    isFree: true,
-    priceText: '0 ر.س (مجاناً)',
-    badge: 'البدء السريع',
+    tag: 'الباقة الأولى',
+    priceText: '99 ر.س / شهرياً أو $26.40 / شهرياً',
+    badge: 'البدء الأساسي',
     detailedFeatures: [
       'سعة 5 مشاريع ودراسات جدوى',
       'تصفح عينات +500 شركة ناجحة',
@@ -97,8 +93,7 @@ const PLAN_DETAILS: Record<SubscriptionPlanId, {
   },
   founder: {
     tag: 'مدفوعة',
-    isFree: false,
-    priceText: '35 ر.س / شهرياً',
+    priceText: `${SUBSCRIPTION_PLANS.founder.monthlyPriceSar} ر.س / شهرياً أو $${SUBSCRIPTION_PLANS.founder.monthlyPriceUsd.toFixed(2)} / شهرياً`,
     badge: 'الأكثر شعبية',
     detailedFeatures: [
       'سعة 10 مشاريع ودراسات متكاملة',
@@ -109,8 +104,7 @@ const PLAN_DETAILS: Record<SubscriptionPlanId, {
   },
   leader: {
     tag: 'مدفوعة',
-    isFree: false,
-    priceText: '75 ر.س / شهرياً',
+    priceText: `${SUBSCRIPTION_PLANS.leader.monthlyPriceSar} ر.س / شهرياً أو $${SUBSCRIPTION_PLANS.leader.monthlyPriceUsd.toFixed(2)} / شهرياً`,
     badge: 'متقدم للقياديين',
     detailedFeatures: [
       'سعة مشاريع غير محدودة',
@@ -241,7 +235,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
       if (mode === 'register') {
         const normalizedEmail = email.trim().toLowerCase();
-        const payload = await postAuthAction('/api/auth/register', {
+        await postAuthAction('/api/auth/register', {
           email: normalizedEmail,
           password,
           name: name.trim(),
@@ -534,7 +528,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 <div className="rounded-2xl bg-primary/5 p-3 flex items-start gap-2 text-xs text-muted-foreground border-0 shadow-2xs">
                   <Zap className="size-4 text-primary shrink-0 mt-0.5" />
                   <p className="leading-relaxed font-medium">
-                    اختر الباقة المناسبة. يمكنك البدء فوراً بـ <strong className="text-emerald-600 dark:text-emerald-400 font-black">الباقة المجانية</strong> أو الترقية لـ <strong className="text-primary font-black">الباقات المدفوعة</strong> لسعة أكبر.
+                    اختر الباقة المناسبة. تبدأ الباقات من <strong className="text-primary font-black">99 ر.س شهرياً</strong> (ما يعادل 26.40 دولاراً) مع خيارات سعة أكبر.
                   </p>
                 </div>
 
@@ -562,9 +556,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                             "size-8 rounded-xl flex items-center justify-center text-xs font-black shrink-0 transition-all shadow-2xs",
                             selected
                               ? "bg-primary text-primary-foreground"
-                              : meta.isFree
-                                ? "bg-emerald-500/15 text-emerald-600"
-                                : "bg-background text-muted-foreground"
+                              : "bg-background text-muted-foreground"
                           )}>
                             {selected ? <Check className="size-4" /> : plan.shortName.charAt(0)}
                           </div>
@@ -573,13 +565,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                               <span className="text-xs font-black text-foreground">{plan.name}</span>
                               <span className={cn(
                                 "text-[9px] font-extrabold px-2 py-0.5 rounded-full shadow-2xs",
-                                meta.isFree
-                                  ? "bg-emerald-500/15 text-emerald-600"
-                                  : "bg-primary/15 text-primary"
+                                "bg-primary/15 text-primary"
                               )}>
                                 {meta.tag}
                               </span>
-                              {meta.badge && !meta.isFree && (
+                              {meta.badge && (
                                 <span className="bg-amber-500/15 text-amber-600 dark:text-amber-400 text-[9px] font-bold px-2 py-0.5 rounded-full">
                                   {meta.badge}
                                 </span>
@@ -594,7 +584,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                         <div className="text-left shrink-0 mr-2 flex flex-col items-end gap-0.5">
                           <span className={cn(
                             "text-xs font-black px-2.5 py-1 rounded-lg shadow-2xs",
-                            meta.isFree ? "text-emerald-600 bg-background" : "text-primary bg-background"
+                            "text-primary bg-background"
                           )}>
                             {meta.priceText}
                           </span>
@@ -614,9 +604,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                       <span>ميزات {SUBSCRIPTION_PLANS[subscriptionPlan].name}:</span>
                       <span className={cn(
                         "text-[10px] font-bold px-2 py-0.5 rounded-full",
-                        PLAN_DETAILS[subscriptionPlan].isFree ? "bg-emerald-500/10 text-emerald-600" : "bg-primary/10 text-primary"
+                        "bg-primary/10 text-primary"
                       )}>
-                        {PLAN_DETAILS[subscriptionPlan].isFree ? 'خطة مجانية' : 'خطة مدفوعة'}
+                        خطة مدفوعة
                       </span>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
@@ -665,26 +655,14 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   </div>
                   <Badge className={cn(
                     "text-xs font-black px-3 py-1 border-0 shadow-2xs",
-                    PLAN_DETAILS[subscriptionPlan].isFree ? "bg-emerald-500/15 text-emerald-600" : "bg-primary text-primary-foreground"
+                    "bg-primary text-primary-foreground"
                   )}>
                     {PLAN_DETAILS[subscriptionPlan].priceText}
                   </Badge>
                 </div>
 
-                {/* Free Plan Instant Notice */}
-                {PLAN_DETAILS[subscriptionPlan].isFree ? (
-                  <div className="p-4 rounded-2xl bg-emerald-500/10 border-0 text-emerald-600 space-y-2 text-right shadow-2xs">
-                    <div className="flex items-center gap-2 font-black text-xs">
-                      <ShieldCheck className="size-4 shrink-0" />
-                      <span>الباقة المجانية مفعّلة فوراً 100%</span>
-                    </div>
-                    <p className="text-xs font-medium leading-relaxed">
-                      لا تتطلب الباقة المجانية إدخال أي بطاقة ائتمانية أو بيانات دفع. يمكنك البدء في بناء أول 5 مشاريع مجاناً بمجرد الضغط على تأكيد التسجيل.
-                    </p>
-                  </div>
-                ) : (
-                  /* Paid Plan Options */
-                  <div className="space-y-3">
+                {/* Paid Plan Options */}
+                <div className="space-y-3">
                     <label className="text-xs font-extrabold text-foreground block">طريقة الدفع والتفعيل</label>
 
                     <div className="grid grid-cols-2 gap-2">
@@ -772,11 +750,15 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                             onChange={(e) => setReceiptFile(e.target.files?.[0] ?? null)}
                             className="bg-background border-0 text-xs py-3 rounded-xl cursor-pointer"
                           />
+                          {receiptFile && (
+                            <p className="text-[10px] text-emerald-600 font-bold truncate">
+                              تم اختيار: {receiptFile.name}
+                            </p>
+                          )}
                         </div>
                       </div>
                     )}
-                  </div>
-                )}
+                </div>
 
                 {/* Final Action Buttons */}
                 <div className="flex items-center gap-2 pt-2">
@@ -800,7 +782,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                     ) : (
                       <>
                         <span>
-                          {PLAN_DETAILS[subscriptionPlan].isFree ? 'تأكيد وإنشاء الحساب المجاني' : 'تأكيد الاشتراك وتفعيل الحساب'}
+                          تأكيد الاشتراك وتفعيل الحساب
                         </span>
                         <ArrowLeft className="size-4" />
                       </>

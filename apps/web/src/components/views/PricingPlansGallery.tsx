@@ -17,7 +17,6 @@ import {
   CheckCircle2,
   ArrowLeft,
   Sparkles,
-  HelpCircle,
   ShieldCheck,
   Gift,
   ChevronDown,
@@ -27,8 +26,6 @@ import {
   Compass,
   Zap,
   Lock,
-  DollarSign,
-  Globe,
   Upload,
   AlertCircle,
   Check,
@@ -41,6 +38,7 @@ import {
   getSubscriptionPlan,
   isHigherSubscriptionPlan,
   normalizeSubscriptionPlanId,
+  SUBSCRIPTION_PLANS,
 } from '@/lib/subscriptionPlans';
 import { cn } from '@/lib/utils';
 
@@ -68,15 +66,20 @@ export const PricingPlansGallery: React.FC = () => {
     {
       id: 'starter' as const,
       name: 'باقة رائد',
-      isFree: true,
-      tag: 'مجانية 100%',
+      tag: 'الباقة الأولى',
       icon: Compass,
-      description: 'لتجربة المنصة وبناء أول 5 مشاريع ودراسات جدوى بدون رسوم.',
-      priceDisplay: currency === 'SAR' ? '0 ر.س' : '$0',
-      priceNote: 'مجاناً للأبد بدون بطاقة ائتمانية',
-      period: 'للأبد',
+      description: 'الباقة الأولى لبناء أول 5 مشاريع ودراسات جدوى والبدء باحتراف.',
+      priceDisplay: currency === 'SAR'
+        ? `${SUBSCRIPTION_PLANS.starter.monthlyPriceSar} ر.س`
+        : `$${SUBSCRIPTION_PLANS.starter.monthlyPriceUsd.toFixed(2)}`,
+      priceNote: currency === 'SAR'
+        ? (billingCycle === 'annual' ? 'تُدفع سنوياً (1,188 ر.س / سنة)' : 'تُدفع شهرياً')
+        : (billingCycle === 'annual' ? 'تُدفع سنوياً ($316.80 / سنة)' : 'تُدفع شهرياً'),
+      period: '/ شهرياً',
       popular: false,
-      ctaText: 'ابدأ مجاناً الان',
+      ctaText: currency === 'SAR'
+        ? `اشترك بـ ${SUBSCRIPTION_PLANS.starter.monthlyPriceSar} ر.س/شهر`
+        : `اشترك بـ $${SUBSCRIPTION_PLANS.starter.monthlyPriceUsd.toFixed(2)}/شهر`,
       projectLimitText: 'سعة 5 مشاريع',
       features: [
         'سعة بناء 5 مشاريع ودراسات جدوى',
@@ -95,22 +98,21 @@ export const PricingPlansGallery: React.FC = () => {
     {
       id: 'founder' as const,
       name: 'باقة مؤسس',
-      isFree: false,
       tag: 'الباقة الأكثر شعبية',
       icon: Rocket,
       description: 'الخيار التأسيسي لبناء 10 مشاريع، وتوليد مخرجات الذكاء الاصطناعي، ومشاركة الخطط.',
       priceDisplay: currency === 'SAR' 
-        ? (billingCycle === 'annual' ? '29 ر.س' : '35 ر.س') 
-        : (billingCycle === 'annual' ? '$7' : '$9'),
+        ? (billingCycle === 'annual' ? `${SUBSCRIPTION_PLANS.founder.annualMonthlyPriceSar} ر.س` : `${SUBSCRIPTION_PLANS.founder.monthlyPriceSar} ر.س`)
+        : (billingCycle === 'annual' ? `$${SUBSCRIPTION_PLANS.founder.annualMonthlyPriceUsd.toFixed(2)}` : `$${SUBSCRIPTION_PLANS.founder.monthlyPriceUsd.toFixed(2)}`),
       priceNote: currency === 'SAR'
-        ? (billingCycle === 'annual' ? 'تُدفع سنوياً (348 ر.س / سنة)' : 'تُدفع شهرياً مع إلغاء مرن')
-        : (billingCycle === 'annual' ? 'تُدفع سنوياً ($84 / سنة)' : 'تُدفع شهرياً مع إلغاء مرن'),
+        ? (billingCycle === 'annual' ? `تُدفع سنوياً (${(SUBSCRIPTION_PLANS.founder.annualMonthlyPriceSar * 12).toLocaleString('en-US')} ر.س / سنة)` : 'تُدفع شهرياً مع إلغاء مرن')
+        : (billingCycle === 'annual' ? `تُدفع سنوياً ($${(SUBSCRIPTION_PLANS.founder.annualMonthlyPriceUsd * 12).toFixed(2)} / سنة)` : 'تُدفع شهرياً مع إلغاء مرن'),
       period: '/ شهرياً',
       popular: true,
       badgeText: 'الأكثر اختياراً',
       ctaText: currency === 'SAR'
-        ? (billingCycle === 'annual' ? 'اشترك بـ 29 ر.س/شهر' : 'اشترك بـ 35 ر.س/شهر')
-        : (billingCycle === 'annual' ? 'اشترك بـ $7/شهر' : 'اشترك بـ $9/شهر'),
+        ? (billingCycle === 'annual' ? `اشترك بـ ${SUBSCRIPTION_PLANS.founder.annualMonthlyPriceSar} ر.س/شهر` : `اشترك بـ ${SUBSCRIPTION_PLANS.founder.monthlyPriceSar} ر.س/شهر`)
+        : (billingCycle === 'annual' ? `اشترك بـ $${SUBSCRIPTION_PLANS.founder.annualMonthlyPriceUsd.toFixed(2)}/شهر` : `اشترك بـ $${SUBSCRIPTION_PLANS.founder.monthlyPriceUsd.toFixed(2)}/شهر`),
       projectLimitText: 'سعة 10 مشاريع',
       parentPlanNote: 'تشمل ميزات باقة رائد، بالإضافة إلى:',
       features: [
@@ -130,22 +132,21 @@ export const PricingPlansGallery: React.FC = () => {
     {
       id: 'leader' as const,
       name: 'باقة قائد',
-      isFree: false,
       tag: 'للمستشارين والفرق',
       icon: Crown,
       description: 'للمستشارين والحاضنات والفرق التي تحتاج سعة غير محدودة وتخصيص كامل.',
       priceDisplay: currency === 'SAR' 
-        ? (billingCycle === 'annual' ? '59 ر.س' : '75 ر.س') 
-        : (billingCycle === 'annual' ? '$15' : '$19'),
+        ? (billingCycle === 'annual' ? `${SUBSCRIPTION_PLANS.leader.annualMonthlyPriceSar} ر.س` : `${SUBSCRIPTION_PLANS.leader.monthlyPriceSar} ر.س`)
+        : (billingCycle === 'annual' ? `$${SUBSCRIPTION_PLANS.leader.annualMonthlyPriceUsd.toFixed(2)}` : `$${SUBSCRIPTION_PLANS.leader.monthlyPriceUsd.toFixed(2)}`),
       priceNote: currency === 'SAR'
-        ? (billingCycle === 'annual' ? 'تُدفع سنوياً (708 ر.س / سنة)' : 'تُدفع شهرياً مع إلغاء مرن')
-        : (billingCycle === 'annual' ? 'تُدفع سنوياً ($180 / سنة)' : 'تُدفع شهرياً مع إلغاء مرن'),
+        ? (billingCycle === 'annual' ? `تُدفع سنوياً (${(SUBSCRIPTION_PLANS.leader.annualMonthlyPriceSar * 12).toLocaleString('en-US')} ر.س / سنة)` : 'تُدفع شهرياً مع إلغاء مرن')
+        : (billingCycle === 'annual' ? `تُدفع سنوياً ($${(SUBSCRIPTION_PLANS.leader.annualMonthlyPriceUsd * 12).toFixed(2)} / سنة)` : 'تُدفع شهرياً مع إلغاء مرن'),
       period: '/ شهرياً',
       popular: false,
       badgeText: 'سعة غير محدودة',
       ctaText: currency === 'SAR'
-        ? (billingCycle === 'annual' ? 'اشترك بـ 59 ر.س/شهر' : 'اشترك بـ 75 ر.س/شهر')
-        : (billingCycle === 'annual' ? 'اشترك بـ $15/شهر' : 'اشترك بـ $19/شهر'),
+        ? (billingCycle === 'annual' ? `اشترك بـ ${SUBSCRIPTION_PLANS.leader.annualMonthlyPriceSar} ر.س/شهر` : `اشترك بـ ${SUBSCRIPTION_PLANS.leader.monthlyPriceSar} ر.س/شهر`)
+        : (billingCycle === 'annual' ? `اشترك بـ $${SUBSCRIPTION_PLANS.leader.annualMonthlyPriceUsd.toFixed(2)}/شهر` : `اشترك بـ $${SUBSCRIPTION_PLANS.leader.monthlyPriceUsd.toFixed(2)}/شهر`),
       projectLimitText: 'مشاريع غير محدودة',
       parentPlanNote: 'تشمل ميزات باقة مؤسس، بالإضافة إلى:',
       features: [
@@ -198,8 +199,8 @@ export const PricingPlansGallery: React.FC = () => {
     {
       icon: Layers,
       category: 'سعة المشاريع',
-      q: 'ما الفرق الرئيسي بين الباقة المجانية والمدفوعة؟',
-      a: 'تسمح لك الباقة المجانية (رائد) ببناء وتجربة حتى 5 مشاريع ودراسات جدوى مجاناً للأبد بدون بطاقة ائتمان. أما الباقات المدفوعة (مؤسس وقائد) فتمنحك سعة أعلى (10 مشاريع أو سعة غير محدودة)، روابط مشاركة تفاعلية، تحليلات مالية متقدمة، وتوليد الذكاء الاصطناعي.'
+      q: 'ما الفرق الرئيسي بين الباقات؟',
+      a: 'تبدأ الباقات من باقة رائد بقيمة 99 ر.س شهرياً (ما يعادل 26.40 دولاراً)، ثم تمنحك باقتا مؤسس وقائد سعة أعلى (10 مشاريع أو سعة غير محدودة)، وروابط مشاركة، وتحليلات مالية متقدمة، وتوليد الذكاء الاصطناعي.'
     },
     {
       icon: Sparkles,
@@ -279,7 +280,7 @@ export const PricingPlansGallery: React.FC = () => {
               <span>عرض الإطلاق</span>
             </Badge>
             <p className="text-xs font-bold text-foreground">
-              انضم مجاناً لأول 100 مشترك واستفد من خيارات الترقية الحصرية!
+               استفد من سعر الباقة الأولى: 99 ر.س شهرياً (26.40 دولاراً).
             </p>
           </div>
 
@@ -293,7 +294,7 @@ export const PricingPlansGallery: React.FC = () => {
                 size="sm"
                 className="font-bold text-xs h-7 px-3 gap-1 cursor-pointer border-0 shadow-2xs"
               >
-                <span>حساب مجاني</span>
+                <span>ابدأ بـ 99 ر.س</span>
                 <ArrowLeft className="size-3" />
               </Button>
             )}
@@ -307,7 +308,7 @@ export const PricingPlansGallery: React.FC = () => {
           باقات خطة
         </h1>
         <p className="text-xs sm:text-sm text-muted-foreground font-medium max-w-lg mx-auto text-center">
-          اختر الباقة المناسبة لحجم أعمالك. ابدأ مجاناً أو اختر إحدى الباقات المدفوعة.
+           اختر الباقة المناسبة لحجم أعمالك. تبدأ الباقات من 99 ر.س شهرياً (26.40 دولاراً).
         </p>
 
         {user && (
@@ -359,7 +360,7 @@ export const PricingPlansGallery: React.FC = () => {
             >
               <span>دفع سنوي</span>
               <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-0">
-                توفير 20%
+                توفير حتى 20%
               </span>
             </button>
           </div>
@@ -391,7 +392,7 @@ export const PricingPlansGallery: React.FC = () => {
                 <div className="flex items-center justify-between gap-2 mb-4">
                   <div className={cn(
                     "size-10 rounded-2xl flex items-center justify-center text-foreground shrink-0 shadow-2xs",
-                    plan.isFree ? "bg-emerald-500/10 text-emerald-600" : plan.popular ? "bg-primary text-primary-foreground" : "bg-muted text-foreground"
+                     plan.popular ? "bg-primary text-primary-foreground" : "bg-muted text-foreground"
                   )}>
                     <PlanHeaderIcon className="size-5" />
                   </div>
@@ -399,7 +400,7 @@ export const PricingPlansGallery: React.FC = () => {
                   <div className="flex items-center gap-1.5 flex-wrap justify-end">
                     <span className={cn(
                       "text-[10px] font-extrabold px-2.5 py-1 rounded-full shadow-2xs",
-                      plan.isFree ? "bg-emerald-500/15 text-emerald-600" : "bg-primary/15 text-primary"
+                       "bg-primary/15 text-primary"
                     )}>
                       {plan.tag}
                     </span>
@@ -542,7 +543,7 @@ export const PricingPlansGallery: React.FC = () => {
               <thead>
                 <tr className="bg-muted/40 text-foreground font-black border-0">
                   <th className="py-3 px-4 text-xs font-black rounded-r-xl">الميزة والخاصية</th>
-                  <th className="py-3 px-3 text-center w-1/4">باقة رائد (مجاناً)</th>
+                  <th className="py-3 px-3 text-center w-1/4">باقة رائد (99 ر.س)</th>
                   <th className="py-3 px-3 text-center w-1/4 bg-primary/10 text-primary font-black">باقة مؤسس</th>
                   <th className="py-3 px-3 text-center w-1/4 rounded-l-xl">باقة قائد</th>
                 </tr>

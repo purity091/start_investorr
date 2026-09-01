@@ -186,27 +186,20 @@ export function ArabWorldMapsView() {
   const fillMap = Object.fromEntries(arabIsos.map(iso => [iso, getFill(iso)]));
 
   return (
-    <div dir="rtl" className="w-full flex-1 flex flex-col min-h-screen bg-background p-2 sm:p-5 gap-3 sm:gap-4">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
       {/* Header Section */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-2.5">
-        <div className="flex items-center gap-2 sm:gap-3">
-          <div className="size-8 sm:size-9 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 shadow-2xs">
-            <BarChart3 className="size-4 text-primary" />
-          </div>
-          <div>
-            <div className="flex items-center gap-1.5">
-              <h1 className="text-sm sm:text-lg font-extrabold text-foreground tracking-tight">
-                التوزيعات السكانية والاقتصادية بالوطن العربي
-              </h1>
-            </div>
-            <p className="text-[10px] sm:text-xs text-muted-foreground font-medium mt-0.5">
-              مرصد تفاعلي شامل لديموغرافيا واقتصاد الدول العربية
-            </p>
-          </div>
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-2">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            التوزيعات السكانية والاقتصادية بالوطن العربي
+          </h1>
+          <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+            مرصد تفاعلي شامل لديموغرافيا واقتصاد 22 دولة عربية، يتيح استكشاف البيانات السكانية والإنتاجية مباشرة على الخريطة.
+          </p>
         </div>
 
         {/* Metric Selector Tabs - Compact Mobile Horizontal Scroll */}
-        <div className="flex items-center gap-1 p-1 rounded-xl bg-muted/60 overflow-x-auto max-w-full touch-pan-x scrollbar-none">
+        <div className="flex items-center gap-1 p-1 rounded-xl bg-muted/60 overflow-x-auto max-w-full touch-pan-x scrollbar-none shrink-0">
           {METRICS.map((m) => {
             const Icon = m.icon;
             const isSelected = metric === m.key;

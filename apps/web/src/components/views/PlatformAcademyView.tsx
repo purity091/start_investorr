@@ -420,60 +420,50 @@ export const PlatformAcademyView: React.FC<{
   }
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-[1600px] flex-col gap-3.5 p-2 sm:p-4 font-sans">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
       
-      {/* Sleek Hero Header & Clean Segmented Filter Bar */}
-      <div className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-4 sm:p-5 shadow-2xs">
-        
-        {/* Top Hero Header Row */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div className="flex items-start gap-3.5">
+      {/* Header Section */}
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-2">
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-3">
             <button
               onClick={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)}
-              className="lg:hidden p-2 rounded-xl border border-input bg-background text-foreground hover:bg-accent transition-colors shrink-0 mt-0.5"
+              className="lg:hidden p-2 rounded-xl border border-input bg-background text-foreground hover:bg-accent transition-colors shrink-0"
             >
               <Menu className="size-4" />
             </button>
-
-            <div className="flex size-10 sm:size-11 items-center justify-center rounded-2xl bg-primary/10 text-primary border border-primary/20 shrink-0 shadow-2xs">
-              <GraduationCap className="size-5 sm:size-6" />
-            </div>
-
-            <div className="space-y-1">
-              <div className="flex items-center gap-2.5 flex-wrap">
-                <h1 className="text-xl sm:text-2xl font-black text-foreground tracking-tight">
-                  أكاديمية المنصة والمفاهيم
-                </h1>
-                <Badge variant="secondary" className="bg-primary/10 text-primary border border-primary/20 text-xs font-bold px-2.5 py-0.5 rounded-full shrink-0">
-                  {articlesIndex.length} مقال
-                </Badge>
-              </div>
-              <p className="text-xs sm:text-sm text-muted-foreground font-medium max-w-2xl leading-relaxed">
-                دليل المفاهيم والمصطلحات والتحليلات الميدانية لخطة الاستثمار وتطوير الأعمال
-              </p>
-            </div>
+            <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              أكاديمية المنصة والمفاهيم
+            </h1>
+            <Badge variant="secondary" className="bg-primary/10 text-primary border border-primary/20 text-xs font-bold px-2.5 py-0.5 rounded-full shrink-0">
+              {articlesIndex.length} مقال
+            </Badge>
           </div>
-
-          {/* Search Box */}
-          <div className="relative w-full sm:w-72 shrink-0">
-            <Search className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
-            <Input
-              type="text"
-              placeholder="بحث في المقالات والمفاهيم..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pr-9.5 pl-8 bg-background h-10 text-xs focus-visible:ring-1 focus-visible:ring-primary rounded-xl border-input shadow-2xs"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 rounded-md hover:bg-muted"
-              >
-                <X className="size-3.5" />
-              </button>
-            )}
-          </div>
+          <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+            دليل المفاهيم والمصطلحات والتحليلات الميدانية لخطة الاستثمار وتطوير الأعمال.
+          </p>
         </div>
+
+        {/* Search Box */}
+        <div className="relative w-full sm:w-72 shrink-0">
+          <Search className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
+          <Input
+            type="text"
+            placeholder="بحث في المقالات والمفاهيم..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="pr-9.5 pl-8 bg-background h-10 text-xs focus-visible:ring-1 focus-visible:ring-primary rounded-xl border-input shadow-2xs"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 rounded-md hover:bg-muted"
+            >
+              <X className="size-3.5" />
+            </button>
+          )}
+        </div>
+      </div>
 
         {/* Clean Segmented Filter Bar & View Switcher */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-border/60 pt-3">
@@ -544,8 +534,6 @@ export const PlatformAcademyView: React.FC<{
             )}
           </div>
         </div>
-
-      </div>
 
       {/* ========================================================================= */}
       {/* MODE 1: Category Cards Grid View                                         */}

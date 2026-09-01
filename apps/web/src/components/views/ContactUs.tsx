@@ -66,7 +66,6 @@ export const ContactUs: React.FC = () => {
       <section className="rounded-lg bg-card p-3 sm:p-4 border-0 shadow-2xs">
         <div className="flex flex-col gap-2.5 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-3xl space-y-1.5">
-            <Badge variant="secondary" className="w-fit text-[11px] font-bold">المراسلة والدعم</Badge>
             <div className="space-y-1">
               <h1 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">نساعدك على اختيار المسار المناسب</h1>
               <p className="text-xs text-muted-foreground leading-relaxed">

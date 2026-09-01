@@ -53,7 +53,7 @@ export const FailedProjectsGallery: React.FC<FailedProjectsGalleryProps> = ({ se
         // Check if there is a specific project in the URL
         const params = new URLSearchParams(window.location.search);
         const projectId = params.get('project');
-        
+
         if (projectId) {
           const projectDetails = await fetchPublicJson<any>(`/data/failed-projects/${projectId}.json`);
           setSelectedProject(projectDetails);
@@ -64,7 +64,7 @@ export const FailedProjectsGallery: React.FC<FailedProjectsGalleryProps> = ({ se
         setIsLoading(false);
       }
     };
-    
+
     loadData();
   }, [initialProjects]);
 
@@ -99,9 +99,6 @@ export const FailedProjectsGallery: React.FC<FailedProjectsGalleryProps> = ({ se
   return (
     <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="flex flex-col gap-3 mb-2">
-        <Badge variant="secondary" className="w-fit bg-red-500/10 text-red-600 hover:bg-red-500/20 border-0 font-bold px-3 py-1">
-          تجارب ودروس مستفادة
-        </Badge>
         <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">شركات فشلت (Post-Mortem)</h1>
         <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
           التعلم من أخطاء الآخرين يختصر عليك الكثير من الوقت والمال. نستعرض هنا دراسات حالة لمشاريع تقنية لم يكتب لها النجاح، مع تحليل أسباب الفشل والدروس المستفادة منها حتى لا تكررها.

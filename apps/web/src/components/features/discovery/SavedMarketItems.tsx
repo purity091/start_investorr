@@ -507,18 +507,15 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
   });
 
   return (
-    <div dir="rtl" className="min-h-screen bg-background text-right text-foreground py-6 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-6">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500 text-right">
 
-        {/* Page Header Area */}
-        <div className="space-y-1">
-          <div className="flex items-center gap-2">
-          </div>
-          <h1 className="text-2xl font-bold tracking-tight">سجل المحفوظات الشامل</h1>
-          <p className="text-sm text-muted-foreground">
-            تصفح واستكشف جميع العناصر والمشاريع التي قمت بحفظها مقسمة بحسب الصفحة المصدر.
-          </p>
-        </div>
+      {/* Page Header Area */}
+      <div className="flex flex-col gap-3 mb-2">
+        <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">سجل المحفوظات الشامل</h1>
+        <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
+          تصفح واستكشف جميع العناصر والمشاريع التي قمت بحفظها مقسمة بحسب الصفحة المصدر.
+        </p>
+      </div>
 
         {/* Filters & Search Toolbar */}
         <div className="flex flex-col gap-4 rounded-xl bg-card p-4 shadow-xs">
@@ -689,8 +686,6 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
             </div>
           )}
         </div>
-
-      </div>
     </div>
   );
 };
